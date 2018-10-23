@@ -11,25 +11,25 @@ entity slt is
 
 	port 
 	(
-		a, b     : in signed	((DATA_WIDTH-1) downto 0);
-		result   : out signed ((DATA_WIDTH-1) downto 0)
+		a, b     : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		result   : out std_logic_vector((DATA_WIDTH-1) downto 0)
 	);
 
 end entity;
 
 architecture rtl of slt is
 
-signal temp : std_logic_vector(31 downto 0);
+signal result_adder, c_out_adder : std_logic_vector(31 downto 0);
 
-signal overflow : std_logic;
+signal temp, overflow : std_logic;
+
+begin
 
 full_adder: entity work.full_adder
 		Port map(a => a, b => b, c_in => '1', result => result_adder, c_out => c_out_adder);
-
-begin
 	
 	overflow <= c_out_adder(30) xor c_out_adder(31);
 	temp <= result_adder(31) xor overflow;
-	result <= "000000000000000000000000000000"& temp(0);
+	result <= "0000000000000000000000000000000"& temp;
 
 end rtl;

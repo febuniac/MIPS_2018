@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ula_mips
-Thu Oct 11 14:56:39 2018
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Tue Oct 23 14:35:14 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
@@ -10,14 +10,26 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: full_adder:full_adder
+ 11. Parameter Settings for User Entity Instance: slt:slt
+ 12. Parameter Settings for User Entity Instance: slt:slt|full_adder:full_adder
+ 13. Port Connectivity Checks: "slt:slt|full_adder:full_adder"
+ 14. Port Connectivity Checks: "full_adder:full_adder"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -25,31 +37,35 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Oct 11 14:56:39 2018           ;
-; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name               ; ula_mips                                    ;
-; Top-level Entity Name       ; ula_mips                                    ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Oct 23 14:35:14 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; ula_mips                                    ;
+; Top-level Entity Name           ; ula_mips                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 100                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -61,13 +77,13 @@ agreement for further details.
 ; Top-level entity name                                                           ; ula_mips           ; ula_mips           ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
@@ -118,7 +134,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -144,7 +160,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -155,28 +171,215 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; ula_mips.vhd                     ; yes             ; User VHDL File  ; /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd   ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd       ;         ;
+; full_adder.vhd                   ; yes             ; User VHDL File  ; /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd ;         ;
+; mux4.vhd                         ; yes             ; User VHDL File  ; /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd       ;         ;
+; slt.vhd                          ; yes             ; User VHDL File  ; /home/parallels/Github/MIPS_2018/ula_mips/slt.vhd        ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimate of Logic utilization (ALMs needed) ; 93                ;
+;                                             ;                   ;
+; Combinational ALUT usage for logic          ; 155               ;
+;     -- 7 input functions                    ; 1                 ;
+;     -- 6 input functions                    ; 30                ;
+;     -- 5 input functions                    ; 30                ;
+;     -- 4 input functions                    ; 11                ;
+;     -- <=3 input functions                  ; 83                ;
+;                                             ;                   ;
+; Dedicated logic registers                   ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 100               ;
+;                                             ;                   ;
+; Total DSP Blocks                            ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; ula_ctrl[2]~input ;
+; Maximum fan-out                             ; 47                ;
+; Total fan-out                               ; 696               ;
+; Average fan-out                             ; 1.96              ;
++---------------------------------------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-------------+--------------+
+; |ula_mips                     ; 155 (6)             ; 0 (0)                     ; 0                 ; 0          ; 100  ; 0            ; |ula_mips                               ; ula_mips    ; work         ;
+;    |full_adder:full_adder|    ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula_mips|full_adder:full_adder         ; full_adder  ; work         ;
+;    |mux2:mux2A|               ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula_mips|mux2:mux2A                    ; mux2        ; work         ;
+;    |mux2:mux2B|               ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula_mips|mux2:mux2B                    ; mux2        ; work         ;
+;    |mux4:mux4|                ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula_mips|mux4:mux4                     ; mux4        ; work         ;
+;    |slt:slt|                  ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula_mips|slt:slt                       ; slt         ; work         ;
+;       |full_adder:full_adder| ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula_mips|slt:slt|full_adder:full_adder ; full_adder  ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |ula_mips|mux4:mux4|Mux29  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:full_adder ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; data_width     ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slt:slt ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; data_width     ; 32    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slt:slt|full_adder:full_adder ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slt:slt|full_adder:full_adder"                                                               ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; c_in          ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; result[30..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c_out[29..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder:full_adder"                                                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 155                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 154                         ;
+;         2 data inputs ; 66                          ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 11                          ;
+;         5 data inputs ; 30                          ;
+;         6 data inputs ; 30                          ;
+; boundary_port         ; 100                         ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 9.14                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Oct 11 14:56:21 2018
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Oct 23 14:35:01 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_mips -c ula_mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Error (10500): VHDL syntax error at ula_mips.vhd(35) near text "std_logic_vector";  expecting ";" File: C:/Users/vitor/Desktop/Design de Computadores/ula_mips/ula_mips.vhd Line: 35
-Info (12021): Found 0 design units, including 0 entities, in source file ula_mips.vhd
-Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
-    Info (12022): Found design unit 1: mux5x1-mux5_arch File: C:/Users/vitor/Desktop/Design de Computadores/ula_mips/mux4.vhd Line: 10
-    Info (12023): Found entity 1: mux5x1 File: C:/Users/vitor/Desktop/Design de Computadores/ula_mips/mux4.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ula_mips.vhd
+    Info (12022): Found design unit 1: ula_mips-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 13
+    Info (12023): Found entity 1: ula_mips File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
-    Info (12022): Found design unit 1: mux2-mux2_arch File: C:/Users/vitor/Desktop/Design de Computadores/ula_mips/mux2.vhd Line: 11
-    Info (12023): Found entity 1: mux2 File: C:/Users/vitor/Desktop/Design de Computadores/ula_mips/mux2.vhd Line: 4
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4858 megabytes
-    Error: Processing ended: Thu Oct 11 14:56:40 2018
-    Error: Elapsed time: 00:00:19
-    Error: Total CPU time (on all processors): 00:00:39
+    Info (12022): Found design unit 1: mux2-mux2_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd Line: 24
+    Info (12023): Found entity 1: full_adder File: /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info (12022): Found design unit 1: mux4-mux4_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 11
+    Info (12023): Found entity 1: mux4 File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file slt.vhd
+    Info (12022): Found design unit 1: slt-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/slt.vhd Line: 20
+    Info (12023): Found entity 1: slt File: /home/parallels/Github/MIPS_2018/ula_mips/slt.vhd Line: 5
+Info (12127): Elaborating entity "ula_mips" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(19): object "overflow" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(19): object "zero" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 19
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux2A" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at mux2.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at mux2.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 19
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:full_adder" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 29
+Info (12128): Elaborating entity "slt" for hierarchy "slt:slt" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 32
+Info (12128): Elaborating entity "mux4" for hierarchy "mux4:mux4" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at mux4.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at mux4.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at mux4.vhd(21): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at mux4.vhd(23): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 23
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 255 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 155 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 1024 megabytes
+    Info: Processing ended: Tue Oct 23 14:35:14 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:18
 
 
