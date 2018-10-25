@@ -1,6 +1,6 @@
 EDA Netlist Writer report for ula_mips
-Tue Oct 23 14:36:36 2018
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Thu Oct 25 18:54:01 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -25,20 +25,21 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 23 14:36:36 2018 ;
+; EDA Netlist Writer Status ; Successful - Thu Oct 25 18:54:01 2018 ;
 ; Revision Name             ; ula_mips                              ;
-; Top-level Entity Name     ; ula_mips                              ;
+; Top-level Entity Name     ; mips_teste                            ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -65,13 +66,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Simulation Generated Files                                              ;
-+-------------------------------------------------------------------------+
-; Generated Files                                                         ;
-+-------------------------------------------------------------------------+
-; /home/parallels/Github/MIPS_2018/ula_mips/simulation/qsim//ula_mips.vho ;
-+-------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Simulation Generated Files                                                       ;
++----------------------------------------------------------------------------------+
+; Generated Files                                                                  ;
++----------------------------------------------------------------------------------+
+; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/simulation/qsim//ula_mips.vho ;
++----------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -79,8 +80,8 @@ refer to the applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Copyright (C) 2016  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and its AMPP partner logic 
     Info: functions, and any output files from any of the foregoing 
@@ -88,20 +89,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: associated documentation or information are expressly subject 
     Info: to the terms and conditions of the Intel Program License 
     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
-    Info: the Intel FPGA IP License Agreement, or other applicable license
-    Info: agreement, including, without limitation, that your use is for
-    Info: the sole purpose of programming logic devices manufactured by
-    Info: Intel and sold by Intel or its authorized distributors.  Please
-    Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Oct 23 14:36:36 2018
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/parallels/Github/MIPS_2018/ula_mips/simulation/qsim/ ula_mips -c ula_mips
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Thu Oct 25 18:54:00 2018
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/simulation/qsim/ ula_mips -c ula_mips
 Info (119006): Selected device 5CGXFC7C7F23C8 for design "ula_mips"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file ula_mips.vho in folder "/home/parallels/Github/MIPS_2018/ula_mips/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ula_mips.vho in folder "C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1123 megabytes
-    Info: Processing ended: Tue Oct 23 14:36:36 2018
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4737 megabytes
+    Info: Processing ended: Thu Oct 25 18:54:01 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

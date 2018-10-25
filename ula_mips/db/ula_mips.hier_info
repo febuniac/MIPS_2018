@@ -1,4 +1,232 @@
-|ula_mips
+|mips_teste
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+saida[0] <= ula_mips:ula.Q[0]
+saida[1] <= ula_mips:ula.Q[1]
+saida[2] <= ula_mips:ula.Q[2]
+saida[3] <= ula_mips:ula.Q[3]
+saida[4] <= ula_mips:ula.Q[4]
+saida[5] <= ula_mips:ula.Q[5]
+saida[6] <= ula_mips:ula.Q[6]
+saida[7] <= ula_mips:ula.Q[7]
+saida[8] <= ula_mips:ula.Q[8]
+saida[9] <= ula_mips:ula.Q[9]
+saida[10] <= ula_mips:ula.Q[10]
+saida[11] <= ula_mips:ula.Q[11]
+saida[12] <= ula_mips:ula.Q[12]
+saida[13] <= ula_mips:ula.Q[13]
+saida[14] <= ula_mips:ula.Q[14]
+saida[15] <= ula_mips:ula.Q[15]
+saida[16] <= ula_mips:ula.Q[16]
+saida[17] <= ula_mips:ula.Q[17]
+saida[18] <= ula_mips:ula.Q[18]
+saida[19] <= ula_mips:ula.Q[19]
+saida[20] <= ula_mips:ula.Q[20]
+saida[21] <= ula_mips:ula.Q[21]
+saida[22] <= ula_mips:ula.Q[22]
+saida[23] <= ula_mips:ula.Q[23]
+saida[24] <= ula_mips:ula.Q[24]
+saida[25] <= ula_mips:ula.Q[25]
+saida[26] <= ula_mips:ula.Q[26]
+saida[27] <= ula_mips:ula.Q[27]
+saida[28] <= ula_mips:ula.Q[28]
+saida[29] <= ula_mips:ula.Q[29]
+saida[30] <= ula_mips:ula.Q[30]
+saida[31] <= ula_mips:ula.Q[31]
+zero <= ula_mips:ula.zero
+mux1_teste <= fd_ctrl:fd_ctrl.mux1
+mux2_teste <= fd_ctrl:fd_ctrl.mux2
+mux3_teste <= fd_ctrl:fd_ctrl.mux3
+mux4_teste <= fd_ctrl:fd_ctrl.mux4
+habEscReg_teste <= fd_ctrl:fd_ctrl.habEscReg
+beq_teste <= fd_ctrl:fd_ctrl.beq
+habLeiMEM_teste <= fd_ctrl:fd_ctrl.habLeiMEM
+habEscMEM_teste <= fd_ctrl:fd_ctrl.habEscMEM
+ULAop_teste[0] <= fd_ctrl:fd_ctrl.ULAop[0]
+ULAop_teste[1] <= fd_ctrl:fd_ctrl.ULAop[1]
+ula_ctrl_teste[0] <= ula_ctrl:ula_ctrl.ula_ctrl[0]
+ula_ctrl_teste[1] <= ula_ctrl:ula_ctrl.ula_ctrl[1]
+ula_ctrl_teste[2] <= ula_ctrl:ula_ctrl.ula_ctrl[2]
+ula_ctrl_teste[3] <= ula_ctrl:ula_ctrl.ula_ctrl[3]
+op_code_aux[0] => fd_ctrl:fd_ctrl.op_code[0]
+op_code_aux[1] => fd_ctrl:fd_ctrl.op_code[1]
+op_code_aux[2] => fd_ctrl:fd_ctrl.op_code[2]
+op_code_aux[3] => fd_ctrl:fd_ctrl.op_code[3]
+op_code_aux[4] => fd_ctrl:fd_ctrl.op_code[4]
+op_code_aux[5] => fd_ctrl:fd_ctrl.op_code[5]
+funct_aux[0] => ula_ctrl:ula_ctrl.funct[0]
+funct_aux[1] => ula_ctrl:ula_ctrl.funct[1]
+funct_aux[2] => ula_ctrl:ula_ctrl.funct[2]
+funct_aux[3] => ula_ctrl:ula_ctrl.funct[3]
+funct_aux[4] => ula_ctrl:ula_ctrl.funct[4]
+funct_aux[5] => ula_ctrl:ula_ctrl.funct[5]
+A_aux[0] => ula_mips:ula.A[0]
+A_aux[1] => ula_mips:ula.A[1]
+A_aux[2] => ula_mips:ula.A[2]
+A_aux[3] => ula_mips:ula.A[3]
+A_aux[4] => ula_mips:ula.A[4]
+A_aux[5] => ula_mips:ula.A[5]
+A_aux[6] => ula_mips:ula.A[6]
+A_aux[7] => ula_mips:ula.A[7]
+A_aux[8] => ula_mips:ula.A[8]
+A_aux[9] => ula_mips:ula.A[9]
+A_aux[10] => ula_mips:ula.A[10]
+A_aux[11] => ula_mips:ula.A[11]
+A_aux[12] => ula_mips:ula.A[12]
+A_aux[13] => ula_mips:ula.A[13]
+A_aux[14] => ula_mips:ula.A[14]
+A_aux[15] => ula_mips:ula.A[15]
+A_aux[16] => ula_mips:ula.A[16]
+A_aux[17] => ula_mips:ula.A[17]
+A_aux[18] => ula_mips:ula.A[18]
+A_aux[19] => ula_mips:ula.A[19]
+A_aux[20] => ula_mips:ula.A[20]
+A_aux[21] => ula_mips:ula.A[21]
+A_aux[22] => ula_mips:ula.A[22]
+A_aux[23] => ula_mips:ula.A[23]
+A_aux[24] => ula_mips:ula.A[24]
+A_aux[25] => ula_mips:ula.A[25]
+A_aux[26] => ula_mips:ula.A[26]
+A_aux[27] => ula_mips:ula.A[27]
+A_aux[28] => ula_mips:ula.A[28]
+A_aux[29] => ula_mips:ula.A[29]
+A_aux[30] => ula_mips:ula.A[30]
+A_aux[31] => ula_mips:ula.A[31]
+B_aux[0] => ula_mips:ula.B[0]
+B_aux[1] => ula_mips:ula.B[1]
+B_aux[2] => ula_mips:ula.B[2]
+B_aux[3] => ula_mips:ula.B[3]
+B_aux[4] => ula_mips:ula.B[4]
+B_aux[5] => ula_mips:ula.B[5]
+B_aux[6] => ula_mips:ula.B[6]
+B_aux[7] => ula_mips:ula.B[7]
+B_aux[8] => ula_mips:ula.B[8]
+B_aux[9] => ula_mips:ula.B[9]
+B_aux[10] => ula_mips:ula.B[10]
+B_aux[11] => ula_mips:ula.B[11]
+B_aux[12] => ula_mips:ula.B[12]
+B_aux[13] => ula_mips:ula.B[13]
+B_aux[14] => ula_mips:ula.B[14]
+B_aux[15] => ula_mips:ula.B[15]
+B_aux[16] => ula_mips:ula.B[16]
+B_aux[17] => ula_mips:ula.B[17]
+B_aux[18] => ula_mips:ula.B[18]
+B_aux[19] => ula_mips:ula.B[19]
+B_aux[20] => ula_mips:ula.B[20]
+B_aux[21] => ula_mips:ula.B[21]
+B_aux[22] => ula_mips:ula.B[22]
+B_aux[23] => ula_mips:ula.B[23]
+B_aux[24] => ula_mips:ula.B[24]
+B_aux[25] => ula_mips:ula.B[25]
+B_aux[26] => ula_mips:ula.B[26]
+B_aux[27] => ula_mips:ula.B[27]
+B_aux[28] => ula_mips:ula.B[28]
+B_aux[29] => ula_mips:ula.B[29]
+B_aux[30] => ula_mips:ula.B[30]
+B_aux[31] => ula_mips:ula.B[31]
+
+
+|mips_teste|fd_ctrl:fd_ctrl
+op_code[0] => op_code_aux.IN1
+op_code[0] => Equal0.IN4
+op_code[0] => Equal1.IN5
+op_code[0] => Equal3.IN4
+op_code[0] => Equal4.IN5
+op_code[0] => Equal5.IN5
+op_code[0] => Equal6.IN4
+op_code[1] => op_code_aux.IN1
+op_code[1] => Equal0.IN5
+op_code[1] => Equal1.IN4
+op_code[1] => Equal3.IN5
+op_code[1] => Equal4.IN4
+op_code[1] => Equal5.IN4
+op_code[1] => Equal6.IN3
+op_code[2] => op_code_aux.IN1
+op_code[2] => Equal0.IN3
+op_code[2] => Equal1.IN2
+op_code[2] => Equal3.IN3
+op_code[2] => Equal4.IN2
+op_code[2] => Equal5.IN1
+op_code[2] => Equal6.IN5
+op_code[3] => op_code_aux.IN1
+op_code[3] => Equal0.IN2
+op_code[3] => Equal1.IN1
+op_code[3] => Equal3.IN2
+op_code[3] => Equal4.IN1
+op_code[3] => Equal5.IN3
+op_code[3] => Equal6.IN2
+op_code[4] => op_code_aux.IN0
+op_code[4] => Equal0.IN1
+op_code[4] => Equal1.IN0
+op_code[4] => Equal2.IN0
+op_code[4] => Equal3.IN1
+op_code[4] => Equal4.IN0
+op_code[4] => Equal5.IN0
+op_code[4] => Equal6.IN1
+op_code[5] => op_code_aux.IN1
+op_code[5] => Equal0.IN0
+op_code[5] => Equal1.IN3
+op_code[5] => Equal2.IN1
+op_code[5] => Equal3.IN0
+op_code[5] => Equal4.IN3
+op_code[5] => Equal5.IN2
+op_code[5] => Equal6.IN0
+mux1 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux2 <= op_code_aux.DB_MAX_OUTPUT_PORT_TYPE
+habEscReg <= habEscReg.DB_MAX_OUTPUT_PORT_TYPE
+mux3 <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+mux4 <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+beq <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+habLeiMEM <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
+habEscMEM <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+ULAop[0] <= ULAop.DB_MAX_OUTPUT_PORT_TYPE
+ULAop[1] <= ULAop.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips_teste|ula_ctrl:ula_ctrl
+ULAop[0] => Equal0.IN1
+ULAop[0] => Equal4.IN0
+ULAop[0] => Equal6.IN1
+ULAop[1] => Equal0.IN0
+ULAop[1] => Equal4.IN1
+ULAop[1] => Equal6.IN0
+funct[0] => Equal1.IN5
+funct[0] => Equal2.IN2
+funct[0] => Equal3.IN5
+funct[0] => Equal5.IN5
+funct[0] => Equal7.IN5
+funct[1] => Equal1.IN2
+funct[1] => Equal2.IN5
+funct[1] => Equal3.IN4
+funct[1] => Equal5.IN1
+funct[1] => Equal7.IN4
+funct[2] => Equal1.IN4
+funct[2] => Equal2.IN1
+funct[2] => Equal3.IN1
+funct[2] => Equal5.IN4
+funct[2] => Equal7.IN3
+funct[3] => Equal1.IN1
+funct[3] => Equal2.IN4
+funct[3] => Equal3.IN3
+funct[3] => Equal5.IN3
+funct[3] => Equal7.IN2
+funct[4] => Equal1.IN3
+funct[4] => Equal2.IN3
+funct[4] => Equal3.IN2
+funct[4] => Equal5.IN2
+funct[4] => Equal7.IN1
+funct[5] => Equal1.IN0
+funct[5] => Equal2.IN0
+funct[5] => Equal3.IN0
+funct[5] => Equal5.IN0
+funct[5] => Equal7.IN0
+ula_ctrl[0] <= ula_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+ula_ctrl[1] <= ula_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+ula_ctrl[2] <= ula_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+ula_ctrl[3] <= <GND>
+
+
+|mips_teste|ula_mips:ula
 A[0] => mux2:mux2A.A[0]
 A[0] => mux2:mux2A.B[0]
 A[1] => mux2:mux2A.A[1]
@@ -164,9 +392,10 @@ Q[28] <= mux4:mux4.Y[28]
 Q[29] <= mux4:mux4.Y[29]
 Q[30] <= mux4:mux4.Y[30]
 Q[31] <= mux4:mux4.Y[31]
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ula_mips|mux2:mux2A
+|mips_teste|ula_mips:ula|mux2:mux2A
 SEL => Y.OUTPUTSELECT
 SEL => Y.OUTPUTSELECT
 SEL => Y.OUTPUTSELECT
@@ -297,7 +526,7 @@ Y[30] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[31] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ula_mips|mux2:mux2B
+|mips_teste|ula_mips:ula|mux2:mux2B
 SEL => Y.OUTPUTSELECT
 SEL => Y.OUTPUTSELECT
 SEL => Y.OUTPUTSELECT
@@ -428,7 +657,7 @@ Y[30] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[31] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ula_mips|full_adder:full_adder
+|mips_teste|ula_mips:ula|full_adder:full_adder
 a[0] => c_out_aux.IN0
 a[0] => c_out_aux.IN0
 a[0] => result.IN0
@@ -690,7 +919,7 @@ c_out[30] <= c_out_aux.DB_MAX_OUTPUT_PORT_TYPE
 c_out[31] <= c_out_aux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ula_mips|slt:slt
+|mips_teste|ula_mips:ula|slt:slt
 a[0] => full_adder:full_adder.a[0]
 a[1] => full_adder:full_adder.a[1]
 a[2] => full_adder:full_adder.a[2]
@@ -755,7 +984,7 @@ b[28] => full_adder:full_adder.b[28]
 b[29] => full_adder:full_adder.b[29]
 b[30] => full_adder:full_adder.b[30]
 b[31] => full_adder:full_adder.b[31]
-result[0] <= <GND>
+result[0] <= temp.DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= <GND>
 result[2] <= <GND>
 result[3] <= <GND>
@@ -786,10 +1015,10 @@ result[27] <= <GND>
 result[28] <= <GND>
 result[29] <= <GND>
 result[30] <= <GND>
-result[31] <= temp.DB_MAX_OUTPUT_PORT_TYPE
+result[31] <= <GND>
 
 
-|ula_mips|slt:slt|full_adder:full_adder
+|mips_teste|ula_mips:ula|slt:slt|full_adder:full_adder
 a[0] => c_out_aux.IN0
 a[0] => c_out_aux.IN0
 a[0] => result.IN0
@@ -1051,7 +1280,7 @@ c_out[30] <= c_out_aux.DB_MAX_OUTPUT_PORT_TYPE
 c_out[31] <= c_out_aux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ula_mips|mux4:mux4
+|mips_teste|ula_mips:ula|mux4:mux4
 SEL[0] => Mux0.IN1
 SEL[0] => Mux1.IN1
 SEL[0] => Mux2.IN1

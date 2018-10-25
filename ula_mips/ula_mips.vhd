@@ -6,7 +6,8 @@ entity ula_mips is
 port( 
         A,B : in std_logic_vector(31 downto 0); 
         ula_ctrl : in std_logic_vector(3 downto 0); 
-        Q : out std_logic_vector(31 downto 0) 
+        Q : out std_logic_vector(31 downto 0);
+		  zero : out std_logic
         );
 end ula_mips;
 
@@ -16,7 +17,7 @@ signal R1,R2,R3 : std_logic_vector(31 downto 0);
 
 signal result_adder, c_out_adder, result_slt : std_logic_vector(31 downto 0);
 
-signal overflow, zero : std_logic;
+signal overflow : std_logic;
 
 begin
 
