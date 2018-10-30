@@ -16,6 +16,7 @@ entity memoria_de_dados is
 	(
 		clk		: in std_logic;
 		endereco	: in natural range 0 to 2**ADDR_WIDTH - 1;
+		
 		dado_escrito	: in std_logic_vector((DATA_WIDTH-1) downto 0);
 		ler		: in std_logic;
 		escrever		: in std_logic;
@@ -42,15 +43,16 @@ begin
 	begin
 	if(rising_edge(clk)) then
 		if(escrever = '1') then
-			ram(endereco) <= data;
-		end if;
 
+			ram(endereco) <= dado_escrito;
+		end if;
+    
 		-- Register the address for reading
 		addr_reg <= endereco;
 	end if;
 	
 	if(ler = '1') then
-		ram(endereco) <= data;
+		ram(endereco) <= dado_escrito;
 	end if;
 		
 	end process;

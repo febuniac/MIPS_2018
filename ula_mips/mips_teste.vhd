@@ -13,8 +13,6 @@ port(
 		  ULAop_teste : out std_logic_vector(1 downto 0);
 
 		  ula_ctrl_teste : out std_logic_vector(3 downto 0);
-		  
-		  op_code_aux, funct_aux : in std_logic_vector(5 downto 0);
 
 		  A_aux, B_aux : in std_logic_vector(31 downto 0)
         );
@@ -28,7 +26,11 @@ signal ULAop_aux : std_logic_vector(1 downto 0);
 
 signal ula_ctrl_aux : std_logic_vector(3 downto 0);
 
-signal saida_somador1, saida_somador2, saida_aux, dado_aux, saida_mux_RtRd, saida_PC, saidaA_regs, saidaB_regs, mux_Rt_im_aux, saida_mux_beq, saida_extensor, saida_mux_PC, saida_shifter1, saida_shifter2, saida_mux_ULA, dado_lido_aux : std_logic_vector(31 downto 0);
+signal saida_mux_RtRd : std_logic_vector (4 downto 0);
+
+signal saida_shifter1 : std_logic_vector (25 downto 0);
+
+signal saida_somador1, saida_somador2, saida_aux, dado_aux, saida_PC, saidaA_regs, saidaB_regs, mux_Rt_im_aux, saida_mux_beq, saida_extensor, saida_mux_PC, saida_shifter2, saida_mux_ULA, dado_lido_aux : std_logic_vector(31 downto 0);
 
 begin
 
@@ -44,7 +46,7 @@ mux_Rt_im: entity work.mux2
 		Port map(A => saida_extensor, B => saidaB_regs, SEL => mux3_aux, Y => mux_Rt_im_aux);
 					
 ula_ctrl: entity work.ula_ctrl
-		Port map(ULAop => ULAop_aux, funct => funct_aux, ula_ctrl => ula_ctrl_aux);
+		Port map(ULAop => ULAop_aux, funct => dado_aux(5 downto 0), ula_ctrl => ula_ctrl_aux);
 		
 ula: entity work.ula_mips
 		Port map(A => saidaA_regs, B => mux_Rt_im_aux, ula_ctrl => ula_ctrl_aux, Q => saida_aux, zero => zero_aux);
@@ -55,7 +57,7 @@ mux_beq: entity work.mux2
 		Port map(A => saida_somador1, B => saida_somador2, SEL => and_beq, Y => saida_mux_beq);
 		
 mux_PC: entity work.mux2
-		Port map(A => saida_mux_beq, B => saida_shifter1 , SEL => mux1_aux, Y => saida_mux_PC);
+		Port map(A => saida_mux_beq, B => saida_PC(31 downto 28) & saida_shifter1 & "00" , SEL => mux1_aux, Y => saida_mux_PC);
 
 shifter1: entity work.shifter26
 		Port map(A => dado_aux(25 downto 0), B => saida_shifter1);
@@ -78,13 +80,13 @@ mux_ULA: entity work.mux2
 PC: entity work.PC
 		Port map(d => saida_mux_PC, clk=> clk, q => saida_PC);
 
-mux_RtRd: entity work.mux2
+mux_RtRd: entity work.mux2de5
 		Port map(A => dado_aux(20 downto 16), B => dado_aux(15 downto 11), SEL => mux2_aux, Y => saida_mux_RtRd);
 		
 memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, endereco => saida_aux, dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
+		Port map (clk => clk, endereco => to_integer(signed(saida_aux)), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 
 memoriaInst: entity work.memoria_de_instrucoes
-		Port map(endereco => saida_PC, dado => dado_aux);
+		Port map(endereco => to_integer(signed(saida_PC)), dado => dado_aux);
 
 end Behavioral;

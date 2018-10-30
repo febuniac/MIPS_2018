@@ -1,23 +1,36 @@
-Analysis & Synthesis report for ula_mips
-Sun Oct 28 21:39:02 2018
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Analysis & Elaboration report for ula_mips
+Tue Oct 30 09:54:19 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: bancoRegistradores:regs
+  5. Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder
+  6. Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt
+  7. Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt|full_adder:full_adder
+  8. Parameter Settings for User Entity Instance: shifter26:shifter1
+  9. Parameter Settings for User Entity Instance: shifter:shifter2
+ 10. Parameter Settings for User Entity Instance: PC:PC
+ 11. Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados
+ 12. Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst
+ 13. Analysis & Elaboration Settings
+ 14. Port Connectivity Checks: "somador:somador1"
+ 15. Port Connectivity Checks: "mux2:mux_PC"
+ 16. Port Connectivity Checks: "ula_mips:ula|slt:slt|full_adder:full_adder"
+ 17. Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"
+ 18. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -25,35 +38,143 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Oct 28 21:39:02 2018           ;
-; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name               ; ula_mips                                    ;
-; Top-level Entity Name       ; mips_teste                                  ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Oct 30 09:54:19 2018       ;
+; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                 ; ula_mips                                    ;
+; Top-level Entity Name         ; mips_teste                                  ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bancoRegistradores:regs ;
++---------------------+-------+----------------------------------------+
+; Parameter Name      ; Value ; Type                                   ;
++---------------------+-------+----------------------------------------+
+; larguradados        ; 32    ; Signed Integer                         ;
+; larguraendbancoregs ; 5     ; Signed Integer                         ;
++---------------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; data_width     ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt|full_adder:full_adder ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter26:shifter1 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; data_width     ; 26    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter:shifter2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 32    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC:PC ;
++----------------+-------+---------------------------+
+; Parameter Name ; Value ; Type                      ;
++----------------+-------+---------------------------+
+; vector_size    ; 32    ; Signed Integer            ;
++----------------+-------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                    ;
+; addr_width     ; 5     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                        ;
+; addr_width     ; 3     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -63,13 +184,13 @@ agreement for further details.
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
 ; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
 ; Safe State Machine                                                              ; Off                ; Off                ;
@@ -119,7 +240,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -140,87 +261,154 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------+
+; Port Connectivity Checks: "somador:somador1" ;
++----------+-------+----------+----------------+
+; Port     ; Type  ; Severity ; Details        ;
++----------+-------+----------+----------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC   ;
++----------+-------+----------+----------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++-------------------------------------------+
+; Port Connectivity Checks: "mux2:mux_PC"   ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; b[1..0] ; Input ; Info     ; Stuck at GND ;
++---------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula_mips:ula|slt:slt|full_adder:full_adder"                                                  ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; c_in          ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; result[30..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c_out[29..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Oct 28 21:38:44 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_mips -c ula_mips
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Oct 30 09:54:05 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_mips -c ula_mips --analysis_and_elaboration
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file /home/parallels/intelFPGA_lite/18.0/quartus/linux64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula_mips.vhd
-    Info (12022): Found design unit 1: ula_mips-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 14
-    Info (12023): Found entity 1: ula_mips File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
+    Info (12022): Found design unit 1: ula_mips-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 14
+    Info (12023): Found entity 1: ula_mips File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
-    Info (12022): Found design unit 1: mux2-mux2_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 11
-    Info (12023): Found entity 1: mux2 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 4
+    Info (12022): Found design unit 1: mux2-mux2_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd Line: 24
-    Info (12023): Found entity 1: full_adder File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd Line: 8
+    Info (12022): Found design unit 1: full_adder-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd Line: 24
+    Info (12023): Found entity 1: full_adder File: /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
-    Info (12022): Found design unit 1: mux4-mux4_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 11
-    Info (12023): Found entity 1: mux4 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 4
+    Info (12022): Found design unit 1: mux4-mux4_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 11
+    Info (12023): Found entity 1: mux4 File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slt.vhd
-    Info (12022): Found design unit 1: slt-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/slt.vhd Line: 20
-    Info (12023): Found entity 1: slt File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/slt.vhd Line: 5
+    Info (12022): Found design unit 1: slt-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/slt.vhd Line: 20
+    Info (12023): Found entity 1: slt File: /home/parallels/Github/MIPS_2018/ula_mips/slt.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula_ctrl.vhd
-    Info (12022): Found design unit 1: ula_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 13
-    Info (12023): Found entity 1: ula_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 5
+    Info (12022): Found design unit 1: ula_ctrl-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 13
+    Info (12023): Found entity 1: ula_ctrl File: /home/parallels/Github/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fd_ctrl.vhd
-    Info (12022): Found design unit 1: fd_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 21
-    Info (12023): Found entity 1: fd_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
+    Info (12022): Found design unit 1: fd_ctrl-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 21
+    Info (12023): Found entity 1: fd_ctrl File: /home/parallels/Github/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mips_teste.vhd
-    Info (12022): Found design unit 1: mips_teste-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 23
-    Info (12023): Found entity 1: mips_teste File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
-Warning (12019): Can't analyze file -- file banco.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: mips_teste-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 21
+    Info (12023): Found entity 1: mips_teste File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/parallels/Github/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
+    Info (12023): Found entity 1: bancoRegistradores File: /home/parallels/Github/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file shifter.vhd
-    Info (12022): Found design unit 1: shifter-shifterarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd Line: 15
-    Info (12023): Found entity 1: shifter File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file estendesinal.vhd
-    Info (12022): Found design unit 1: estendeSinal-estendeSinalarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd Line: 13
-    Info (12023): Found entity 1: estendeSinal File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd Line: 5
+    Info (12022): Found design unit 1: shifter-shifterarch File: /home/parallels/Github/MIPS_2018/ula_mips/shifter.vhd Line: 15
+    Info (12023): Found entity 1: shifter File: /home/parallels/Github/MIPS_2018/ula_mips/shifter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file estendeSinal.vhd
+    Info (12022): Found design unit 1: estendeSinal-estendeSinalarch File: /home/parallels/Github/MIPS_2018/ula_mips/estendeSinal.vhd Line: 13
+    Info (12023): Found entity 1: estendeSinal File: /home/parallels/Github/MIPS_2018/ula_mips/estendeSinal.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
-    Info (12022): Found design unit 1: somador-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd Line: 14
-    Info (12023): Found entity 1: somador File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: PC-PC_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd Line: 13
-    Info (12023): Found entity 1: PC File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd Line: 4
+    Info (12022): Found design unit 1: somador-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/somador.vhd Line: 14
+    Info (12023): Found entity 1: somador File: /home/parallels/Github/MIPS_2018/ula_mips/somador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file PC.vhd
+    Info (12022): Found design unit 1: PC-PC_arch File: /home/parallels/Github/MIPS_2018/ula_mips/PC.vhd Line: 13
+    Info (12023): Found entity 1: PC File: /home/parallels/Github/MIPS_2018/ula_mips/PC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_de_dados.vhd
-    Info (12022): Found design unit 1: memoria_de_dados-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 27
-    Info (12023): Found entity 1: memoria_de_dados File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 7
+    Info (12022): Found design unit 1: memoria_de_dados-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 28
+    Info (12023): Found entity 1: memoria_de_dados File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_de_instrucoes.vhd
-    Info (12022): Found design unit 1: memoria_de_instrucoes-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 24
-    Info (12023): Found entity 1: memoria_de_instrucoes File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_de_instrucoes-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 24
+    Info (12023): Found entity 1: memoria_de_instrucoes File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file shifter26.vhd
-    Info (12022): Found design unit 1: shifter26-shifterarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd Line: 15
-    Info (12023): Found entity 1: shifter26 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd Line: 5
-Error (10476): VHDL error at memoria_de_dados.vhd(45): type of identifier "endereco" does not agree with its usage as "integer" type File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 45
-Error (10482): VHDL error at memoria_de_dados.vhd(45): object "data" is used but not declared File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 45
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 4859 megabytes
-    Error: Processing ended: Sun Oct 28 21:39:02 2018
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:42
+    Info (12022): Found design unit 1: shifter26-shifterarch File: /home/parallels/Github/MIPS_2018/ula_mips/shifter26.vhd Line: 15
+    Info (12023): Found entity 1: shifter26 File: /home/parallels/Github/MIPS_2018/ula_mips/shifter26.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux2de5.vhd
+    Info (12022): Found design unit 1: mux2de5-mux2_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd Line: 11
+    Info (12023): Found entity 1: mux2de5 File: /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd Line: 4
+Info (12127): Elaborating entity "mips_teste" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(8): used implicit default value for signal "saida" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(9): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux1_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux2_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux3_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux4_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "habEscReg_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "beq_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "habLeiMEM_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "habEscMEM_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(13): used implicit default value for signal "ULAop_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(15): used implicit default value for signal "ula_ctrl_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
+Info (12128): Elaborating entity "fd_ctrl" for hierarchy "fd_ctrl:fd_ctrl" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 37
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:regs" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 42
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_Rt_im" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at mux2.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at mux2.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 19
+Info (12128): Elaborating entity "ula_ctrl" for hierarchy "ula_ctrl:ula_ctrl" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 48
+Info (12128): Elaborating entity "ula_mips" for hierarchy "ula_mips:ula" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 51
+Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(20): object "overflow" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 20
+Info (12128): Elaborating entity "full_adder" for hierarchy "ula_mips:ula|full_adder:full_adder" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 30
+Info (12128): Elaborating entity "slt" for hierarchy "ula_mips:ula|slt:slt" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 33
+Info (12128): Elaborating entity "mux4" for hierarchy "ula_mips:ula|mux4:mux4" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at mux4.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at mux4.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at mux4.vhd(21): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at mux4.vhd(23): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 23
+Info (12128): Elaborating entity "shifter26" for hierarchy "shifter26:shifter1" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 62
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter2" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 65
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:extensor" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 68
+Info (12128): Elaborating entity "somador" for hierarchy "somador:somador1" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 71
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 80
+Info (12128): Elaborating entity "mux2de5" for hierarchy "mux2de5:mux_RtRd" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at mux2de5.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at mux2de5.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd Line: 19
+Info (12128): Elaborating entity "memoria_de_dados" for hierarchy "memoria_de_dados:memoriaDados" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at memoria_de_dados.vhd(54): signal "ler" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at memoria_de_dados.vhd(55): signal "dado_escrito" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at memoria_de_dados.vhd(55): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 55
+Info (12128): Elaborating entity "memoria_de_instrucoes" for hierarchy "memoria_de_instrucoes:memoriaInst" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 89
+Warning (10541): VHDL Signal Declaration warning at memoria_de_instrucoes.vhd(45): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 45
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 1328 megabytes
+    Info: Processing ended: Tue Oct 30 09:54:19 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:19
 
 
