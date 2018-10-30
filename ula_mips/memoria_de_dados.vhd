@@ -8,8 +8,8 @@ entity memoria_de_dados is
 
 	generic 
 	(
-		DATA_WIDTH : natural := 256;
-		ADDR_WIDTH : natural := 32
+		DATA_WIDTH : natural := 32;
+		ADDR_WIDTH : natural := 8
 	);
 
 	port 

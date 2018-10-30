@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ula_mips
-Tue Oct 30 10:01:47 2018
+Tue Oct 30 14:10:00 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -10,26 +10,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: bancoRegistradores:regs
- 10. Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder
- 11. Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt
- 12. Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt|full_adder:full_adder
- 13. Parameter Settings for User Entity Instance: shifter26:shifter1
- 14. Parameter Settings for User Entity Instance: shifter:shifter2
- 15. Parameter Settings for User Entity Instance: PC:PC
- 16. Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados
- 17. Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst
- 18. Port Connectivity Checks: "somador:somador1"
- 19. Port Connectivity Checks: "mux2:mux_PC"
- 20. Port Connectivity Checks: "ula_mips:ula|slt:slt|full_adder:full_adder"
- 21. Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -53,115 +34,111 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 30 10:01:47 2018       ;
-; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name                   ; ula_mips                                    ;
-; Top-level Entity Name           ; mips_teste                                  ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 113                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Tue Oct 30 14:10:00 2018           ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; ula_mips                                    ;
+; Top-level Entity Name              ; mips_teste                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; mips_teste         ; ula_mips           ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
-; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; mips_teste         ; ula_mips           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -180,247 +157,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; ula_mips.vhd                     ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd              ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd                  ;         ;
-; full_adder.vhd                   ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd            ;         ;
-; mux4.vhd                         ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd                  ;         ;
-; slt.vhd                          ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/slt.vhd                   ;         ;
-; ula_ctrl.vhd                     ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd              ;         ;
-; fd_ctrl.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd               ;         ;
-; mips_teste.vhd                   ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd            ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd    ;         ;
-; shifter.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd               ;         ;
-; estendeSinal.vhd                 ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd          ;         ;
-; somador.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd               ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd                    ;         ;
-; memoria_de_dados.vhd             ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd      ;         ;
-; memoria_de_instrucoes.vhd        ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd ;         ;
-; shifter26.vhd                    ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd             ;         ;
-; mux2de5.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd               ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 113   ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 113   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mips_teste                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 113  ; 0            ; |mips_teste         ; mips_teste  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: bancoRegistradores:regs ;
-+---------------------+-------+----------------------------------------+
-; Parameter Name      ; Value ; Type                                   ;
-+---------------------+-------+----------------------------------------+
-; larguradados        ; 32    ; Signed Integer                         ;
-; larguraendbancoregs ; 5     ; Signed Integer                         ;
-+---------------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; data_width     ; 32    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt|full_adder:full_adder ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shifter26:shifter1 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; data_width     ; 26    ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shifter:shifter2 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; data_width     ; 32    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------+
-; Parameter Settings for User Entity Instance: PC:PC ;
-+----------------+-------+---------------------------+
-; Parameter Name ; Value ; Type                      ;
-+----------------+-------+---------------------------+
-; vector_size    ; 32    ; Signed Integer            ;
-+----------------+-------+---------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                    ;
-; addr_width     ; 5     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                        ;
-; addr_width     ; 3     ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "somador:somador1" ;
-+----------+-------+----------+----------------+
-; Port     ; Type  ; Severity ; Details        ;
-+----------+-------+----------+----------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND   ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND   ;
-; b[2]     ; Input ; Info     ; Stuck at VCC   ;
-+----------+-------+----------+----------------+
-
-
-+-------------------------------------------+
-; Port Connectivity Checks: "mux2:mux_PC"   ;
-+---------+-------+----------+--------------+
-; Port    ; Type  ; Severity ; Details      ;
-+---------+-------+----------+--------------+
-; b[1..0] ; Input ; Info     ; Stuck at GND ;
-+---------+-------+----------+--------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ula_mips:ula|slt:slt|full_adder:full_adder"                                                  ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; c_in          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; result[30..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c_out[29..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"                                                  ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 113                         ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct 30 10:01:14 2018
+    Info: Processing started: Tue Oct 30 14:09:43 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_mips -c ula_mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -445,9 +188,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file ula_ctr
 Info (12021): Found 2 design units, including 1 entities, in source file fd_ctrl.vhd
     Info (12022): Found design unit 1: fd_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 21
     Info (12023): Found entity 1: fd_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file mips_teste.vhd
-    Info (12022): Found design unit 1: mips_teste-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 21
-    Info (12023): Found entity 1: mips_teste File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
+Error (10500): VHDL syntax error at mips_teste.vhd(13) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
+Error (10500): VHDL syntax error at mips_teste.vhd(30) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 30
+Info (12021): Found 0 design units, including 0 entities, in source file mips_teste.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
     Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
     Info (12023): Found entity 1: bancoRegistradores File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
@@ -475,172 +218,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file shifter
 Info (12021): Found 2 design units, including 1 entities, in source file mux2de5.vhd
     Info (12022): Found design unit 1: mux2de5-mux2_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 11
     Info (12023): Found entity 1: mux2de5 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 4
-Info (12127): Elaborating entity "mips_teste" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(8): used implicit default value for signal "saida" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(9): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux1_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux2_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux3_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "mux4_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "habEscReg_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "beq_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "habLeiMEM_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(11): used implicit default value for signal "habEscMEM_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(13): used implicit default value for signal "ULAop_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(15): used implicit default value for signal "ula_ctrl_teste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-Info (12128): Elaborating entity "fd_ctrl" for hierarchy "fd_ctrl:fd_ctrl" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 37
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:regs" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 42
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_Rt_im" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 45
-Warning (10492): VHDL Process Statement warning at mux2.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at mux2.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 19
-Info (12128): Elaborating entity "ula_ctrl" for hierarchy "ula_ctrl:ula_ctrl" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 48
-Info (12128): Elaborating entity "ula_mips" for hierarchy "ula_mips:ula" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 51
-Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(20): object "overflow" assigned a value but never read File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 20
-Info (12128): Elaborating entity "full_adder" for hierarchy "ula_mips:ula|full_adder:full_adder" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 30
-Info (12128): Elaborating entity "slt" for hierarchy "ula_mips:ula|slt:slt" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 33
-Info (12128): Elaborating entity "mux4" for hierarchy "ula_mips:ula|mux4:mux4" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at mux4.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at mux4.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 19
-Warning (10492): VHDL Process Statement warning at mux4.vhd(21): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at mux4.vhd(23): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 23
-Info (12128): Elaborating entity "shifter26" for hierarchy "shifter26:shifter1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 62
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter2" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 65
-Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:extensor" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 68
-Info (12128): Elaborating entity "somador" for hierarchy "somador:somador1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 71
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 80
-Info (12128): Elaborating entity "mux2de5" for hierarchy "mux2de5:mux_RtRd" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at mux2de5.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at mux2de5.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 19
-Info (12128): Elaborating entity "memoria_de_dados" for hierarchy "memoria_de_dados:memoriaDados" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at memoria_de_dados.vhd(54): signal "ler" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 54
-Warning (10492): VHDL Process Statement warning at memoria_de_dados.vhd(55): signal "dado_escrito" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 55
-Warning (10492): VHDL Process Statement warning at memoria_de_dados.vhd(55): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 55
-Info (12128): Elaborating entity "memoria_de_instrucoes" for hierarchy "memoria_de_instrucoes:memoriaInst" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 89
-Warning (10541): VHDL Signal Declaration warning at memoria_de_instrucoes.vhd(45): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 45
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "saida[0]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[1]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[2]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[5]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[6]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[7]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[8]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[9]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[10]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[11]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[12]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[13]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[14]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[15]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[16]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[17]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[18]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[19]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[20]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[21]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[22]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[23]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[24]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[25]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[26]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[27]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[28]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[29]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[30]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saida[31]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "zero" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
-    Warning (13410): Pin "mux1_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "mux2_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "mux3_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "mux4_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "habEscReg_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "beq_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "habLeiMEM_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "habEscMEM_teste" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "ULAop_teste[0]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
-    Warning (13410): Pin "ULAop_teste[1]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
-    Warning (13410): Pin "ula_ctrl_teste[0]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-    Warning (13410): Pin "ula_ctrl_teste[1]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-    Warning (13410): Pin "ula_ctrl_teste[2]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-    Warning (13410): Pin "ula_ctrl_teste[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 66 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 7
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 7
-    Warning (15610): No output dependent on input pin "A_aux[0]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[1]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[2]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[3]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[4]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[5]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[6]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[7]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[8]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[9]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[10]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[11]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[12]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[13]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[14]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[15]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[16]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[17]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[18]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[19]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[20]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[21]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[22]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[23]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[24]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[25]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[26]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[27]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[28]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[29]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[30]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "A_aux[31]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[0]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[1]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[2]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[3]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[4]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[5]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[6]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[7]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[8]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[9]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[10]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[11]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[12]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[13]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[14]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[15]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[16]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[17]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[18]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[19]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[20]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[21]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[22]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[23]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[24]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[25]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[26]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[27]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[28]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[29]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[30]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-    Warning (15610): No output dependent on input pin "B_aux[31]" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 17
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 66 input pins
-    Info (21059): Implemented 47 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Tue Oct 30 10:01:48 2018
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:48
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4798 megabytes
+    Error: Processing ended: Tue Oct 30 14:10:00 2018
+    Error: Elapsed time: 00:00:17
+    Error: Total CPU time (on all processors): 00:00:40
 
 

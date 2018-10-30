@@ -9,12 +9,7 @@ port(
 		  zero : out std_logic;
 
 		  mux1_teste, mux2_teste, mux3_teste, mux4_teste, habEscReg_teste, beq_teste, habLeiMEM_teste, habEscMEM_teste : out std_logic;
-		  
-		  ULAop_teste : out std_logic_vector(1 downto 0);
-
-		  ula_ctrl_teste : out std_logic_vector(3 downto 0);
-
-		  A_aux, B_aux : in std_logic_vector(31 downto 0)
+	
         );
 end mips_teste;
 
@@ -87,6 +82,6 @@ memoriaDados: entity work.memoria_de_dados
 		Port map (clk => clk, endereco => to_integer(signed(saida_aux)), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 
 memoriaInst: entity work.memoria_de_instrucoes
-		Port map(endereco => to_integer(signed(saida_PC)), dado => dado_aux);
+		Port map(endereco => to_integer(unsigned(saida_PC)), dado => dado_aux);
 
 end Behavioral;
