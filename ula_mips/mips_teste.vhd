@@ -4,12 +4,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity mips_teste is
 port( 
-		  clk, reset: in std_logic; 
-        saida, dado_simula : out std_logic_vector(31 downto 0);
-		  zero : out std_logic;
-
-		  mux1_teste, mux2_teste, mux3_teste, mux4_teste, habEscReg_teste, beq_teste, habLeiMEM_teste, habEscMEM_teste : out std_logic
-	
+		  clk : in std_logic; 
+        Reg3, entrada1_ULA, entrada2_ULA, saida : out std_logic_vector(31 downto 0);
+		  --zero : out std_logic;
+		  
+		  end1, end2, end3 : out std_logic_vector (4 downto 0)
         );
 end mips_teste;
 
@@ -38,7 +37,7 @@ regs: entity work.bancoRegistradores
 		Port map(clk => clk, enderecoA => dado_aux(25 downto 21), enderecoB => dado_aux(20 downto 16), enderecoC => saida_mux_RtRd, dadoEscritaC => saida_mux_ULA, escreveC => habEscReg_aux, saidaA => saidaA_regs, saidaB => saidaB_regs);
 		
 mux_Rt_im: entity work.mux2
-		Port map(A => saida_extensor, B => saidaB_regs, SEL => mux3_aux, Y => mux_Rt_im_aux);
+		Port map(A => saidaB_regs, B => saida_extensor, SEL => mux3_aux, Y => mux_Rt_im_aux);
 					
 ula_ctrl: entity work.ula_ctrl
 		Port map(ULAop => ULAop_aux, funct => dado_aux(5 downto 0), ula_ctrl => ula_ctrl_aux);
@@ -84,6 +83,12 @@ memoriaDados: entity work.memoria_de_dados
 memoriaInst: entity work.memoria_de_instrucoes
 		Port map(endereco => saida_PC(9 downto 2), dado => dado_aux);
 		
-dado_simula <= dado_aux;
+saida <= saida_aux;
+entrada1_ULA <= mux_Rt_im_aux;
+entrada2_ULA <= saidaA_regs;
+end1 <= dado_aux(25 downto 21);
+end2 <= dado_aux(20 downto 16);
+end3 <= saida_mux_RtRd;
+Reg3 <= saida_mux_ULA;
 
 end Behavioral;

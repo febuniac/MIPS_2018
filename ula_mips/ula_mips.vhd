@@ -37,5 +37,4 @@ mux4: entity work.mux4
 zero <= NOT (R3(31) OR R3(30) OR R3(29) OR R3(28) OR R3(27) OR R3(26) OR R3(25) OR R3(24) OR R3(23) OR R3(22) OR R3(21) OR R3(20) OR R3(19) OR R3(18) OR R3(17) OR R3(16) OR R3(15) OR R3(14) OR R3(13) OR R3(12) OR R3(11) OR R3(10) OR R3(9) OR R3(8) OR R3(7) OR R3(6) OR R3(5) OR R3(4) OR R3(3) OR R3(2) OR R3(1) OR R3(0)); 
 Q <= R3;
       
-
 end Behavioral;

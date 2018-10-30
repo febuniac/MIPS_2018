@@ -33,18 +33,18 @@ architecture comportamento of bancoRegistradores is
 
 -- So para teste:  ====================================================================
 
---  function inicializa_regs
---      return memoria_t is
---      variable tmp : memoria_t := (others => (others => '0'));
---  begin
---      tmp(0) := (others => '0');    -- $zero
---      return tmp;
---  end inicializa_regs;
+  function inicializa_regs
+      return memoria_t is
+      variable tmp : memoria_t := (others => (others => '0'));
+  begin
+      tmp(0) := (others => '0');    -- $zero
+      return tmp;
+  end inicializa_regs;
     -- ===================================================================================
 
     -- Declaracao dos registradores:
-    shared variable registrador : memoria_t;
---  shared variable registrador : memoria_t := inicializa_regs;
+--    shared variable registrador : memoria_t;
+  shared variable registrador : memoria_t := inicializa_regs;
 
 begin
     process(clk) is
