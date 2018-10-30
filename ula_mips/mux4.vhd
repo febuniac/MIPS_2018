@@ -10,7 +10,7 @@ end mux4;
 
 architecture mux4_arch of mux4 is
 begin
-process(SEL)
+process(ALL)
 begin
 	case SEL is
 		when "00" => --and/nor

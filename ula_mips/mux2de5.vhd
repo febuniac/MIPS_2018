@@ -10,7 +10,7 @@ end mux2de5;
 
 architecture mux2_arch of mux2de5 is
 begin
-process(SEL)
+process(ALL)
 begin
 	case SEL is
 		when '0' => 

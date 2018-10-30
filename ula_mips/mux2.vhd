@@ -10,7 +10,7 @@ end mux2;
 
 architecture mux2_arch of mux2 is
 begin
-process(SEL)
+process(SEL, A, B)
 begin
 	case SEL is
 		when '0' => 

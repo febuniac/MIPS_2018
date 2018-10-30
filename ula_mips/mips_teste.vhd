@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity mips_teste is
 port( 
 		  clk, reset: in std_logic; 
-        saida : out std_logic_vector(31 downto 0);
+        saida, dado_simula : out std_logic_vector(31 downto 0);
 		  zero : out std_logic;
 
 		  mux1_teste, mux2_teste, mux3_teste, mux4_teste, habEscReg_teste, beq_teste, habLeiMEM_teste, habEscMEM_teste : out std_logic
@@ -79,9 +79,11 @@ mux_RtRd: entity work.mux2de5
 		Port map(A => dado_aux(20 downto 16), B => dado_aux(15 downto 11), SEL => mux2_aux, Y => saida_mux_RtRd);
 		
 memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, endereco => to_integer(signed(saida_aux)), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
+		Port map (clk => clk, endereco => saida_aux(9 downto 2), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 
 memoriaInst: entity work.memoria_de_instrucoes
-		Port map(endereco => to_integer(unsigned(saida_PC)), dado => dado_aux);
+		Port map(endereco => saida_PC(9 downto 2), dado => dado_aux);
+		
+dado_simula <= dado_aux;
 
 end Behavioral;

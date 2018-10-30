@@ -3,6 +3,7 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity memoria_de_dados is
 
@@ -15,7 +16,7 @@ entity memoria_de_dados is
 	port 
 	(
 		clk		: in std_logic;
-		endereco	: in natural range 0 to 2**ADDR_WIDTH - 1;
+		endereco	: in std_logic_vector(ADDR_WIDTH - 1 downto 0);
 		
 		dado_escrito	: in std_logic_vector((DATA_WIDTH-1) downto 0);
 		ler		: in std_logic;
@@ -37,9 +38,6 @@ architecture rtl of memoria_de_dados is
 	attribute ram_init_file of ram:
 	signal is "RAM.mif";
 
-	-- Register to hold the address 
-	signal addr_reg : natural range 0 to 2**ADDR_WIDTH-1;
-
 begin
 
 	process(clk)
@@ -47,19 +45,13 @@ begin
 	if(rising_edge(clk)) then
 		if(escrever = '1') then
 
-			ram(endereco) <= dado_escrito;
+			ram(to_integer(unsigned(endereco))) <= dado_escrito;
 		end if;
     
-		-- Register the address for reading
-		addr_reg <= endereco;
-	end if;
-	
-	if(ler = '1') then
-		ram(endereco) <= dado_escrito;
 	end if;
 		
 	end process;
-
-	dado_lido <= ram(addr_reg);
-
+	
+	dado_lido <= ram(to_integer(unsigned(endereco))) when ler = '1' else (OTHERS => 'X');  
+					 
 end rtl;
