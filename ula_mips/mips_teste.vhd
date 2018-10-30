@@ -8,7 +8,7 @@ port(
         saida : out std_logic_vector(31 downto 0);
 		  zero : out std_logic;
 
-		  mux1_teste, mux2_teste, mux3_teste, mux4_teste, habEscReg_teste, beq_teste, habLeiMEM_teste, habEscMEM_teste : out std_logic;
+		  mux1_teste, mux2_teste, mux3_teste, mux4_teste, habEscReg_teste, beq_teste, habLeiMEM_teste, habEscMEM_teste : out std_logic
 	
         );
 end mips_teste;
