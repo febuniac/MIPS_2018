@@ -10,7 +10,7 @@ entity memoria_de_instrucoes is
 	generic 
 	(
 		DATA_WIDTH : natural := 32;
-		ADDR_WIDTH : natural := 3 -- 2^3 = 8
+		ADDR_WIDTH : natural := 256
 	);
 
 	port 
@@ -45,9 +45,7 @@ architecture rtl of memoria_de_instrucoes is
 	signal rom: memory_t;
 	attribute ram_init_file : string;
 	attribute ram_init_file of rom:
-	signal is "inst_ROM.mif";
-	
-
+	signal is "ROM.mif";
 
 begin
 

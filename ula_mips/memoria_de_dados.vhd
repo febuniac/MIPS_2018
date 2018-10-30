@@ -8,8 +8,8 @@ entity memoria_de_dados is
 
 	generic 
 	(
-		DATA_WIDTH : natural := 32;
-		ADDR_WIDTH : natural := 5 -- 2^5 = 32
+		DATA_WIDTH : natural := 256;
+		ADDR_WIDTH : natural := 32
 	);
 
 	port 
@@ -33,6 +33,9 @@ architecture rtl of memoria_de_dados is
 
 	-- Declare the RAM signal.	
 	signal ram : memory_t;
+	attribute ram_init_file : string;
+	attribute ram_init_file of ram:
+	signal is "RAM.mif";
 
 	-- Register to hold the address 
 	signal addr_reg : natural range 0 to 2**ADDR_WIDTH-1;
