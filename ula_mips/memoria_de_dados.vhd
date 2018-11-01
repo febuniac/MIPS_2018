@@ -32,11 +32,31 @@ architecture rtl of memoria_de_dados is
 	subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
 	type memory_t is array(2**ADDR_WIDTH-1 downto 0) of word_t;
 
-	-- Declare the RAM signal.	
-	signal ram : memory_t;
-	attribute ram_init_file : string;
-	attribute ram_init_file of ram:
-	signal is "RAM.mif";
+	function init_ram
+		return memory_t is 
+		variable tmp : memory_t := (others => (others => '0'));
+	begin 
+--		for addr_pos in 0 to 2**ADDR_WIDTH - 1 loop 
+--			-- Initialize each address with the address itself
+--			tmp(addr_pos) := std_logic_vector(to_unsigned(addr_pos, DATA_WIDTH));
+--		end loop;
+		tmp(0) := "00000000000000000000000000000000"; 
+		tmp(1) := "00000000000000000000000000000001"; 
+		tmp(2) := "00000000000000000000000000000010"; 
+		tmp(3) := "00000000000000000000000000000011"; 
+		tmp(4) := "00000000000000000000000000000100"; 
+		tmp(5) := "00000000000000000000000000000101";
+		tmp(6) := "00000000000000000000000000000110"; 
+		tmp(7) := "00000000000000000000000000000111"; 
+		tmp(8) := "00000000000000000000000000001000"; 
+		tmp(9) := "00000000000000000000000000001001"; 
+		return tmp;
+	end init_ram;	 
+
+	-- Declare the ROM signal and specify a default value.	Quartus Prime
+	-- will create a memory initialization file (.mif) based on the 
+	-- default value.
+	signal ram : memory_t := init_ram;
 
 begin
 
