@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ula_mips
-Tue Oct 30 19:13:39 2018
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Thu Nov 01 17:53:23 2018
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
 ---------------------
@@ -17,40 +17,38 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: bancoRegistradores:regs
- 13. Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder
- 14. Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt
- 15. Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt|full_adder:full_adder
- 16. Parameter Settings for User Entity Instance: shifter26:shifter1
- 17. Parameter Settings for User Entity Instance: shifter:shifter2
- 18. Parameter Settings for User Entity Instance: PC:PC
- 19. Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados
- 20. Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst
+ 12. Parameter Settings for User Entity Instance: PC:PC
+ 13. Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst
+ 14. Parameter Settings for User Entity Instance: shifter26:shifter1
+ 15. Parameter Settings for User Entity Instance: bancoRegistradores:regs
+ 16. Parameter Settings for User Entity Instance: shifter:shifter2
+ 17. Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder
+ 18. Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados
+ 19. Port Connectivity Checks: "ula_mips:ula|mux4:mux4"
+ 20. Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"
  21. Port Connectivity Checks: "somador:somador1"
  22. Port Connectivity Checks: "mux2:mux_PC"
- 23. Port Connectivity Checks: "ula_mips:ula|slt:slt|full_adder:full_adder"
- 24. Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
+devices manufactured by Altera and sold by Altera or its 
 authorized distributors.  Please refer to the applicable 
 agreement for further details.
 
@@ -59,16 +57,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 30 19:13:39 2018       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 01 17:53:23 2018       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; ula_mips                                    ;
 ; Top-level Entity Name              ; mips_teste                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 14,733                                      ;
-;     Total combinational functions  ; 6,361                                       ;
-;     Dedicated logic registers      ; 8,456                                       ;
-; Total registers                    ; 8456                                        ;
-; Total pins                         ; 144                                         ;
+; Total logic elements               ; 753                                         ;
+;     Total combinational functions  ; 529                                         ;
+;     Dedicated logic registers      ; 264                                         ;
+; Total registers                    ; 264                                         ;
+; Total pins                         ; 277                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -92,7 +90,7 @@ agreement for further details.
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
 ; Safe State Machine                                                         ; Off                ; Off                ;
@@ -160,6 +158,7 @@ agreement for further details.
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
@@ -176,33 +175,32 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; ula_mips.vhd                     ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd              ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd                  ;         ;
-; full_adder.vhd                   ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd            ;         ;
-; mux4.vhd                         ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd                  ;         ;
-; slt.vhd                          ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/slt.vhd                   ;         ;
-; ula_ctrl.vhd                     ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd              ;         ;
-; fd_ctrl.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd               ;         ;
-; mips_teste.vhd                   ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd            ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd    ;         ;
-; shifter.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd               ;         ;
-; estendeSinal.vhd                 ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd          ;         ;
-; somador.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd               ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd                    ;         ;
-; memoria_de_dados.vhd             ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd      ;         ;
-; memoria_de_instrucoes.vhd        ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd ;         ;
-; shifter26.vhd                    ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd             ;         ;
-; mux2de5.vhd                      ; yes             ; User VHDL File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd               ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ula_mips.vhd                     ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_mips.vhd              ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux2.vhd                  ;         ;
+; full_adder.vhd                   ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/full_adder.vhd            ;         ;
+; mux4.vhd                         ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux4.vhd                  ;         ;
+; ula_ctrl.vhd                     ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_ctrl.vhd              ;         ;
+; fd_ctrl.vhd                      ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/fd_ctrl.vhd               ;         ;
+; mips_teste.vhd                   ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd            ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/bancoRegistradores.vhd    ;         ;
+; shifter.vhd                      ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/shifter.vhd               ;         ;
+; estendeSinal.vhd                 ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/estendeSinal.vhd          ;         ;
+; somador.vhd                      ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/somador.vhd               ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/PC.vhd                    ;         ;
+; memoria_de_dados.vhd             ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_dados.vhd      ;         ;
+; memoria_de_instrucoes.vhd        ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd ;         ;
+; shifter26.vhd                    ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/shifter26.vhd             ;         ;
+; mux2de5.vhd                      ; yes             ; User VHDL File  ; C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux2de5.vhd               ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -210,58 +208,55 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 14,733    ;
+; Estimated Total logic elements              ; 753       ;
 ;                                             ;           ;
-; Total combinational functions               ; 6361      ;
+; Total combinational functions               ; 529       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 6010      ;
-;     -- 3 input functions                    ; 313       ;
-;     -- <=2 input functions                  ; 38        ;
+;     -- 4 input functions                    ; 454       ;
+;     -- 3 input functions                    ; 16        ;
+;     -- <=2 input functions                  ; 59        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6347      ;
+;     -- normal mode                          ; 515       ;
 ;     -- arithmetic mode                      ; 14        ;
 ;                                             ;           ;
-; Total registers                             ; 8456      ;
-;     -- Dedicated logic registers            ; 8456      ;
+; Total registers                             ; 264       ;
+;     -- Dedicated logic registers            ; 264       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 144       ;
+; I/O pins                                    ; 277       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 8456      ;
-; Total fan-out                               ; 50690     ;
-; Average fan-out                             ; 3.36      ;
+; Maximum fan-out                             ; 264       ;
+; Total fan-out                               ; 3256      ;
+; Average fan-out                             ; 2.42      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name           ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-----------------------+--------------+
-; |mips_teste                            ; 6361 (10)           ; 8456 (0)                  ; 0           ; 0            ; 0       ; 0         ; 144  ; 0            ; |mips_teste                                            ; mips_teste            ; work         ;
-;    |PC:PC|                             ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|PC:PC                                      ; PC                    ; work         ;
-;    |bancoRegistradores:regs|           ; 332 (332)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs                    ; bancoRegistradores    ; work         ;
-;    |fd_ctrl:fd_ctrl|                   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|fd_ctrl:fd_ctrl                            ; fd_ctrl               ; work         ;
-;    |memoria_de_dados:memoriaDados|     ; 5740 (5740)         ; 8192 (8192)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados              ; memoria_de_dados      ; work         ;
-;    |memoria_de_instrucoes:memoriaInst| ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_instrucoes:memoriaInst          ; memoria_de_instrucoes ; work         ;
-;    |mux2:mux_PC|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_PC                                ; mux2                  ; work         ;
-;    |mux2:mux_Rt_im|                    ; 35 (35)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_Rt_im                             ; mux2                  ; work         ;
-;    |mux2:mux_ULA|                      ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_ULA                               ; mux2                  ; work         ;
-;    |mux2de5:mux_RtRd|                  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2de5:mux_RtRd                           ; mux2de5               ; work         ;
-;    |somador:somador1|                  ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|somador:somador1                           ; somador               ; work         ;
-;    |somador:somador2|                  ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|somador:somador2                           ; somador               ; work         ;
-;    |ula_ctrl:ula_ctrl|                 ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_ctrl:ula_ctrl                          ; ula_ctrl              ; work         ;
-;    |ula_mips:ula|                      ; 134 (2)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula                               ; ula_mips              ; work         ;
-;       |full_adder:full_adder|          ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|full_adder:full_adder         ; full_adder            ; work         ;
-;       |mux2:mux2B|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux2:mux2B                    ; mux2                  ; work         ;
-;       |mux4:mux4|                      ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux4:mux4                     ; mux4                  ; work         ;
-;       |slt:slt|                        ; 31 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|slt:slt                       ; slt                   ; work         ;
-;          |full_adder:full_adder|       ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|slt:slt|full_adder:full_adder ; full_adder            ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name           ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-----------------------+--------------+
+; |mips_teste                            ; 529 (14)          ; 264 (0)      ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |mips_teste                                    ; mips_teste            ; work         ;
+;    |PC:PC|                             ; 5 (5)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|PC:PC                              ; PC                    ; work         ;
+;    |bancoRegistradores:regs|           ; 273 (273)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs            ; bancoRegistradores    ; work         ;
+;    |fd_ctrl:fd_ctrl|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|fd_ctrl:fd_ctrl                    ; fd_ctrl               ; work         ;
+;    |memoria_de_dados:memoriaDados|     ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados      ; memoria_de_dados      ; work         ;
+;    |memoria_de_instrucoes:memoriaInst| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_instrucoes:memoriaInst  ; memoria_de_instrucoes ; work         ;
+;    |mux2:mux_Rt_im|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_Rt_im                     ; mux2                  ; work         ;
+;    |mux2:mux_ULA|                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_ULA                       ; mux2                  ; work         ;
+;    |mux2de5:mux_RtRd|                  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2de5:mux_RtRd                   ; mux2de5               ; work         ;
+;    |somador:somador1|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|somador:somador1                   ; somador               ; work         ;
+;    |somador:somador2|                  ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|somador:somador2                   ; somador               ; work         ;
+;    |ula_ctrl:ula_ctrl|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_ctrl:ula_ctrl                  ; ula_ctrl              ; work         ;
+;    |ula_mips:ula|                      ; 98 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula                       ; ula_mips              ; work         ;
+;       |full_adder:full_adder|          ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|full_adder:full_adder ; full_adder            ; work         ;
+;       |mux2:mux2B|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux2:mux2B            ; mux2                  ; work         ;
+;       |mux4:mux4|                      ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux4:mux4             ; mux4                  ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1060,12 +1055,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8456  ;
+; Total registers                              ; 264   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8448  ;
+; Number of registers using Clock Enable       ; 256   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1075,71 +1070,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[11]                  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[22]                  ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |mips_teste|ula_mips:ula|mux4:mux4|Mux15 ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[14]                  ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[26]                  ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |mips_teste|ula_mips:ula|mux4:mux4|Mux29 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: bancoRegistradores:regs ;
-+---------------------+-------+----------------------------------------+
-; Parameter Name      ; Value ; Type                                   ;
-+---------------------+-------+----------------------------------------+
-; larguradados        ; 32    ; Signed Integer                         ;
-; larguraendbancoregs ; 5     ; Signed Integer                         ;
-+---------------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; data_width     ; 32    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ula_mips:ula|slt:slt|full_adder:full_adder ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shifter26:shifter1 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; data_width     ; 26    ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shifter:shifter2 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; data_width     ; 32    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------+
@@ -1149,17 +1083,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------+
 ; vector_size    ; 32    ; Signed Integer            ;
 +----------------+-------+---------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; data_width     ; 32    ; Signed Integer                                    ;
-; addr_width     ; 8     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1174,14 +1097,84 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter26:shifter1 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; data_width     ; 26    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bancoRegistradores:regs ;
++---------------------+-------+----------------------------------------+
+; Parameter Name      ; Value ; Type                                   ;
++---------------------+-------+----------------------------------------+
+; larguradados        ; 32    ; Signed Integer                         ;
+; larguraendbancoregs ; 5     ; Signed Integer                         ;
++---------------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter:shifter2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 32    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula_mips:ula|full_adder:full_adder ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoria_de_dados:memoriaDados ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                    ;
+; addr_width     ; 9     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "ula_mips:ula|mux4:mux4" ;
++----------+-------+----------+----------------------+
+; Port     ; Type  ; Severity ; Details              ;
++----------+-------+----------+----------------------+
+; d[31..1] ; Input ; Info     ; Stuck at GND         ;
++----------+-------+----------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------+
 ; Port Connectivity Checks: "somador:somador1" ;
 +----------+-------+----------+----------------+
 ; Port     ; Type  ; Severity ; Details        ;
 +----------+-------+----------+----------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND   ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND   ;
-; b[2]     ; Input ; Info     ; Stuck at VCC   ;
+; a[31..3] ; Input ; Info     ; Stuck at GND   ;
+; a[1..0]  ; Input ; Info     ; Stuck at GND   ;
+; a[2]     ; Input ; Info     ; Stuck at VCC   ;
 +----------+-------+----------+----------------+
 
 
@@ -1194,49 +1187,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ula_mips:ula|slt:slt|full_adder:full_adder"                                                  ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; c_in          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; result[30..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c_out[29..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ula_mips:ula|full_adder:full_adder"                                                  ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 144                         ;
-; cycloneiii_ff         ; 8456                        ;
-;     ENA               ; 8448                        ;
+; boundary_port         ; 277                         ;
+; cycloneiii_ff         ; 264                         ;
+;     ENA               ; 256                         ;
 ;     SLD               ; 5                           ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 6362                        ;
+; cycloneiii_lcell_comb ; 530                         ;
 ;     arith             ; 14                          ;
 ;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 5                           ;
-;     normal            ; 6348                        ;
+;     normal            ; 516                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 308                         ;
-;         4 data inputs ; 6010                        ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 454                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 40.00                       ;
-; Average LUT depth     ; 13.76                       ;
+; Max LUT depth         ; 42.00                       ;
+; Average LUT depth     ; 24.74                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1245,7 +1218,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:34     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1254,102 +1227,163 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct 30 19:12:49 2018
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Thu Nov 01 17:53:02 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_mips -c ula_mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula_mips.vhd
-    Info (12022): Found design unit 1: ula_mips-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 14
-    Info (12023): Found entity 1: ula_mips File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
+    Info (12022): Found design unit 1: ula_mips-Behavioral File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_mips.vhd Line: 14
+    Info (12023): Found entity 1: ula_mips File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
-    Info (12022): Found design unit 1: mux2-mux2_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 11
-    Info (12023): Found entity 1: mux2 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 4
+    Info (12022): Found design unit 1: mux2-mux2_arch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd Line: 24
-    Info (12023): Found entity 1: full_adder File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd Line: 8
+    Info (12022): Found design unit 1: full_adder-rtl File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/full_adder.vhd Line: 25
+    Info (12023): Found entity 1: full_adder File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/full_adder.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
-    Info (12022): Found design unit 1: mux4-mux4_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 11
-    Info (12023): Found entity 1: mux4 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file slt.vhd
-    Info (12022): Found design unit 1: slt-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/slt.vhd Line: 20
-    Info (12023): Found entity 1: slt File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/slt.vhd Line: 5
+    Info (12022): Found design unit 1: mux4-mux4_arch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux4.vhd Line: 11
+    Info (12023): Found entity 1: mux4 File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ula_ctrl.vhd
-    Info (12022): Found design unit 1: ula_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 13
-    Info (12023): Found entity 1: ula_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 5
+    Info (12022): Found design unit 1: ula_ctrl-Behavioral File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 13
+    Info (12023): Found entity 1: ula_ctrl File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fd_ctrl.vhd
-    Info (12022): Found design unit 1: fd_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 21
-    Info (12023): Found entity 1: fd_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
+    Info (12022): Found design unit 1: fd_ctrl-Behavioral File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 21
+    Info (12023): Found entity 1: fd_ctrl File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mips_teste.vhd
-    Info (12022): Found design unit 1: mips_teste-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-    Info (12023): Found entity 1: mips_teste File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
+    Info (12022): Found design unit 1: mips_teste-Behavioral File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 16
+    Info (12023): Found entity 1: mips_teste File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file shifter.vhd
-    Info (12022): Found design unit 1: shifter-shifterarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd Line: 15
-    Info (12023): Found entity 1: shifter File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd Line: 5
+    Info (12022): Found design unit 1: shifter-shifterarch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/shifter.vhd Line: 15
+    Info (12023): Found entity 1: shifter File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/shifter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file estendesinal.vhd
-    Info (12022): Found design unit 1: estendeSinal-estendeSinalarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd Line: 13
-    Info (12023): Found entity 1: estendeSinal File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd Line: 5
+    Info (12022): Found design unit 1: estendeSinal-estendeSinalarch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/estendeSinal.vhd Line: 13
+    Info (12023): Found entity 1: estendeSinal File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/estendeSinal.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
-    Info (12022): Found design unit 1: somador-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd Line: 14
-    Info (12023): Found entity 1: somador File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd Line: 6
+    Info (12022): Found design unit 1: somador-Behavioral File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/somador.vhd Line: 14
+    Info (12023): Found entity 1: somador File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/somador.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: PC-PC_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd Line: 13
-    Info (12023): Found entity 1: PC File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd Line: 4
+    Info (12022): Found design unit 1: PC-PC_arch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/PC.vhd Line: 13
+    Info (12023): Found entity 1: PC File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/PC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_de_dados.vhd
-    Info (12022): Found design unit 1: memoria_de_dados-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 29
-    Info (12023): Found entity 1: memoria_de_dados File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_de_dados-rtl File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 29
+    Info (12023): Found entity 1: memoria_de_dados File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_de_instrucoes.vhd
-    Info (12022): Found design unit 1: memoria_de_instrucoes-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 24
-    Info (12023): Found entity 1: memoria_de_instrucoes File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_de_instrucoes-rtl File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 24
+    Info (12023): Found entity 1: memoria_de_instrucoes File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file shifter26.vhd
-    Info (12022): Found design unit 1: shifter26-shifterarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd Line: 15
-    Info (12023): Found entity 1: shifter26 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd Line: 5
+    Info (12022): Found design unit 1: shifter26-shifterarch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/shifter26.vhd Line: 15
+    Info (12023): Found entity 1: shifter26 File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/shifter26.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2de5.vhd
-    Info (12022): Found design unit 1: mux2de5-mux2_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 11
-    Info (12023): Found entity 1: mux2de5 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 4
+    Info (12022): Found design unit 1: mux2de5-mux2_arch File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux2de5.vhd Line: 11
+    Info (12023): Found entity 1: mux2de5 File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mux2de5.vhd Line: 4
 Info (12127): Elaborating entity "mips_teste" for the top level hierarchy
-Info (12128): Elaborating entity "fd_ctrl" for hierarchy "fd_ctrl:fd_ctrl" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 31
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:regs" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 36
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_Rt_im" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 39
-Info (12128): Elaborating entity "ula_ctrl" for hierarchy "ula_ctrl:ula_ctrl" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 42
-Info (12128): Elaborating entity "ula_mips" for hierarchy "ula_mips:ula" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(18): object "c_out_adder" assigned a value but never read File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 18
-Info (12128): Elaborating entity "full_adder" for hierarchy "ula_mips:ula|full_adder:full_adder" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 28
-Info (12128): Elaborating entity "slt" for hierarchy "ula_mips:ula|slt:slt" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 31
-Info (12128): Elaborating entity "mux4" for hierarchy "ula_mips:ula|mux4:mux4" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 34
-Info (12128): Elaborating entity "shifter26" for hierarchy "shifter26:shifter1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 56
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter2" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 59
-Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:extensor" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 62
-Info (12128): Elaborating entity "somador" for hierarchy "somador:somador1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 65
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 74
-Info (12128): Elaborating entity "mux2de5" for hierarchy "mux2de5:mux_RtRd" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 77
-Info (12128): Elaborating entity "memoria_de_dados" for hierarchy "memoria_de_dados:memoriaDados" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 80
-Info (12128): Elaborating entity "memoria_de_instrucoes" for hierarchy "memoria_de_instrucoes:memoriaInst" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 83
+Info (12128): Elaborating entity "fd_ctrl" for hierarchy "fd_ctrl:fd_ctrl" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 32
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 37
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_PC" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 40
+Info (12128): Elaborating entity "memoria_de_instrucoes" for hierarchy "memoria_de_instrucoes:memoriaInst" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 43
+Info (12128): Elaborating entity "somador" for hierarchy "somador:somador1" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 46
+Info (12128): Elaborating entity "shifter26" for hierarchy "shifter26:shifter1" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 49
+Info (12128): Elaborating entity "mux2de5" for hierarchy "mux2de5:mux_RtRd" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 52
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:extensor" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 55
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:regs" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 58
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter2" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 64
+Info (12128): Elaborating entity "ula_ctrl" for hierarchy "ula_ctrl:ula_ctrl" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 70
+Info (12128): Elaborating entity "ula_mips" for hierarchy "ula_mips:ula" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 73
+Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(18): object "c_out_adder" assigned a value but never read File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_mips.vhd Line: 18
+Info (12128): Elaborating entity "full_adder" for hierarchy "ula_mips:ula|full_adder:full_adder" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_mips.vhd Line: 30
+Info (12128): Elaborating entity "mux4" for hierarchy "ula_mips:ula|mux4:mux4" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/ula_mips.vhd Line: 36
+Info (12128): Elaborating entity "memoria_de_dados" for hierarchy "memoria_de_dados:memoriaDados" File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 84
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoria_de_dados:memoriaDados|ram" is uninferred due to asynchronous read logic File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 36
-    Info (276007): RAM logic "bancoRegistradores:regs|registrador" is uninferred due to asynchronous read logic File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 47
+    Info (276007): RAM logic "memoria_de_dados:memoriaDados|ram" is uninferred due to asynchronous read logic File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 59
+    Info (276007): RAM logic "bancoRegistradores:regs|registrador" is uninferred due to asynchronous read logic File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 47
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "end1[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end1[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end2[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end2[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end3[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end3[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+    Warning (13410): Pin "instrucao[4]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[6]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[7]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[8]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[9]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[10]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[15]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[19]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[20]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[23]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[24]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[25]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[30]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[4]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[6]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[7]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[8]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[9]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[10]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[15]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[16]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[17]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[18]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[19]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[20]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[21]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[22]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[23]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[24]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[25]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[26]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[27]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[28]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[29]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[30]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[31]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[4]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[5]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[6]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[7]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[8]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[9]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[10]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[11]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[12]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[13]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[14]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[15]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[16]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[17]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[18]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[19]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[20]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[21]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[22]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[23]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[24]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[25]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[26]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[27]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[28]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[29]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[30]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "dadolido[31]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "ula_control[3]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 10
+    Warning (13410): Pin "end1[2]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
+    Warning (13410): Pin "end1[3]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
+    Warning (13410): Pin "end1[4]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
+    Warning (13410): Pin "end2[3]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
+    Warning (13410): Pin "end2[4]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
+    Warning (13410): Pin "end3[4]" is stuck at GND File: C:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 790 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 14941 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1062 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 143 output pins
-    Info (21061): Implemented 14797 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Tue Oct 30 19:13:39 2018
-    Info: Elapsed time: 00:00:50
-    Info: Total CPU time (on all processors): 00:01:07
+    Info (21059): Implemented 276 output pins
+    Info (21061): Implemented 785 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 940 megabytes
+    Info: Processing ended: Thu Nov 01 17:53:23 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:46
 
 

@@ -5,9 +5,10 @@ use IEEE.NUMERIC_STD.ALL;
 entity mips_teste is
 port( 
 		  clk : in std_logic; 
-        Reg3, instrucao, entrada1_ULA, entrada2_ULA, saida : out std_logic_vector(31 downto 0);
+        Reg3, saida2Regs, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
 		  --zero : out std_logic;
 		  ula_control : out std_logic_vector (3 downto 0);
+		  mux_ulamem : out std_logic;
 		  end1, end2, end3 : out std_logic_vector (4 downto 0)
         );
 end mips_teste;
@@ -81,16 +82,20 @@ mux_beq: entity work.mux2
 		Port map(A => saida_somador1, B => saida_somador2, SEL => and_beq, Y => saida_mux_beq);
 		
 memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, endereco => saida_aux(9 downto 2), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
+		Port map (clk => clk, endereco => saida_aux(10 downto 2), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 		
 saida <= saida_aux;
 entrada1_ULA <= saidaA_regs;
 entrada2_ULA <= mux_Rt_im_aux;
+saida2Regs <= saidaB_regs;
+saidaExtensor <= saida_extensor;
+mux_ulamem <= mux4_aux;
 end1 <= dado_aux(25 downto 21);
 end2 <= dado_aux(20 downto 16);
 end3 <= saida_mux_RtRd;
 Reg3 <= saida_mux_ULA;
 instrucao <= dado_aux;
 ula_control <= ula_ctrl_aux;
+dadolido <= dado_lido_aux;
 
 end Behavioral;

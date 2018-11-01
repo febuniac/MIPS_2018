@@ -10,14 +10,14 @@ entity memoria_de_dados is
 	generic 
 	(
 		DATA_WIDTH : natural := 32;
-		ADDR_WIDTH : natural := 8
+		ADDR_WIDTH : natural := 9
 	);
 
 	port 
 	(
 		clk		: in std_logic;
 		endereco	: in std_logic_vector(ADDR_WIDTH - 1 downto 0);
-		
+		--endereco	: in natural range 
 		dado_escrito	: in std_logic_vector((DATA_WIDTH-1) downto 0);
 		ler		: in std_logic;
 		escrever		: in std_logic;
@@ -41,9 +41,9 @@ architecture rtl of memoria_de_dados is
 --			tmp(addr_pos) := std_logic_vector(to_unsigned(addr_pos, DATA_WIDTH));
 --		end loop;
 		tmp(0) := "00000000000000000000000000000000"; 
-		tmp(1) := "00000000000000000000000000000001"; 
+		tmp(1) := "00000000000000000000000000000011"; 
 		tmp(2) := "00000000000000000000000000000010"; 
-		tmp(3) := "00000000000000000000000000000011"; 
+		tmp(3) := "00000000000000000000000000000001"; 
 		tmp(4) := "00000000000000000000000000000100"; 
 		tmp(5) := "00000000000000000000000000000101";
 		tmp(6) := "00000000000000000000000000000110"; 
@@ -60,18 +60,18 @@ architecture rtl of memoria_de_dados is
 
 begin
 
-	process(clk)
-	begin
-	if(rising_edge(clk)) then
-		if(escrever = '1') then
-
-			ram(to_integer(unsigned(endereco))) <= dado_escrito;
-		end if;
-    
-	end if;
-		
-	end process;
-	
-	dado_lido <= ram(to_integer(unsigned(endereco))) when ler = '1' else (OTHERS => 'X');  
-					 
+--	process(clk)
+--	begin
+--	if(rising_edge(clk)) then
+--		if(escrever = '1') then
+--			ram(to_integer(unsigned(endereco))) <= dado_escrito;
+--		end if;
+--	end if;
+--	end process;
+--	process(all)
+--	begin
+--	if(ler = '1') then
+		dado_lido <= ram(to_integer(unsigned(endereco))); -- when ler = '1' else (OTHERS => 'Z');  
+--	end if;
+--	end process;
 end rtl;

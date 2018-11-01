@@ -40,18 +40,16 @@
 set_global_assignment -name TOP_LEVEL_ENTITY mips_teste
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:39:37  OCTOBER 11, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name VHDL_FILE ula_mips.vhd
 set_global_assignment -name VHDL_FILE mux2.vhd
 set_global_assignment -name VHDL_FILE full_adder.vhd
 set_global_assignment -name VHDL_FILE mux4.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VHDL_FILE ula_ctrl.vhd
 set_global_assignment -name VHDL_FILE fd_ctrl.vhd
 set_global_assignment -name VHDL_FILE mips_teste.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VHDL_FILE bancoRegistradores.vhd
 set_global_assignment -name VHDL_FILE shifter.vhd
 set_global_assignment -name VHDL_FILE estendeSinal.vhd
@@ -67,20 +65,6 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
 set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name VHDL_FILE mux2de5.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
 
 #============================================================
 # Build by Altera University Program
@@ -1260,11 +1244,13 @@ set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to HEX0
 set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to HEX1
 set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to KEY
 set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to SW
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform20.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
