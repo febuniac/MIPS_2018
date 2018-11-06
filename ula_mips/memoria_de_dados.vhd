@@ -16,7 +16,7 @@ entity memoria_de_dados is
 	port 
 	(
 		clk		: in std_logic;
-		endereco	: in std_logic_vector(ADDR_WIDTH - 1 downto 0);
+		endereco	: in natural range 0 to 2**ADDR_WIDTH - 1;
 		--endereco	: in natural range 
 		dado_escrito	: in std_logic_vector((DATA_WIDTH-1) downto 0);
 		ler		: in std_logic;
@@ -60,18 +60,18 @@ architecture rtl of memoria_de_dados is
 
 begin
 
---	process(clk)
---	begin
---	if(rising_edge(clk)) then
---		if(escrever = '1') then
---			ram(to_integer(unsigned(endereco))) <= dado_escrito;
---		end if;
---	end if;
---	end process;
+	process(clk)
+	begin
+	if(rising_edge(clk)) then
+		if(escrever = '1') then
+			ram(endereco) <= dado_escrito;
+		end if;
+	end if;
+	end process;
 --	process(all)
 --	begin
 --	if(ler = '1') then
-		dado_lido <= ram(to_integer(unsigned(endereco))); -- when ler = '1' else (OTHERS => 'Z');  
+		dado_lido <= ram(endereco) when ler = '1' else (OTHERS => '0');  
 --	end if;
 --	end process;
 end rtl;

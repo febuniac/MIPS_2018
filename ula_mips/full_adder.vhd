@@ -16,7 +16,7 @@ entity full_adder is
 	(
 		a, b     : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		c_in : in std_logic;
-		result, c_out : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		result : out std_logic_vector((DATA_WIDTH-1) downto 0);
 		overflow : out std_logic
 	);
 
@@ -35,8 +35,6 @@ begin
 	result_aux(DATA_WIDTH-1 downto 1) <= (a(DATA_WIDTH-1 downto 1) xor b(DATA_WIDTH-1 downto 1)) xor c_out_aux(DATA_WIDTH-2 downto 0);
 	
 	overflow <= ((NOT a(31)) AND (NOT b(31)) AND result_aux(31)) OR (a(31) AND b(31) AND (NOT result_aux(31)));
-	
-	c_out <= c_out_aux;
 	
 	result <= result_aux;
 	

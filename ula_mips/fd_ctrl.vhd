@@ -36,7 +36,7 @@ begin
 			  '0';
 	mux4 <= '1' when op_code = "100011" else
 	        '0';
-	beq <= '1' when op_code = "000010" else
+	beq <= '1' when op_code = "000100" else
 			 '0';
 	habLeiMEM <= '1' when op_code = "100011" else
 	             '0'; 

@@ -15,21 +15,19 @@ port(
 		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
 	 
 		  clk : in std_logic; 
-        Reg3, saida2Regs, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
+        instrucao, soma1 : out std_logic_vector(31 downto 0)
 		  --zero : out std_logic;
-		  ula_control : out std_logic_vector (3 downto 0);
-		  mux_ulamem : out std_logic;
-		  end1, end2, end3 : out std_logic_vector (4 downto 0)
+
         );
 end mips_teste;
 
 architecture Behavioral of mips_teste is
 
-signal zero_aux, mux1_aux, mux2_aux, mux3_aux, mux4_aux, habEscReg_aux, beq_aux, habLeiMEM_aux, habEscMEM_aux, and_beq : std_logic;
+signal auxOverFlow, zero_aux, mux1_aux, mux2_aux, mux3_aux, mux4_aux, habEscReg_aux, beq_aux, habLeiMEM_aux, habEscMEM_aux, and_beq : std_logic;
 
 signal ULAop_aux : std_logic_vector(1 downto 0);
 
-signal ula_ctrl_aux : std_logic_vector(3 downto 0);
+signal ula_ctrl_aux, auxSaida : std_logic_vector(3 downto 0);
 
 signal saida_mux_RtRd : std_logic_vector (4 downto 0);
 
@@ -51,7 +49,7 @@ mux_PC: entity work.mux2
 		Port map(A => saida_mux_beq, B => saida_somador1(31 downto 28) & saida_shifter1 & "00" , SEL => mux1_aux, Y => saida_mux_PC);					
 
 memoriaInst: entity work.memoria_de_instrucoes
-		Port map(endereco => saida_PC(9 downto 2), dado => dado_aux);
+		Port map(endereco => to_integer(unsigned(saida_PC(9 downto 2))), dado => dado_aux);
 		
 somador1: entity work.somador
 		Port map(A => "00000000000000000000000000000100", B => saida_PC, Y => saida_somador1);
@@ -92,23 +90,12 @@ mux_beq: entity work.mux2
 		Port map(A => saida_somador1, B => saida_somador2, SEL => and_beq, Y => saida_mux_beq);
 		
 memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, endereco => saida_aux(10 downto 2), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
+		Port map (clk => clk, endereco => to_integer(unsigned(saida_aux(10 downto 2))), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 		
 display0 : entity work.conversorHex7seg
     Port map (saida7seg => HEX0, dadoHex => auxSaida(3 downto 0), apaga => auxOverFlow);
 	 
-saida <= saida_aux;
-entrada1_ULA <= saidaA_regs;
-entrada2_ULA <= mux_Rt_im_aux;
-saida2Regs <= saidaB_regs;
-saidaExtensor <= saida_extensor;
-mux_ulamem <= mux4_aux;
-end1 <= dado_aux(25 downto 21);
-end2 <= dado_aux(20 downto 16);
-end3 <= saida_mux_RtRd;
-Reg3 <= saida_mux_ULA;
+soma1 <= saida_somador1;
 instrucao <= dado_aux;
-ula_control <= ula_ctrl_aux;
-dadolido <= dado_lido_aux;
 
 end Behavioral;

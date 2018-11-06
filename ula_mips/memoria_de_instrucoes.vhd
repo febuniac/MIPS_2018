@@ -15,7 +15,7 @@ entity memoria_de_instrucoes is
 
 	port 
 	(
-		endereco	: in std_logic_vector(ADDR_WIDTH-1 downto 0);
+		endereco	: in natural range 0 to 2**ADDR_WIDTH - 1;
 		dado		: out std_logic_vector((DATA_WIDTH -1) downto 0)
 	);
 
@@ -38,15 +38,19 @@ architecture rtl of memoria_de_instrucoes is
 		tmp(0) := "00000000000000000000000000000000"; -- nop
 		tmp(1) := b"100011_00000_00010_0000000000000001"; -- poe em r2 o que estava na memoria r0 + 1
 		tmp(2) := b"100011_00000_00001_0000000000000100"; -- poe em r1 o que estava na memoria r0 + 4
-		tmp(3) := b"000000_00001_00010_00011_00000_100000"; -- r1+r2 no r3 (add)
-		tmp(4) := b"000000_00001_00010_00100_00000_100010"; --r1-r2 no r4 (sub)
-		tmp(5) := b"000000_00001_00010_00101_00000_100100"; --r1 and r2 no r5 (and)
-		tmp(6) := b"000000_00001_00010_00110_00000_100101"; --r1 or r2 no r6 (or)
-		tmp(7) := b"000000_00010_00001_00111_00000_101010"; --r1 slt r2 no r7 (slt)
-		tmp(8) := b"000100_00011_00100_0000000000000001"; -- beq r3 e r4
-		tmp(9) := b"000010_00000000000000000000001001"; -- jmp para 9
-		tmp(10) := b"101011_00000_00011_0000000000000101"; --sw
-		tmp(11) := b"000000_00000_00000_01000_00000_100000"; -- r0+r0 no r8 (add)
+		tmp(3) := b"000000_00001_00001_00011_00000_100000"; -- r1+r1 no r3 (add)
+		--tmp(4) := b"000000_00001_00010_00100_00000_100010"; --r1-r2 no r4 (sub)
+		--tmp(5) := b"000000_00001_00010_00101_00000_100100"; --r1 and r2 no r5 (and)
+		--tmp(6) := b"000000_00001_00010_00110_00000_100101"; --r1 or r2 no r6 (or)
+		--tmp(7) := b"000000_00010_00001_00111_00000_101010"; --r1 slt r2 no r7 (slt)
+		tmp(4) := b"000100_00000_00000_0000000000000111"; -- beq r0 e r0
+		--tmp(9) := b"000010_00000000000000000000001000"; -- jmp para 8
+		--tmp(10) := b"101011_00000_00001_0000000000000101"; --sw pego o conteudo de r1 e coloco em r0 + 5 
+		--tmp(11) := b"101011_00000_00011_0000000000000110"; --sw pego o conteudo de r3 e coloco em r0 + 6 
+		--tmp(12) := b"100011_00000_00010_0000000000000101"; -- lw pego o conteudo de r0 + 5 e coloco em r2
+		--tmp(13) := b"100011_00000_00100_0000000000000110"; -- lw pego o conteudo de r0 + 6 e coloco em r4
+		--tmp(14) := b"000000_00010_00100_01000_00000_100000"; --add r2+r4 no r8
+		--tmp(15) := b"000000_00010_01000_00100_01001_100010"; --sub r2-r8 no r9
 		return tmp;
 	end init_rom;	 
 
@@ -60,7 +64,7 @@ architecture rtl of memoria_de_instrucoes is
 --	signal is "ROM.mif";
 
 begin
-	dado <= rom(to_integer(unsigned(endereco)));
+	dado <= rom(endereco);
 	--dado(23 downto 16) <= rom(endereco+1);
 	--dado(15 downto 8) <= rom(endereco+2);
 	--dado(7 downto 0) <= rom(endereco+3);
