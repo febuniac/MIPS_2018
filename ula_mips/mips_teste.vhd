@@ -92,8 +92,44 @@ mux_beq: entity work.mux2
 memoriaDados: entity work.memoria_de_dados
 		Port map (clk => clk, endereco => to_integer(unsigned(saida_aux(10 downto 2))), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 		
-display0 : entity work.conversorHex7seg
-    Port map (saida7seg => HEX0, dadoHex => auxSaida(3 downto 0), apaga => auxOverFlow);
+
+--display7 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_17,
+--		 saida7seg => HEX7);
+--
+--display6 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_16,
+--		 saida7seg => HEX6);
+--		 
+--
+--display5 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_15,
+--		 saida7seg => HEX5);
+--
+--
+--display4 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_14,
+--		 saida7seg => HEX4);
+--
+--
+--
+--display3 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_13,
+--		 saida7seg => HEX3);
+--
+--
+--display2 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_12,
+--		 saida7seg => HEX2);
+--
+--
+--display1 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_11,
+--		 saida7seg => HEX1);
+--
+--display0 : entity work.conversorHex7seg
+--PORT MAP(dadoHex => SYNTHESIZED_WIRE_10,
+--		 saida7seg => HEX0);
 	 
 soma1 <= saida_somador1;
 instrucao <= dado_aux;
