@@ -4,6 +4,16 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity mips_teste is
 port( 
+			    -- Entradas (placa)
+		  CLOCK_50 : in STD_LOGIC;
+		  KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  SW: in STD_LOGIC_VECTOR(17 DOWNTO 0);
+		  
+		  -- Saidas (placa)
+	 	  LEDR  : out STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
+		  LEDG  : out STD_LOGIC_VECTOR(8 DOWNTO 0) := (others => '0');
+		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	 
 		  clk : in std_logic; 
         Reg3, saida2Regs, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
 		  --zero : out std_logic;
@@ -84,6 +94,9 @@ mux_beq: entity work.mux2
 memoriaDados: entity work.memoria_de_dados
 		Port map (clk => clk, endereco => saida_aux(10 downto 2), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
 		
+display0 : entity work.conversorHex7seg
+    Port map (saida7seg => HEX0, dadoHex => auxSaida(3 downto 0), apaga => auxOverFlow);
+	 
 saida <= saida_aux;
 entrada1_ULA <= saidaA_regs;
 entrada2_ULA <= mux_Rt_im_aux;
