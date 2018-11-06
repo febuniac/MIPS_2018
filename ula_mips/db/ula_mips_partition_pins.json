@@ -4,15 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "instrucao[0]",
-					"strict" : false
-				},
-				{
-					"name" : "instrucao[1]",
-					"strict" : false
-				},
-				{
 					"name" : "instrucao[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[4]",
 					"strict" : false
 				},
 				{
