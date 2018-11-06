@@ -23,17 +23,18 @@ end mips_teste;
 
 architecture Behavioral of mips_teste is
 
-signal auxOverFlow, zero_aux, mux1_aux, mux2_aux, mux3_aux, mux4_aux, habEscReg_aux, beq_aux, habLeiMEM_aux, habEscMEM_aux, and_beq : std_logic;
+signal aux_seven_segments,and_memDadosLeitura, and_memDadosEscrita, aux_mem_dados_leitura,aux_mem_dados_escrita,auxOverFlow, zero_aux, mux1_aux, mux2_aux, mux3_aux, mux4_aux, habEscReg_aux, beq_aux, habLeiMEM_aux, habEscMEM_aux, and_beq : std_logic;
 
 signal ULAop_aux : std_logic_vector(1 downto 0);
 
-signal ula_ctrl_aux, auxSaida : std_logic_vector(3 downto 0);
+signal aux_hex0,aux_hex1,aux_hex2,aux_hex3,aux_hex4,aux_hex5,aux_hex6,ula_ctrl_aux, auxSaida : std_logic_vector(3 downto 0);
 
 signal saida_mux_RtRd : std_logic_vector (4 downto 0);
 
 signal saida_shifter1 : std_logic_vector (25 downto 0);
 
 signal saida_somador1, saida_somador2, saida_aux, dado_aux, saida_PC, saidaA_regs, saidaB_regs, mux_Rt_im_aux, saida_mux_beq, saida_extensor, saida_mux_PC, saida_shifter2, saida_mux_ULA, dado_lido_aux : std_logic_vector(31 downto 0);
+
 
 begin
 
@@ -88,11 +89,16 @@ and_beq <= beq_aux and zero_aux;
 
 mux_beq: entity work.mux2
 		Port map(A => saida_somador1, B => saida_somador2, SEL => and_beq, Y => saida_mux_beq);
-		
-memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, endereco => to_integer(unsigned(saida_aux(10 downto 2))), dado_escrito => saidaB_regs, ler => habLeiMEM_aux, escrever => habEscMEM_aux, dado_lido => dado_lido_aux);
-		
 
+and_memDadosLeitura <= aux_mem_dados_leitura and habLeiMEM_aux ;	
+and_memDadosEscrita <= aux_mem_dados_escrita and habEscMEM_aux ;		
+memoriaDados: entity work.memoria_de_dados
+		Port map (clk => clk, endereco => to_integer(unsigned(saida_aux(10 downto 2))), dado_escrito => saidaB_regs, ler => and_memDadosLeitura, escrever => and_memDadosEscrita, dado_lido => dado_lido_aux);
+
+decoder: entity work.decoder
+		Port map(endereco_entrada=>saida_aux ,memoria_leitura=>aux_mem_dados_leitura,seven_segments=>aux_seven_segments,chave=>aux_mem_dados_escrita);	
+registrador_decoder: entity work.registrador
+	Port map(d=>saidaB_regs,clk=>clk, enable=>aux_seven_segments, reset=>'1',q(3 downto 0)=>aux_hex0,q(7 downto 4)=>aux_hex1,q(11 downto 8)=>aux_hex2,q(15 downto 12)=>aux_hex3,q(19 downto 16)=>aux_hex4,q(23 downto 20)=>aux_hex5,q(27 downto 24)=>aux_hex6);
 --display7 : entity work.conversorHex7seg
 --PORT MAP(dadoHex => SYNTHESIZED_WIRE_17,
 --		 saida7seg => HEX7);
