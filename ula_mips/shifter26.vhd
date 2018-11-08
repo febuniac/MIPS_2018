@@ -16,6 +16,6 @@ architecture shifterarch of shifter26  is
 
 begin
 
-	B <= A(DATA_WIDTH-3 downto 0) & "00";
+	B <= A(DATA_WIDTH-1 downto 0);
 
 end architecture;

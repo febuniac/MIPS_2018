@@ -10,13 +10,7 @@ end mux2;
 
 architecture mux2_arch of mux2 is
 begin
-process(SEL, A, B)
-begin
-	case SEL is
-		when '0' => 
-			y <= A;
-		when '1' => 
-			y <= B;
-	end case;
-end process;
+y <= A when SEL = '0'
+     else B;
+	  
 end mux2_arch;

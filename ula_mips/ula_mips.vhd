@@ -14,9 +14,7 @@ end ula_mips;
 architecture Behavioral of ula_mips is
 
 signal R1,R2,R3 : std_logic_vector(31 downto 0);
-
-signal result_adder, result_slt : std_logic_vector(31 downto 0);
-
+signal result_adder, c_out_adder, result_slt : std_logic_vector(31 downto 0);
 signal temp, overflow : std_logic;
 
 begin
@@ -28,7 +26,7 @@ mux2B: entity work.mux2
 		Port map(A => B, B => (not B), SEL => ula_ctrl(2), Y => R2);
 		
 full_adder: entity work.full_adder
-		Port map(a => R1, b => R2, c_in => ula_ctrl(2), result => result_adder, overflow => overflow);
+		Port map(a => R1, b => R2, c_in => ula_ctrl(2), result => result_adder, c_out => c_out_adder, overflow => overflow);
 
 temp <= result_adder(31) xor overflow;
 result_slt <= "0000000000000000000000000000000"& temp;			

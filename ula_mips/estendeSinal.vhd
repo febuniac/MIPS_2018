@@ -13,5 +13,7 @@ end entity;
 architecture estendeSinalarch of estendeSinal  is
 
 begin
-  B <= std_logic_vector(resize(signed(A), B'length));
+  --B <= std_logic_vector(resize(signed(A), B'length));
+  B(15 downto 0) <= A(15 downto 0);
+  B(31 downto 16) <= "0000000000000000";
 end architecture;

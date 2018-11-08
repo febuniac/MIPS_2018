@@ -6,7 +6,7 @@ entity PC is
 	port ( 
 			d:   in  STD_LOGIC_VECTOR((Vector_Size - 1) downto 0);
 			clk: in  STD_LOGIC;
-			q:   out STD_LOGIC_VECTOR((Vector_Size - 1) downto 0)
+			q:   out STD_LOGIC_VECTOR((Vector_Size - 1) downto 0) := "00000000000000000000000000000000"
 	);
 end entity;
 
