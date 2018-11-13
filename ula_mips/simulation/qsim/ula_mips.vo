@@ -1,0 +1,624 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition"
+
+// DATE "11/08/2018 15:03:22"
+
+// 
+// Device: Altera EP4CE115F29C8 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module decoder (
+	endereco_entrada,
+	memoria_leitura,
+	seven_segments,
+	chave);
+input 	[31:0] endereco_entrada;
+output 	memoria_leitura;
+output 	seven_segments;
+output 	chave;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \endereco_entrada[31]~input_o ;
+wire \memoria_leitura~output_o ;
+wire \seven_segments~output_o ;
+wire \chave~output_o ;
+wire \endereco_entrada[8]~input_o ;
+wire \endereco_entrada[9]~input_o ;
+wire \endereco_entrada[10]~input_o ;
+wire \endereco_entrada[11]~input_o ;
+wire \endereco_entrada[12]~input_o ;
+wire \chave~0_combout ;
+wire \endereco_entrada[13]~input_o ;
+wire \endereco_entrada[14]~input_o ;
+wire \endereco_entrada[15]~input_o ;
+wire \endereco_entrada[16]~input_o ;
+wire \chave~1_combout ;
+wire \endereco_entrada[17]~input_o ;
+wire \endereco_entrada[18]~input_o ;
+wire \endereco_entrada[19]~input_o ;
+wire \endereco_entrada[20]~input_o ;
+wire \chave~2_combout ;
+wire \endereco_entrada[21]~input_o ;
+wire \endereco_entrada[22]~input_o ;
+wire \endereco_entrada[23]~input_o ;
+wire \endereco_entrada[24]~input_o ;
+wire \chave~3_combout ;
+wire \chave~4_combout ;
+wire \endereco_entrada[25]~input_o ;
+wire \endereco_entrada[26]~input_o ;
+wire \endereco_entrada[27]~input_o ;
+wire \endereco_entrada[28]~input_o ;
+wire \chave~5_combout ;
+wire \endereco_entrada[29]~input_o ;
+wire \endereco_entrada[30]~input_o ;
+wire \chave~6_combout ;
+wire \LessThan0~0_combout ;
+wire \endereco_entrada[1]~input_o ;
+wire \endereco_entrada[2]~input_o ;
+wire \endereco_entrada[3]~input_o ;
+wire \endereco_entrada[4]~input_o ;
+wire \chave~7_combout ;
+wire \endereco_entrada[5]~input_o ;
+wire \endereco_entrada[6]~input_o ;
+wire \endereco_entrada[7]~input_o ;
+wire \chave~8_combout ;
+wire \endereco_entrada[0]~input_o ;
+wire \seven_segments~0_combout ;
+wire \chave~9_combout ;
+
+
+cycloneive_io_obuf \memoria_leitura~output (
+	.i(!\LessThan0~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memoria_leitura~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memoria_leitura~output .bus_hold = "false";
+defparam \memoria_leitura~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \seven_segments~output (
+	.i(\seven_segments~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\seven_segments~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \seven_segments~output .bus_hold = "false";
+defparam \seven_segments~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \chave~output (
+	.i(\chave~9_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\chave~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \chave~output .bus_hold = "false";
+defparam \chave~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[8]~input (
+	.i(endereco_entrada[8]),
+	.ibar(gnd),
+	.o(\endereco_entrada[8]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[8]~input .bus_hold = "false";
+defparam \endereco_entrada[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[9]~input (
+	.i(endereco_entrada[9]),
+	.ibar(gnd),
+	.o(\endereco_entrada[9]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[9]~input .bus_hold = "false";
+defparam \endereco_entrada[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[10]~input (
+	.i(endereco_entrada[10]),
+	.ibar(gnd),
+	.o(\endereco_entrada[10]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[10]~input .bus_hold = "false";
+defparam \endereco_entrada[10]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[11]~input (
+	.i(endereco_entrada[11]),
+	.ibar(gnd),
+	.o(\endereco_entrada[11]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[11]~input .bus_hold = "false";
+defparam \endereco_entrada[11]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[12]~input (
+	.i(endereco_entrada[12]),
+	.ibar(gnd),
+	.o(\endereco_entrada[12]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[12]~input .bus_hold = "false";
+defparam \endereco_entrada[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~0 (
+// Equation(s):
+// \chave~0_combout  = (!\endereco_entrada[9]~input_o  & (!\endereco_entrada[10]~input_o  & (!\endereco_entrada[11]~input_o  & !\endereco_entrada[12]~input_o )))
+
+	.dataa(\endereco_entrada[9]~input_o ),
+	.datab(\endereco_entrada[10]~input_o ),
+	.datac(\endereco_entrada[11]~input_o ),
+	.datad(\endereco_entrada[12]~input_o ),
+	.cin(gnd),
+	.combout(\chave~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~0 .lut_mask = 16'h0001;
+defparam \chave~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[13]~input (
+	.i(endereco_entrada[13]),
+	.ibar(gnd),
+	.o(\endereco_entrada[13]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[13]~input .bus_hold = "false";
+defparam \endereco_entrada[13]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[14]~input (
+	.i(endereco_entrada[14]),
+	.ibar(gnd),
+	.o(\endereco_entrada[14]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[14]~input .bus_hold = "false";
+defparam \endereco_entrada[14]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[15]~input (
+	.i(endereco_entrada[15]),
+	.ibar(gnd),
+	.o(\endereco_entrada[15]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[15]~input .bus_hold = "false";
+defparam \endereco_entrada[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[16]~input (
+	.i(endereco_entrada[16]),
+	.ibar(gnd),
+	.o(\endereco_entrada[16]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[16]~input .bus_hold = "false";
+defparam \endereco_entrada[16]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~1 (
+// Equation(s):
+// \chave~1_combout  = (!\endereco_entrada[13]~input_o  & (!\endereco_entrada[14]~input_o  & (!\endereco_entrada[15]~input_o  & !\endereco_entrada[16]~input_o )))
+
+	.dataa(\endereco_entrada[13]~input_o ),
+	.datab(\endereco_entrada[14]~input_o ),
+	.datac(\endereco_entrada[15]~input_o ),
+	.datad(\endereco_entrada[16]~input_o ),
+	.cin(gnd),
+	.combout(\chave~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~1 .lut_mask = 16'h0001;
+defparam \chave~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[17]~input (
+	.i(endereco_entrada[17]),
+	.ibar(gnd),
+	.o(\endereco_entrada[17]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[17]~input .bus_hold = "false";
+defparam \endereco_entrada[17]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[18]~input (
+	.i(endereco_entrada[18]),
+	.ibar(gnd),
+	.o(\endereco_entrada[18]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[18]~input .bus_hold = "false";
+defparam \endereco_entrada[18]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[19]~input (
+	.i(endereco_entrada[19]),
+	.ibar(gnd),
+	.o(\endereco_entrada[19]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[19]~input .bus_hold = "false";
+defparam \endereco_entrada[19]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[20]~input (
+	.i(endereco_entrada[20]),
+	.ibar(gnd),
+	.o(\endereco_entrada[20]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[20]~input .bus_hold = "false";
+defparam \endereco_entrada[20]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~2 (
+// Equation(s):
+// \chave~2_combout  = (!\endereco_entrada[17]~input_o  & (!\endereco_entrada[18]~input_o  & (!\endereco_entrada[19]~input_o  & !\endereco_entrada[20]~input_o )))
+
+	.dataa(\endereco_entrada[17]~input_o ),
+	.datab(\endereco_entrada[18]~input_o ),
+	.datac(\endereco_entrada[19]~input_o ),
+	.datad(\endereco_entrada[20]~input_o ),
+	.cin(gnd),
+	.combout(\chave~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~2 .lut_mask = 16'h0001;
+defparam \chave~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[21]~input (
+	.i(endereco_entrada[21]),
+	.ibar(gnd),
+	.o(\endereco_entrada[21]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[21]~input .bus_hold = "false";
+defparam \endereco_entrada[21]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[22]~input (
+	.i(endereco_entrada[22]),
+	.ibar(gnd),
+	.o(\endereco_entrada[22]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[22]~input .bus_hold = "false";
+defparam \endereco_entrada[22]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[23]~input (
+	.i(endereco_entrada[23]),
+	.ibar(gnd),
+	.o(\endereco_entrada[23]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[23]~input .bus_hold = "false";
+defparam \endereco_entrada[23]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[24]~input (
+	.i(endereco_entrada[24]),
+	.ibar(gnd),
+	.o(\endereco_entrada[24]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[24]~input .bus_hold = "false";
+defparam \endereco_entrada[24]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~3 (
+// Equation(s):
+// \chave~3_combout  = (!\endereco_entrada[21]~input_o  & (!\endereco_entrada[22]~input_o  & (!\endereco_entrada[23]~input_o  & !\endereco_entrada[24]~input_o )))
+
+	.dataa(\endereco_entrada[21]~input_o ),
+	.datab(\endereco_entrada[22]~input_o ),
+	.datac(\endereco_entrada[23]~input_o ),
+	.datad(\endereco_entrada[24]~input_o ),
+	.cin(gnd),
+	.combout(\chave~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~3 .lut_mask = 16'h0001;
+defparam \chave~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~4 (
+// Equation(s):
+// \chave~4_combout  = (\chave~0_combout  & (\chave~1_combout  & (\chave~2_combout  & \chave~3_combout )))
+
+	.dataa(\chave~0_combout ),
+	.datab(\chave~1_combout ),
+	.datac(\chave~2_combout ),
+	.datad(\chave~3_combout ),
+	.cin(gnd),
+	.combout(\chave~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~4 .lut_mask = 16'h8000;
+defparam \chave~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[25]~input (
+	.i(endereco_entrada[25]),
+	.ibar(gnd),
+	.o(\endereco_entrada[25]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[25]~input .bus_hold = "false";
+defparam \endereco_entrada[25]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[26]~input (
+	.i(endereco_entrada[26]),
+	.ibar(gnd),
+	.o(\endereco_entrada[26]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[26]~input .bus_hold = "false";
+defparam \endereco_entrada[26]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[27]~input (
+	.i(endereco_entrada[27]),
+	.ibar(gnd),
+	.o(\endereco_entrada[27]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[27]~input .bus_hold = "false";
+defparam \endereco_entrada[27]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[28]~input (
+	.i(endereco_entrada[28]),
+	.ibar(gnd),
+	.o(\endereco_entrada[28]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[28]~input .bus_hold = "false";
+defparam \endereco_entrada[28]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~5 (
+// Equation(s):
+// \chave~5_combout  = (!\endereco_entrada[25]~input_o  & (!\endereco_entrada[26]~input_o  & (!\endereco_entrada[27]~input_o  & !\endereco_entrada[28]~input_o )))
+
+	.dataa(\endereco_entrada[25]~input_o ),
+	.datab(\endereco_entrada[26]~input_o ),
+	.datac(\endereco_entrada[27]~input_o ),
+	.datad(\endereco_entrada[28]~input_o ),
+	.cin(gnd),
+	.combout(\chave~5_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~5 .lut_mask = 16'h0001;
+defparam \chave~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[29]~input (
+	.i(endereco_entrada[29]),
+	.ibar(gnd),
+	.o(\endereco_entrada[29]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[29]~input .bus_hold = "false";
+defparam \endereco_entrada[29]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[30]~input (
+	.i(endereco_entrada[30]),
+	.ibar(gnd),
+	.o(\endereco_entrada[30]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[30]~input .bus_hold = "false";
+defparam \endereco_entrada[30]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~6 (
+// Equation(s):
+// \chave~6_combout  = (\chave~4_combout  & (\chave~5_combout  & (!\endereco_entrada[29]~input_o  & !\endereco_entrada[30]~input_o )))
+
+	.dataa(\chave~4_combout ),
+	.datab(\chave~5_combout ),
+	.datac(\endereco_entrada[29]~input_o ),
+	.datad(\endereco_entrada[30]~input_o ),
+	.cin(gnd),
+	.combout(\chave~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~6 .lut_mask = 16'h0008;
+defparam \chave~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan0~0 (
+// Equation(s):
+// \LessThan0~0_combout  = (\endereco_entrada[8]~input_o ) # (!\chave~6_combout )
+
+	.dataa(\endereco_entrada[8]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\chave~6_combout ),
+	.cin(gnd),
+	.combout(\LessThan0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~0 .lut_mask = 16'hAAFF;
+defparam \LessThan0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[1]~input (
+	.i(endereco_entrada[1]),
+	.ibar(gnd),
+	.o(\endereco_entrada[1]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[1]~input .bus_hold = "false";
+defparam \endereco_entrada[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[2]~input (
+	.i(endereco_entrada[2]),
+	.ibar(gnd),
+	.o(\endereco_entrada[2]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[2]~input .bus_hold = "false";
+defparam \endereco_entrada[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[3]~input (
+	.i(endereco_entrada[3]),
+	.ibar(gnd),
+	.o(\endereco_entrada[3]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[3]~input .bus_hold = "false";
+defparam \endereco_entrada[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[4]~input (
+	.i(endereco_entrada[4]),
+	.ibar(gnd),
+	.o(\endereco_entrada[4]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[4]~input .bus_hold = "false";
+defparam \endereco_entrada[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~7 (
+// Equation(s):
+// \chave~7_combout  = (!\endereco_entrada[1]~input_o  & (!\endereco_entrada[2]~input_o  & (!\endereco_entrada[3]~input_o  & !\endereco_entrada[4]~input_o )))
+
+	.dataa(\endereco_entrada[1]~input_o ),
+	.datab(\endereco_entrada[2]~input_o ),
+	.datac(\endereco_entrada[3]~input_o ),
+	.datad(\endereco_entrada[4]~input_o ),
+	.cin(gnd),
+	.combout(\chave~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~7 .lut_mask = 16'h0001;
+defparam \chave~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[5]~input (
+	.i(endereco_entrada[5]),
+	.ibar(gnd),
+	.o(\endereco_entrada[5]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[5]~input .bus_hold = "false";
+defparam \endereco_entrada[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[6]~input (
+	.i(endereco_entrada[6]),
+	.ibar(gnd),
+	.o(\endereco_entrada[6]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[6]~input .bus_hold = "false";
+defparam \endereco_entrada[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[7]~input (
+	.i(endereco_entrada[7]),
+	.ibar(gnd),
+	.o(\endereco_entrada[7]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[7]~input .bus_hold = "false";
+defparam \endereco_entrada[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~8 (
+// Equation(s):
+// \chave~8_combout  = (\endereco_entrada[8]~input_o  & (!\endereco_entrada[5]~input_o  & (!\endereco_entrada[6]~input_o  & !\endereco_entrada[7]~input_o )))
+
+	.dataa(\endereco_entrada[8]~input_o ),
+	.datab(\endereco_entrada[5]~input_o ),
+	.datac(\endereco_entrada[6]~input_o ),
+	.datad(\endereco_entrada[7]~input_o ),
+	.cin(gnd),
+	.combout(\chave~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~8 .lut_mask = 16'h0002;
+defparam \chave~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[0]~input (
+	.i(endereco_entrada[0]),
+	.ibar(gnd),
+	.o(\endereco_entrada[0]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[0]~input .bus_hold = "false";
+defparam \endereco_entrada[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \seven_segments~0 (
+// Equation(s):
+// \seven_segments~0_combout  = (\chave~6_combout  & (\chave~7_combout  & (\chave~8_combout  & !\endereco_entrada[0]~input_o )))
+
+	.dataa(\chave~6_combout ),
+	.datab(\chave~7_combout ),
+	.datac(\chave~8_combout ),
+	.datad(\endereco_entrada[0]~input_o ),
+	.cin(gnd),
+	.combout(\seven_segments~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \seven_segments~0 .lut_mask = 16'h0080;
+defparam \seven_segments~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \chave~9 (
+// Equation(s):
+// \chave~9_combout  = (\chave~6_combout  & (\endereco_entrada[0]~input_o  & (\chave~7_combout  & \chave~8_combout )))
+
+	.dataa(\chave~6_combout ),
+	.datab(\endereco_entrada[0]~input_o ),
+	.datac(\chave~7_combout ),
+	.datad(\chave~8_combout ),
+	.cin(gnd),
+	.combout(\chave~9_combout ),
+	.cout());
+// synopsys translate_off
+defparam \chave~9 .lut_mask = 16'h8000;
+defparam \chave~9 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \endereco_entrada[31]~input (
+	.i(endereco_entrada[31]),
+	.ibar(gnd),
+	.o(\endereco_entrada[31]~input_o ));
+// synopsys translate_off
+defparam \endereco_entrada[31]~input .bus_hold = "false";
+defparam \endereco_entrada[31]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign memoria_leitura = \memoria_leitura~output_o ;
+
+assign seven_segments = \seven_segments~output_o ;
+
+assign chave = \chave~output_o ;
+
+endmodule
