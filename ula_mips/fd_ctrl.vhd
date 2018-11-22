@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity fd_ctrl is
 port( 
         op_code : in std_logic_vector(5 downto 0);  
-		  saida_flxuo : out std_logic_vector(8 downto 0);
+		  saida_fluxo : out std_logic_vector(8 downto 0)
         );
 end fd_ctrl;
 

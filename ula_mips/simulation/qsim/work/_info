@@ -7,84 +7,84 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/simulation/qsim
+dC:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana13/MIPS_2018/ula_mips/simulation/qsim
 vdecoder
-Z1 !s110 1541696604
+Z0 !s110 1541696604
 !i10b 1
 !s100 o]G:m2cZ5bTNTF6Ez1ae62
 IJ^RbQ_SGD3Zz2gOaFSF_Q2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana14/MIPS_2018/ula_mips/simulation/qsim
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Carlos/OneDrive/Documents/educacao/Insper/insper_6_semester_2018/descomp/semana14/MIPS_2018/ula_mips/simulation/qsim
 w1541696602
-Z4 8ula_mips.vo
-Z5 Fula_mips.vo
-Z6 L0 32
-Z7 OV;L;10.4d;61
+Z3 8ula_mips.vo
+Z4 Fula_mips.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z8 !s108 1541696604.000000
-Z9 !s107 ula_mips.vo|
-Z10 !s90 -work|work|ula_mips.vo|
+Z7 !s108 1541696604.000000
+Z8 !s107 ula_mips.vo|
+Z9 !s90 -work|work|ula_mips.vo|
 !i113 1
-Z11 o-work work
+Z10 o-work work
 vdecoder_vlg_vec_tst
-R1
+R0
 !i10b 1
 !s100 9FZ1ba<<`HzDZNN3TGkoG2
 IU=C379>QQjP1D0Zc6zS4Q1
+R1
 R2
-R3
 w1541696600
-Z12 8Waveform.vwf.vt
-Z13 FWaveform.vwf.vt
-Z14 L0 30
-R7
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z11 L0 30
+R6
 r1
 !s85 0
 31
-R8
+R7
 !s107 Waveform.vwf.vt|
-Z15 !s90 -work|work|Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R11
+R10
 vmips_teste
-Z16 !s110 1541521569
+!s110 1542915141
 !i10b 1
-!s100 >PKlkg[?b_;]5AzXY67^W0
-I8mn6XZV?Oj`GXMV^Z7I]Z2
+!s100 _P[i5[5icOae^4@M4N^>22
+I]fU@Ne;?d`:bB]VECc7?L1
+R1
 R2
-R0
-w1541521566
+w1542915137
+R3
 R4
 R5
 R6
-R7
 r1
 !s85 0
 31
-!s108 1541521568.000000
+!s108 1542915140.000000
+R8
 R9
-R10
 !i113 1
-R11
+R10
 vmips_teste_vlg_vec_tst
-R16
+!s110 1542915142
 !i10b 1
-!s100 IV[FKJ6k58cGW6Rd<D5GG1
-IEdJUeg=:bI>YeJH7UHMkj0
+!s100 MoH5G9`3ZCiTZ:CC]Im^?1
+Id@mcMIHWNg4][mj9BLoVF1
+R1
 R2
-R0
-w1541521564
-R12
-R13
-R14
-R7
+w1542915133
+8Waveform11.vwf.vt
+FWaveform11.vwf.vt
+R11
+R6
 r1
 !s85 0
 31
-!s108 1541521569.000000
-!s107 Waveform.vwf.vt|
-R15
+!s108 1542915142.000000
+!s107 Waveform11.vwf.vt|
+!s90 -work|work|Waveform11.vwf.vt|
 !i113 1
-R11
+R10
