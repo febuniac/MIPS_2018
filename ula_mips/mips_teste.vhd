@@ -39,6 +39,10 @@ signal saida_IF : std_logic_vector(63 downto 0);
 
 signal saida_EX : std_logic_vector(147 downto 0);
 
+signal saida_EX_MEM : std_logic_vector(106 downto 0);
+
+signal saida_MEM_WB : std_logic_vector(71 downto 0);
+
 signal saida_somador1, saida_somador2, saida_aux, dado_aux, saida_PC, saidaA_regs, saidaB_regs, mux_Rt_im_aux, saida_mux_beq, saida_extensor, saida_mux_PC, saida_shifter2, saida_mux_ULA, dado_lido_aux, dado_lido_mem : std_logic_vector(31 downto 0);
 
 signal controlador_mem: std_logic;
@@ -60,7 +64,7 @@ PC: entity work.PC
 		Port map(d => saida_mux_PC, clk=> clk, q => saida_PC);
 		
 mux_PC: entity work.mux2
-		Port map(A => saida_mux_beq, B => saida_somador1(31 downto 28) & saida_shifter1 & "00" , SEL => mux1_aux, Y => saida_mux_PC);					
+		Port map(A => saida_mux_beq, B => saida_EX_MEM(101 downto 70) , SEL => mux1_aux, Y => saida_mux_PC);					
 
 memoriaInst: entity work.memoria_de_instrucoes
 		Port map(endereco => saida_PC(9 downto 2), dado => dado_aux);
@@ -75,7 +79,7 @@ shifter1: entity work.shifter26
 		Port map(A => dado_aux(25 downto 0), B => saida_shifter1);
 
 mux_RtRd: entity work.mux2de5
-		Port map(A => dado_aux(20 downto 16), B => dado_aux(15 downto 11), SEL => mux2_aux, Y => saida_mux_RtRd);
+		Port map(A => saida_EX(9 downto 5), B => saida_EX(4 downto 0), SEL => saida_EX(141), Y => saida_mux_RtRd);
 		
 extensor: entity work.estendeSinal
 		Port map(A => saida_IF(15 downto 0), B => saida_extensor);
@@ -87,33 +91,36 @@ ID_EX: entity work.registrador
 Generic map(DATA_WIDTH => 147) Port map(data(5 downto 0) => saida_IF(15 downto 0),  data(10 downto 6) => saida_IF(20 downto 16), data(42 downto 11) => saida_extensor, data(74 downto 43) => saidaB_regs, data(106 downto 75) => saidaA_regs, data(138 downto 107) => saida_IF(63 downto 32), data(142 downto 139) => saida_fluxo(3 downto 0), data(145 downto 143) => saida_fluxo(6 downto 4), data(147 downto 146) => saida_fluxo(8 downto 7), clk => clk, we => '1', q => saida_EX);
 		
 mux_Rt_im: entity work.mux2
-		Port map(A => saidaB_regs, B => saida_extensor, SEL => mux3_aux, Y => mux_Rt_im_aux);
+		Port map(A => saida_EX(73 downto 42), B => saida_EX(41 downto 10), SEL => saida_EX(138), Y => mux_Rt_im_aux);
 		
 shifter2: entity work.shifter
-		Port map(A => saida_extensor, B => saida_shifter2);		
+		Port map(A => saida_EX(41 downto 10), B => saida_shifter2);		
 		
 somador2: entity work.somador
-		Port map(A => saida_somador1, B => saida_shifter2, Y => saida_somador2);	
+		Port map(A => saida_EX(137 downto 106), B => saida_shifter2, Y => saida_somador2);	
 
 ula_ctrl: entity work.ula_ctrl
-		Port map(ULAop => ULAop_aux, funct => dado_aux(5 downto 0), ula_ctrl => ula_ctrl_aux);
+		Port map(ULAop => saida_EX(140 dowto 139), funct => saida_EX(41 downto 36), ula_ctrl => ula_ctrl_aux);
 
 ula: entity work.ula_mips
-		Port map(A => saidaA_regs, B => mux_Rt_im_aux, ula_ctrl => ula_ctrl_aux, Q => saida_aux, zero => zero_aux);
+		Port map(A => saida_EX(105 downto 74), B => mux_Rt_im_aux, ula_ctrl => ula_ctrl_aux, Q => saida_aux, zero => zero_aux);
 
 mux_ULA: entity work.mux2
 		Port map(A => saida_aux, B => dado_lido_aux, SEL => mux4_aux, Y => saida_mux_ULA);
 		
 EX_MEM: entity work.registrador
-Generic map(DATA_WIDTH => 107) Port map(data(4 downto 0) => saida_mux_RtRd, data(36 downto 5) => saida_IF(73 downto 42), data(77 downto 74) => saida_extensor, data(106 downto 75) => saidaA_regs, data(138 downto 107) => saida_IF(63 downto 32), data(142 downto 139) => saida_fluxo(3 downto 0), data(138 downto 107) => saida_IF(63 downto 32), data(142 downto 139) => saida_fluxo(6 downto 4), clk => clk, we => , q => );
+Generic map(DATA_WIDTH => 107) Port map(data(4 downto 0) => saida_mux_RtRd, data(36 downto 5) => saida_EX(73 downto 42), data(68 downto 37) => saida_aux, data(69) => zero_aux, data(101 downto 70) => saida_somador2, data(104 downto 102) => saida_EX(144 downto 142), data(107 downto 105) => saida_EX(146 downto 145), clk => clk, we => , q => saida_EX_MEM);
 
-and_beq <= beq_aux and zero_aux;
+and_beq <= saida_EX_MEM(69) and saida_EX_MEM(104);
 
 mux_beq: entity work.mux2
 		Port map(A => saida_somador1, B => saida_somador2, SEL => and_beq, Y => saida_mux_beq);
 		
 memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, addr => to_integer(unsigned(saida_aux(8 downto 2))), data => saidaB_regs, we => habEscMEM_aux and controlador_mem, q => dado_lido_mem);
+		Port map (clk => clk, addr => saida_EX_MEM(68 downto 37), data => saida_EX_MEM(36 downto 5), we => saida_EX_MEM(102), q => dado_lido_mem);
+
+MEM_WB: entity work.registrador
+Generic map(DATA_WIDTH => 71) Port map(data(4 downto 0) => saida_EX_MEM(4 downto 0), data(36 downto 5) => saida_EX_MEM(68 downto 37), data(68 downto 37) => dado_lido_mem, data(70 downto 69) => saida_EX_MEM(106 downto 105), clk => clk, we => , q => );
 		
 --saida <= saida_aux;
 --teste_PC <= saida_PC;
