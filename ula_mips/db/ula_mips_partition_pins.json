@@ -536,6 +536,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "instrucao[10]",
+					"strict" : false
+				},
+				{
 					"name" : "instrucao[11]",
 					"strict" : false
 				},
@@ -576,15 +580,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "instrucao[25]",
-					"strict" : false
-				},
-				{
 					"name" : "instrucao[26]",
 					"strict" : false
 				},
 				{
 					"name" : "instrucao[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[28]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[29]",
 					"strict" : false
 				},
 				{
@@ -996,6 +1004,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "saidaExtensor[10]",
+					"strict" : false
+				},
+				{
 					"name" : "saidaExtensor[11]",
 					"strict" : false
 				},
@@ -1157,10 +1169,6 @@
 				},
 				{
 					"name" : "end1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "end1[4]",
 					"strict" : false
 				},
 				{
@@ -1329,6 +1337,14 @@
 				},
 				{
 					"name" : "op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op[2]",
+					"strict" : false
+				},
+				{
+					"name" : "op[3]",
 					"strict" : false
 				},
 				{

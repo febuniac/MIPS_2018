@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ula_mips
-Thu Nov 22 22:17:22 2018
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Fri Nov 23 09:48:29 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
@@ -22,7 +22,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Source assignments for bancoRegistradores:regs|altsyncram:registrador_rtl_0|altsyncram_mcc1:auto_generated
  16. Source assignments for bancoRegistradores:regs|altsyncram:registrador_rtl_1|altsyncram_mcc1:auto_generated
- 17. Source assignments for memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_7ch1:auto_generated
+ 17. Source assignments for memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_31i1:auto_generated
  18. Parameter Settings for User Entity Instance: PC:PC
  19. Parameter Settings for User Entity Instance: memoria_de_instrucoes:memoriaInst
  20. Parameter Settings for User Entity Instance: registrador:IF_ID
@@ -71,7 +71,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -79,27 +79,26 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 22 22:17:22 2018       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 23 09:48:29 2018       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; ula_mips                                    ;
 ; Top-level Entity Name              ; mips_teste                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 710                                         ;
-;     Total combinational functions  ; 486                                         ;
-;     Dedicated logic registers      ; 440                                         ;
-; Total registers                    ; 440                                         ;
+; Total logic elements               ; 716                                         ;
+;     Total combinational functions  ; 479                                         ;
+;     Dedicated logic registers      ; 454                                         ;
+; Total registers                    ; 454                                         ;
 ; Total pins                         ; 488                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -108,91 +107,91 @@ agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE115F29C8      ;                    ;
-; Top-level entity name                                                      ; mips_teste         ; ula_mips           ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
-; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
-; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C8      ;                    ;
+; Top-level entity name                                            ; mips_teste         ; ula_mips           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -200,7 +199,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -212,44 +211,44 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                         ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                          ; Library ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; ula_mips.vhd                                       ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd                                       ;         ;
-; mux2.vhd                                           ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd                                           ;         ;
-; full_adder.vhd                                     ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd                                     ;         ;
-; mux4.vhd                                           ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd                                           ;         ;
-; ula_ctrl.vhd                                       ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd                                       ;         ;
-; fd_ctrl.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd                                        ;         ;
-; mips_teste.vhd                                     ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd                                     ;         ;
-; bancoRegistradores.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd                             ;         ;
-; shifter.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd                                        ;         ;
-; estendeSinal.vhd                                   ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd                                   ;         ;
-; somador.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd                                        ;         ;
-; PC.vhd                                             ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd                                             ;         ;
-; memoria_de_dados.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd                               ;         ;
-; memoria_de_instrucoes.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd                          ;         ;
-; shifter26.vhd                                      ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd                                      ;         ;
-; mux2de5.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd                                        ;         ;
-; decodificador.vhd                                  ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/decodificador.vhd                                  ;         ;
-; controlador_io.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd                                 ;         ;
-; registrador.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd                                    ;         ;
-; conversorHex7Seg.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/conversorHex7Seg.vhd                               ;         ;
-; altsyncram.tdf                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal161.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc                                 ;         ;
-; a_rdenreg.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_mcc1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/db/altsyncram_mcc1.tdf                             ;         ;
-; db/altsyncram_7ch1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/db/altsyncram_7ch1.tdf                             ;         ;
-; db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif ;         ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                ;
++----------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; ula_mips.vhd                                       ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd                                       ;         ;
+; mux2.vhd                                           ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd                                           ;         ;
+; full_adder.vhd                                     ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd                                     ;         ;
+; mux4.vhd                                           ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd                                           ;         ;
+; ula_ctrl.vhd                                       ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/ula_ctrl.vhd                                       ;         ;
+; fd_ctrl.vhd                                        ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/fd_ctrl.vhd                                        ;         ;
+; mips_teste.vhd                                     ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd                                     ;         ;
+; bancoRegistradores.vhd                             ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/bancoRegistradores.vhd                             ;         ;
+; shifter.vhd                                        ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/shifter.vhd                                        ;         ;
+; estendeSinal.vhd                                   ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/estendeSinal.vhd                                   ;         ;
+; somador.vhd                                        ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/somador.vhd                                        ;         ;
+; PC.vhd                                             ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/PC.vhd                                             ;         ;
+; memoria_de_dados.vhd                               ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd                               ;         ;
+; memoria_de_instrucoes.vhd                          ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd                          ;         ;
+; shifter26.vhd                                      ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/shifter26.vhd                                      ;         ;
+; mux2de5.vhd                                        ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd                                        ;         ;
+; decodificador.vhd                                  ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/decodificador.vhd                                  ;         ;
+; controlador_io.vhd                                 ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd                                 ;         ;
+; registrador.vhd                                    ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd                                    ;         ;
+; conversorHex7Seg.vhd                               ; yes             ; User VHDL File                                        ; /home/parallels/Github/MIPS_2018/ula_mips/conversorHex7Seg.vhd                               ;         ;
+; altsyncram.tdf                                     ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf           ;         ;
+; stratix_ram_block.inc                              ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc    ;         ;
+; lpm_mux.inc                                        ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc              ;         ;
+; lpm_decode.inc                                     ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc           ;         ;
+; aglobal180.inc                                     ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc           ;         ;
+; a_rdenreg.inc                                      ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc            ;         ;
+; altrom.inc                                         ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/altrom.inc               ;         ;
+; altram.inc                                         ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/altram.inc               ;         ;
+; altdpram.inc                                       ; yes             ; Megafunction                                          ; /home/parallels/intelFPGA_lite/18.0/quartus/libraries/megafunctions/altdpram.inc             ;         ;
+; db/altsyncram_mcc1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; /home/parallels/Github/MIPS_2018/ula_mips/db/altsyncram_mcc1.tdf                             ;         ;
+; db/altsyncram_31i1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; /home/parallels/Github/MIPS_2018/ula_mips/db/altsyncram_31i1.tdf                             ;         ;
+; db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/parallels/Github/MIPS_2018/ula_mips/db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif ;         ;
++----------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -257,20 +256,20 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 710            ;
+; Estimated Total logic elements              ; 716            ;
 ;                                             ;                ;
-; Total combinational functions               ; 486            ;
+; Total combinational functions               ; 479            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 325            ;
-;     -- 3 input functions                    ; 94             ;
-;     -- <=2 input functions                  ; 67             ;
+;     -- 4 input functions                    ; 342            ;
+;     -- 3 input functions                    ; 75             ;
+;     -- <=2 input functions                  ; 62             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 457            ;
+;     -- normal mode                          ; 450            ;
 ;     -- arithmetic mode                      ; 29             ;
 ;                                             ;                ;
-; Total registers                             ; 440            ;
-;     -- Dedicated logic registers            ; 440            ;
+; Total registers                             ; 454            ;
+;     -- Dedicated logic registers            ; 454            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 488            ;
@@ -279,9 +278,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 536            ;
-; Total fan-out                               ; 4678           ;
-; Average fan-out                             ; 2.34           ;
+; Maximum fan-out                             ; 550            ;
+; Total fan-out                               ; 4712           ;
+; Average fan-out                             ; 2.35           ;
 +---------------------------------------------+----------------+
 
 
@@ -290,14 +289,14 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |mips_teste                               ; 486 (1)             ; 440 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 488  ; 0            ; |mips_teste                                                                                     ; mips_teste            ; work         ;
+; |mips_teste                               ; 479 (1)             ; 454 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 488  ; 0            ; |mips_teste                                                                                     ; mips_teste            ; work         ;
 ;    |PC:PC|                                ; 30 (30)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|PC:PC                                                                               ; PC                    ; work         ;
-;    |bancoRegistradores:regs|              ; 72 (72)             ; 82 (82)                   ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs                                                             ; bancoRegistradores    ; work         ;
+;    |bancoRegistradores:regs|              ; 72 (72)             ; 81 (81)                   ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs                                                             ; bancoRegistradores    ; work         ;
 ;       |altsyncram:registrador_rtl_0|      ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs|altsyncram:registrador_rtl_0                                ; altsyncram            ; work         ;
 ;          |altsyncram_mcc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs|altsyncram:registrador_rtl_0|altsyncram_mcc1:auto_generated ; altsyncram_mcc1       ; work         ;
 ;       |altsyncram:registrador_rtl_1|      ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs|altsyncram:registrador_rtl_1                                ; altsyncram            ; work         ;
 ;          |altsyncram_mcc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|bancoRegistradores:regs|altsyncram:registrador_rtl_1|altsyncram_mcc1:auto_generated ; altsyncram_mcc1       ; work         ;
-;    |controlador_io:controlador1|          ; 105 (37)            ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1                                                         ; controlador_io        ; work         ;
+;    |controlador_io:controlador1|          ; 106 (37)            ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1                                                         ; controlador_io        ; work         ;
 ;       |conversorHex7Seg:conv_HEX0|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|conversorHex7Seg:conv_HEX0                              ; conversorHex7Seg      ; work         ;
 ;       |conversorHex7Seg:conv_HEX1|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|conversorHex7Seg:conv_HEX1                              ; conversorHex7Seg      ; work         ;
 ;       |conversorHex7Seg:conv_HEX2|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|conversorHex7Seg:conv_HEX2                              ; conversorHex7Seg      ; work         ;
@@ -306,26 +305,26 @@ agreement for further details.
 ;       |conversorHex7Seg:conv_HEX5|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|conversorHex7Seg:conv_HEX5                              ; conversorHex7Seg      ; work         ;
 ;       |conversorHex7Seg:conv_HEX6|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|conversorHex7Seg:conv_HEX6                              ; conversorHex7Seg      ; work         ;
 ;       |conversorHex7Seg:conv_HEX7|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|conversorHex7Seg:conv_HEX7                              ; conversorHex7Seg      ; work         ;
-;       |decodificador:decodificador1|      ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|decodificador:decodificador1                            ; decodificador         ; work         ;
+;       |decodificador:decodificador1|      ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|decodificador:decodificador1                            ; decodificador         ; work         ;
 ;       |registrador:reg_leds|              ; 0 (0)               ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|registrador:reg_leds                                    ; registrador           ; work         ;
 ;       |registrador:reg_seg7|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|controlador_io:controlador1|registrador:reg_seg7                                    ; registrador           ; work         ;
-;    |fd_ctrl:fd_ctrl|                      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|fd_ctrl:fd_ctrl                                                                     ; fd_ctrl               ; work         ;
-;    |memoria_de_dados:memoriaDados|        ; 33 (33)             ; 64 (64)                   ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados                                                       ; memoria_de_dados      ; work         ;
+;    |fd_ctrl:fd_ctrl|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|fd_ctrl:fd_ctrl                                                                     ; fd_ctrl               ; work         ;
+;    |memoria_de_dados:memoriaDados|        ; 37 (37)             ; 77 (77)                   ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados                                                       ; memoria_de_dados      ; work         ;
 ;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0                                  ; altsyncram            ; work         ;
-;          |altsyncram_7ch1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_7ch1:auto_generated   ; altsyncram_7ch1       ; work         ;
-;    |memoria_de_instrucoes:memoriaInst|    ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_instrucoes:memoriaInst                                                   ; memoria_de_instrucoes ; work         ;
+;          |altsyncram_31i1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_31i1:auto_generated   ; altsyncram_31i1       ; work         ;
+;    |memoria_de_instrucoes:memoriaInst|    ; 50 (50)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|memoria_de_instrucoes:memoriaInst                                                   ; memoria_de_instrucoes ; work         ;
 ;    |mux2:mux_Rt_im|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_Rt_im                                                                      ; mux2                  ; work         ;
 ;    |mux2:mux_ULA|                         ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2:mux_ULA                                                                        ; mux2                  ; work         ;
 ;    |mux2de5:mux_RtRd|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|mux2de5:mux_RtRd                                                                    ; mux2de5               ; work         ;
-;    |registrador:EX_MEM|                   ; 0 (0)               ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:EX_MEM                                                                  ; registrador           ; work         ;
-;    |registrador:ID_EX|                    ; 1 (1)               ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:ID_EX                                                                   ; registrador           ; work         ;
-;    |registrador:IF_ID|                    ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:IF_ID                                                                   ; registrador           ; work         ;
+;    |registrador:EX_MEM|                   ; 0 (0)               ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:EX_MEM                                                                  ; registrador           ; work         ;
+;    |registrador:ID_EX|                    ; 0 (0)               ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:ID_EX                                                                   ; registrador           ; work         ;
+;    |registrador:IF_ID|                    ; 0 (0)               ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:IF_ID                                                                   ; registrador           ; work         ;
 ;    |registrador:MEM_WB|                   ; 0 (0)               ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|registrador:MEM_WB                                                                  ; registrador           ; work         ;
-;    |ula_ctrl:ula_ctrl|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_ctrl:ula_ctrl                                                                   ; ula_ctrl              ; work         ;
-;    |ula_mips:ula|                         ; 102 (1)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula                                                                        ; ula_mips              ; work         ;
-;       |full_adder:full_adder|             ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|full_adder:full_adder                                                  ; full_adder            ; work         ;
-;       |mux2:mux2B|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux2:mux2B                                                             ; mux2                  ; work         ;
-;       |mux4:mux4|                         ; 67 (67)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux4:mux4                                                              ; mux4                  ; work         ;
+;    |ula_ctrl:ula_ctrl|                    ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_ctrl:ula_ctrl                                                                   ; ula_ctrl              ; work         ;
+;    |ula_mips:ula|                         ; 105 (1)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula                                                                        ; ula_mips              ; work         ;
+;       |full_adder:full_adder|             ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|full_adder:full_adder                                                  ; full_adder            ; work         ;
+;       |mux2:mux2B|                        ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux2:mux2B                                                             ; mux2                  ; work         ;
+;       |mux4:mux4|                         ; 68 (68)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_teste|ula_mips:ula|mux4:mux4                                                              ; mux4                  ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -337,219 +336,206 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
 ; bancoRegistradores:regs|altsyncram:registrador_rtl_0|altsyncram_mcc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None                                               ;
 ; bancoRegistradores:regs|altsyncram:registrador_rtl_1|altsyncram_mcc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None                                               ;
-; memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_7ch1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif ;
+; memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_31i1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif ;
 +------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                         ;
-+-------------------------------------------------------+--------------------------------------------------------------------+
-; Register name                                         ; Reason for Removal                                                 ;
-+-------------------------------------------------------+--------------------------------------------------------------------+
-; registrador:ID_EX|q[26..41]                           ; Stuck at GND due to stuck port data_in                             ;
-; registrador:ID_EX|q[73]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[31] ;
-; registrador:ID_EX|q[72]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[30] ;
-; registrador:ID_EX|q[71]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[29] ;
-; registrador:ID_EX|q[70]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[28] ;
-; registrador:ID_EX|q[69]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[27] ;
-; registrador:ID_EX|q[68]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[26] ;
-; registrador:ID_EX|q[67]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[25] ;
-; registrador:ID_EX|q[66]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[24] ;
-; registrador:ID_EX|q[65]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[23] ;
-; registrador:ID_EX|q[64]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[22] ;
-; registrador:ID_EX|q[63]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[21] ;
-; registrador:ID_EX|q[62]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[20] ;
-; registrador:ID_EX|q[61]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[19] ;
-; registrador:ID_EX|q[60]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[18] ;
-; registrador:ID_EX|q[59]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[17] ;
-; registrador:ID_EX|q[58]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[16] ;
-; registrador:ID_EX|q[57]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[15] ;
-; registrador:ID_EX|q[56]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[14] ;
-; registrador:ID_EX|q[55]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[13] ;
-; registrador:ID_EX|q[54]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[12] ;
-; registrador:ID_EX|q[53]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[11] ;
-; registrador:ID_EX|q[52]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[10] ;
-; registrador:ID_EX|q[51]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[9]  ;
-; registrador:ID_EX|q[50]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[8]  ;
-; registrador:ID_EX|q[49]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[7]  ;
-; registrador:ID_EX|q[48]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[6]  ;
-; registrador:ID_EX|q[47]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[5]  ;
-; registrador:ID_EX|q[46]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[4]  ;
-; registrador:ID_EX|q[45]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[3]  ;
-; registrador:ID_EX|q[44]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[2]  ;
-; registrador:ID_EX|q[43]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[1]  ;
-; registrador:ID_EX|q[42]                               ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[0]  ;
-; registrador:ID_EX|q[4]                                ; Merged with registrador:ID_EX|q[25]                                ;
-; registrador:ID_EX|q[3]                                ; Merged with registrador:ID_EX|q[24]                                ;
-; registrador:ID_EX|q[2]                                ; Merged with registrador:ID_EX|q[23]                                ;
-; registrador:ID_EX|q[1]                                ; Merged with registrador:ID_EX|q[22]                                ;
-; registrador:ID_EX|q[0]                                ; Merged with registrador:ID_EX|q[21]                                ;
-; PC:PC|q[1]                                            ; Merged with PC:PC|q[0]                                             ;
-; registrador:EX_MEM|q[71]                              ; Merged with registrador:EX_MEM|q[70]                               ;
-; registrador:ID_EX|q[107]                              ; Merged with registrador:ID_EX|q[106]                               ;
-; registrador:IF_ID|q[33]                               ; Merged with registrador:IF_ID|q[32]                                ;
-; registrador:IF_ID|q[4,6..10,13,15,18,23,28..30]       ; Stuck at GND due to stuck port data_in                             ;
-; registrador:ID_EX|q[7]                                ; Stuck at GND due to stuck port data_in                             ;
-; bancoRegistradores:regs|registrador_rtl_0_bypass[6]   ; Stuck at GND due to stuck port data_in                             ;
-; bancoRegistradores:regs|registrador_rtl_1_bypass[6]   ; Stuck at GND due to stuck port data_in                             ;
-; registrador:ID_EX|q[14,16..20,23,25,139,142]          ; Stuck at GND due to stuck port data_in                             ;
-; registrador:EX_MEM|q[2,102]                           ; Stuck at GND due to stuck port data_in                             ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[0]     ; Stuck at GND due to stuck port data_in                             ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[1..12] ; Lost fanout                                                        ;
-; registrador:MEM_WB|q[2]                               ; Stuck at GND due to stuck port data_in                             ;
-; bancoRegistradores:regs|registrador_rtl_0_bypass[5]   ; Stuck at GND due to stuck port data_in                             ;
-; bancoRegistradores:regs|registrador_rtl_1_bypass[5]   ; Stuck at GND due to stuck port data_in                             ;
-; registrador:ID_EX|q[141]                              ; Merged with registrador:ID_EX|q[140]                               ;
-; registrador:IF_ID|q[26]                               ; Merged with registrador:IF_ID|q[27]                                ;
-; registrador:ID_EX|q[144]                              ; Stuck at GND due to stuck port data_in                             ;
-; registrador:EX_MEM|q[104]                             ; Stuck at GND due to stuck port data_in                             ;
-; registrador:EX_MEM|q[69,70,72..101]                   ; Lost fanout                                                        ;
-; registrador:ID_EX|q[137]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[63]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[136]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[62]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[135]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[61]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[134]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[60]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[133]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[59]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[132]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[58]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[131]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[57]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[130]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[56]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[129]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[55]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[128]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[54]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[127]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[53]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[126]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[52]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[125]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[51]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[124]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[50]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[123]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[49]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[121]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[47]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[118]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[44]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[117]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[43]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[116]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[42]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[115]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[41]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[114]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[40]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[112]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[38]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[106]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[32]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[122]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[48]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[120]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[46]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[119]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[45]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[113]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[39]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[111]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[37]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[110]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[36]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[109]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[35]                               ; Lost fanout                                                        ;
-; registrador:ID_EX|q[108]                              ; Lost fanout                                                        ;
-; registrador:IF_ID|q[34]                               ; Lost fanout                                                        ;
-; PC:PC|q[0]                                            ; Stuck at GND due to stuck port data_in                             ;
-; Total Number of Removed Registers = 200               ;                                                                    ;
-+-------------------------------------------------------+--------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                          ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+; Register name                                          ; Reason for Removal                                                 ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+; registrador:ID_EX|q[26..41]                            ; Stuck at GND due to stuck port data_in                             ;
+; registrador:ID_EX|q[73]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[31] ;
+; registrador:ID_EX|q[72]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[30] ;
+; registrador:ID_EX|q[71]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[29] ;
+; registrador:ID_EX|q[70]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[28] ;
+; registrador:ID_EX|q[69]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[27] ;
+; registrador:ID_EX|q[68]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[26] ;
+; registrador:ID_EX|q[67]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[25] ;
+; registrador:ID_EX|q[66]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[24] ;
+; registrador:ID_EX|q[65]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[23] ;
+; registrador:ID_EX|q[64]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[22] ;
+; registrador:ID_EX|q[63]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[21] ;
+; registrador:ID_EX|q[62]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[20] ;
+; registrador:ID_EX|q[61]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[19] ;
+; registrador:ID_EX|q[60]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[18] ;
+; registrador:ID_EX|q[59]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[17] ;
+; registrador:ID_EX|q[58]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[16] ;
+; registrador:ID_EX|q[57]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[15] ;
+; registrador:ID_EX|q[56]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[14] ;
+; registrador:ID_EX|q[55]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[13] ;
+; registrador:ID_EX|q[54]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[12] ;
+; registrador:ID_EX|q[53]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[11] ;
+; registrador:ID_EX|q[52]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[10] ;
+; registrador:ID_EX|q[51]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[9]  ;
+; registrador:ID_EX|q[50]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[8]  ;
+; registrador:ID_EX|q[49]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[7]  ;
+; registrador:ID_EX|q[48]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[6]  ;
+; registrador:ID_EX|q[47]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[5]  ;
+; registrador:ID_EX|q[46]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[4]  ;
+; registrador:ID_EX|q[45]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[3]  ;
+; registrador:ID_EX|q[44]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[2]  ;
+; registrador:ID_EX|q[43]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[1]  ;
+; registrador:ID_EX|q[42]                                ; Merged with controlador_io:controlador1|registrador:reg_seg7|q[0]  ;
+; registrador:ID_EX|q[4]                                 ; Merged with registrador:ID_EX|q[25]                                ;
+; registrador:ID_EX|q[3]                                 ; Merged with registrador:ID_EX|q[24]                                ;
+; registrador:ID_EX|q[2]                                 ; Merged with registrador:ID_EX|q[23]                                ;
+; registrador:ID_EX|q[1]                                 ; Merged with registrador:ID_EX|q[22]                                ;
+; registrador:ID_EX|q[0]                                 ; Merged with registrador:ID_EX|q[21]                                ;
+; PC:PC|q[1]                                             ; Merged with PC:PC|q[0]                                             ;
+; registrador:EX_MEM|q[71]                               ; Merged with registrador:EX_MEM|q[70]                               ;
+; registrador:ID_EX|q[107]                               ; Merged with registrador:ID_EX|q[106]                               ;
+; registrador:IF_ID|q[33]                                ; Merged with registrador:IF_ID|q[32]                                ;
+; registrador:IF_ID|q[4,6..9,13,15,18,23,25,30]          ; Stuck at GND due to stuck port data_in                             ;
+; registrador:ID_EX|q[7]                                 ; Stuck at GND due to stuck port data_in                             ;
+; bancoRegistradores:regs|registrador_rtl_0_bypass[6,10] ; Stuck at GND due to stuck port data_in                             ;
+; bancoRegistradores:regs|registrador_rtl_1_bypass[6]    ; Stuck at GND due to stuck port data_in                             ;
+; registrador:ID_EX|q[14,16..19,23,25]                   ; Stuck at GND due to stuck port data_in                             ;
+; registrador:EX_MEM|q[2]                                ; Stuck at GND due to stuck port data_in                             ;
+; registrador:MEM_WB|q[2]                                ; Stuck at GND due to stuck port data_in                             ;
+; bancoRegistradores:regs|registrador_rtl_0_bypass[5]    ; Stuck at GND due to stuck port data_in                             ;
+; bancoRegistradores:regs|registrador_rtl_1_bypass[5]    ; Stuck at GND due to stuck port data_in                             ;
+; registrador:IF_ID|q[16]                                ; Merged with registrador:IF_ID|q[24]                                ;
+; registrador:ID_EX|q[141]                               ; Merged with registrador:ID_EX|q[140]                               ;
+; registrador:IF_ID|q[29]                                ; Merged with registrador:IF_ID|q[10]                                ;
+; registrador:IF_ID|q[14]                                ; Merged with registrador:IF_ID|q[11]                                ;
+; registrador:IF_ID|q[26]                                ; Merged with registrador:IF_ID|q[27]                                ;
+; registrador:ID_EX|q[24]                                ; Merged with registrador:ID_EX|q[21]                                ;
+; registrador:ID_EX|q[144]                               ; Stuck at GND due to stuck port data_in                             ;
+; registrador:EX_MEM|q[104]                              ; Stuck at GND due to stuck port data_in                             ;
+; registrador:EX_MEM|q[69,70,72..101]                    ; Lost fanout                                                        ;
+; registrador:ID_EX|q[137]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[63]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[136]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[62]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[135]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[61]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[134]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[60]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[133]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[59]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[132]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[58]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[131]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[57]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[130]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[56]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[129]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[55]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[128]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[54]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[127]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[53]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[126]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[52]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[125]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[51]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[124]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[50]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[123]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[49]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[121]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[47]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[117]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[43]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[116]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[42]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[115]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[41]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[114]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[40]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[112]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[38]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[106]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[32]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[122]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[48]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[120]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[46]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[119]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[45]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[118]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[44]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[113]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[39]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[111]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[37]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[110]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[36]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[109]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[35]                                ; Lost fanout                                                        ;
+; registrador:ID_EX|q[108]                               ; Lost fanout                                                        ;
+; registrador:IF_ID|q[34]                                ; Lost fanout                                                        ;
+; PC:PC|q[0]                                             ; Stuck at GND due to stuck port data_in                             ;
+; Total Number of Removed Registers = 186                ;                                                                    ;
++--------------------------------------------------------+--------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                            ;
-+--------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name            ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+--------------------------+---------------------------+---------------------------------------------------------------------------------+
-; registrador:IF_ID|q[30]  ; Stuck at GND              ; registrador:ID_EX|q[139], registrador:ID_EX|q[142], registrador:EX_MEM|q[102],  ;
-;                          ; due to stuck port data_in ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[0],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[1],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[2],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[3],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[4],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[5],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[6],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[7],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[8],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[9],                              ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[10],                             ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[11],                             ;
-;                          ;                           ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[12], registrador:ID_EX|q[144],   ;
-;                          ;                           ; registrador:EX_MEM|q[104], registrador:EX_MEM|q[69], registrador:EX_MEM|q[72],  ;
-;                          ;                           ; registrador:EX_MEM|q[73], registrador:EX_MEM|q[74], registrador:EX_MEM|q[75],   ;
-;                          ;                           ; registrador:EX_MEM|q[76], registrador:EX_MEM|q[77], registrador:EX_MEM|q[78],   ;
-;                          ;                           ; registrador:EX_MEM|q[79], registrador:EX_MEM|q[70], registrador:EX_MEM|q[80],   ;
-;                          ;                           ; registrador:EX_MEM|q[81], registrador:EX_MEM|q[82], registrador:EX_MEM|q[83],   ;
-;                          ;                           ; registrador:EX_MEM|q[84], registrador:EX_MEM|q[85], registrador:EX_MEM|q[86],   ;
-;                          ;                           ; registrador:EX_MEM|q[87], registrador:EX_MEM|q[88], registrador:EX_MEM|q[89],   ;
-;                          ;                           ; registrador:EX_MEM|q[90], registrador:EX_MEM|q[91], registrador:EX_MEM|q[92],   ;
-;                          ;                           ; registrador:EX_MEM|q[93], registrador:EX_MEM|q[94], registrador:EX_MEM|q[95],   ;
-;                          ;                           ; registrador:EX_MEM|q[96], registrador:EX_MEM|q[97], registrador:EX_MEM|q[98],   ;
-;                          ;                           ; registrador:EX_MEM|q[99], registrador:EX_MEM|q[100], registrador:EX_MEM|q[101], ;
-;                          ;                           ; registrador:ID_EX|q[106], registrador:IF_ID|q[32], PC:PC|q[0]                   ;
-; registrador:ID_EX|q[39]  ; Stuck at GND              ; registrador:ID_EX|q[137], registrador:IF_ID|q[63], registrador:ID_EX|q[136],    ;
-;                          ; due to stuck port data_in ; registrador:IF_ID|q[62], registrador:ID_EX|q[135], registrador:IF_ID|q[61],     ;
-;                          ;                           ; registrador:ID_EX|q[134], registrador:IF_ID|q[60], registrador:ID_EX|q[133],    ;
-;                          ;                           ; registrador:IF_ID|q[59], registrador:ID_EX|q[132], registrador:IF_ID|q[58],     ;
-;                          ;                           ; registrador:ID_EX|q[131], registrador:IF_ID|q[57], registrador:ID_EX|q[130],    ;
-;                          ;                           ; registrador:IF_ID|q[56]                                                         ;
-; registrador:IF_ID|q[18]  ; Stuck at GND              ; registrador:ID_EX|q[7], registrador:EX_MEM|q[2], registrador:MEM_WB|q[2],       ;
-;                          ; due to stuck port data_in ; bancoRegistradores:regs|registrador_rtl_0_bypass[5],                            ;
-;                          ;                           ; bancoRegistradores:regs|registrador_rtl_1_bypass[5]                             ;
-; registrador:IF_ID|q[4]   ; Stuck at GND              ; registrador:ID_EX|q[14]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[6]   ; Stuck at GND              ; registrador:ID_EX|q[16]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[7]   ; Stuck at GND              ; registrador:ID_EX|q[17]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[8]   ; Stuck at GND              ; registrador:ID_EX|q[18]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[9]   ; Stuck at GND              ; registrador:ID_EX|q[19]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[10]  ; Stuck at GND              ; registrador:ID_EX|q[20]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[13]  ; Stuck at GND              ; registrador:ID_EX|q[23]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:IF_ID|q[15]  ; Stuck at GND              ; registrador:ID_EX|q[25]                                                         ;
-;                          ; due to stuck port data_in ;                                                                                 ;
-; registrador:ID_EX|q[129] ; Lost Fanouts              ; registrador:IF_ID|q[55]                                                         ;
-; registrador:ID_EX|q[128] ; Lost Fanouts              ; registrador:IF_ID|q[54]                                                         ;
-; registrador:ID_EX|q[127] ; Lost Fanouts              ; registrador:IF_ID|q[53]                                                         ;
-; registrador:ID_EX|q[126] ; Lost Fanouts              ; registrador:IF_ID|q[52]                                                         ;
-; registrador:ID_EX|q[125] ; Lost Fanouts              ; registrador:IF_ID|q[51]                                                         ;
-; registrador:ID_EX|q[124] ; Lost Fanouts              ; registrador:IF_ID|q[50]                                                         ;
-; registrador:ID_EX|q[123] ; Lost Fanouts              ; registrador:IF_ID|q[49]                                                         ;
-; registrador:ID_EX|q[121] ; Lost Fanouts              ; registrador:IF_ID|q[47]                                                         ;
-; registrador:ID_EX|q[118] ; Lost Fanouts              ; registrador:IF_ID|q[44]                                                         ;
-; registrador:ID_EX|q[117] ; Lost Fanouts              ; registrador:IF_ID|q[43]                                                         ;
-; registrador:ID_EX|q[116] ; Lost Fanouts              ; registrador:IF_ID|q[42]                                                         ;
-; registrador:ID_EX|q[115] ; Lost Fanouts              ; registrador:IF_ID|q[41]                                                         ;
-; registrador:ID_EX|q[114] ; Lost Fanouts              ; registrador:IF_ID|q[40]                                                         ;
-; registrador:ID_EX|q[112] ; Lost Fanouts              ; registrador:IF_ID|q[38]                                                         ;
-; registrador:ID_EX|q[122] ; Lost Fanouts              ; registrador:IF_ID|q[48]                                                         ;
-; registrador:ID_EX|q[120] ; Lost Fanouts              ; registrador:IF_ID|q[46]                                                         ;
-; registrador:ID_EX|q[119] ; Lost Fanouts              ; registrador:IF_ID|q[45]                                                         ;
-; registrador:ID_EX|q[113] ; Lost Fanouts              ; registrador:IF_ID|q[39]                                                         ;
-; registrador:ID_EX|q[111] ; Lost Fanouts              ; registrador:IF_ID|q[37]                                                         ;
-; registrador:ID_EX|q[110] ; Lost Fanouts              ; registrador:IF_ID|q[36]                                                         ;
-; registrador:ID_EX|q[109] ; Lost Fanouts              ; registrador:IF_ID|q[35]                                                         ;
-; registrador:ID_EX|q[108] ; Lost Fanouts              ; registrador:IF_ID|q[34]                                                         ;
-+--------------------------+---------------------------+---------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                           ;
++--------------------------+---------------------------+--------------------------------------------------------------------------------+
+; Register name            ; Reason for Removal        ; Registers Removed due to This Register                                         ;
++--------------------------+---------------------------+--------------------------------------------------------------------------------+
+; registrador:IF_ID|q[30]  ; Stuck at GND              ; registrador:ID_EX|q[144], registrador:EX_MEM|q[104], registrador:EX_MEM|q[69], ;
+;                          ; due to stuck port data_in ; registrador:EX_MEM|q[72], registrador:EX_MEM|q[73], registrador:EX_MEM|q[74],  ;
+;                          ;                           ; registrador:EX_MEM|q[75], registrador:EX_MEM|q[76], registrador:EX_MEM|q[77],  ;
+;                          ;                           ; registrador:EX_MEM|q[78], registrador:EX_MEM|q[79], registrador:EX_MEM|q[70],  ;
+;                          ;                           ; registrador:EX_MEM|q[80], registrador:EX_MEM|q[81], registrador:EX_MEM|q[82],  ;
+;                          ;                           ; registrador:EX_MEM|q[83], registrador:EX_MEM|q[84], registrador:EX_MEM|q[85],  ;
+;                          ;                           ; registrador:EX_MEM|q[86], registrador:EX_MEM|q[87], registrador:EX_MEM|q[88],  ;
+;                          ;                           ; registrador:EX_MEM|q[89], registrador:EX_MEM|q[90], registrador:EX_MEM|q[91],  ;
+;                          ;                           ; registrador:EX_MEM|q[92], registrador:EX_MEM|q[93], registrador:EX_MEM|q[94],  ;
+;                          ;                           ; registrador:EX_MEM|q[95], registrador:EX_MEM|q[96], registrador:EX_MEM|q[97],  ;
+;                          ;                           ; registrador:EX_MEM|q[98], registrador:EX_MEM|q[99], registrador:EX_MEM|q[100], ;
+;                          ;                           ; registrador:EX_MEM|q[101], registrador:ID_EX|q[106], registrador:IF_ID|q[32],  ;
+;                          ;                           ; PC:PC|q[0]                                                                     ;
+; registrador:ID_EX|q[39]  ; Stuck at GND              ; registrador:ID_EX|q[137], registrador:IF_ID|q[63], registrador:ID_EX|q[136],   ;
+;                          ; due to stuck port data_in ; registrador:IF_ID|q[62], registrador:ID_EX|q[135], registrador:IF_ID|q[61],    ;
+;                          ;                           ; registrador:ID_EX|q[134], registrador:IF_ID|q[60], registrador:ID_EX|q[133],   ;
+;                          ;                           ; registrador:IF_ID|q[59], registrador:ID_EX|q[132], registrador:IF_ID|q[58],    ;
+;                          ;                           ; registrador:ID_EX|q[131], registrador:IF_ID|q[57], registrador:ID_EX|q[130],   ;
+;                          ;                           ; registrador:IF_ID|q[56]                                                        ;
+; registrador:IF_ID|q[18]  ; Stuck at GND              ; registrador:ID_EX|q[7], registrador:EX_MEM|q[2], registrador:MEM_WB|q[2],      ;
+;                          ; due to stuck port data_in ; bancoRegistradores:regs|registrador_rtl_0_bypass[5],                           ;
+;                          ;                           ; bancoRegistradores:regs|registrador_rtl_1_bypass[5]                            ;
+; registrador:ID_EX|q[116] ; Lost Fanouts              ; registrador:IF_ID|q[42]                                                        ;
+; registrador:ID_EX|q[117] ; Lost Fanouts              ; registrador:IF_ID|q[43]                                                        ;
+; registrador:ID_EX|q[109] ; Lost Fanouts              ; registrador:IF_ID|q[35]                                                        ;
+; registrador:ID_EX|q[115] ; Lost Fanouts              ; registrador:IF_ID|q[41]                                                        ;
+; registrador:ID_EX|q[114] ; Lost Fanouts              ; registrador:IF_ID|q[40]                                                        ;
+; registrador:ID_EX|q[112] ; Lost Fanouts              ; registrador:IF_ID|q[38]                                                        ;
+; registrador:ID_EX|q[122] ; Lost Fanouts              ; registrador:IF_ID|q[48]                                                        ;
+; registrador:ID_EX|q[120] ; Lost Fanouts              ; registrador:IF_ID|q[46]                                                        ;
+; registrador:ID_EX|q[119] ; Lost Fanouts              ; registrador:IF_ID|q[45]                                                        ;
+; registrador:ID_EX|q[118] ; Lost Fanouts              ; registrador:IF_ID|q[44]                                                        ;
+; registrador:ID_EX|q[113] ; Lost Fanouts              ; registrador:IF_ID|q[39]                                                        ;
+; registrador:ID_EX|q[111] ; Lost Fanouts              ; registrador:IF_ID|q[37]                                                        ;
+; registrador:ID_EX|q[110] ; Lost Fanouts              ; registrador:IF_ID|q[36]                                                        ;
+; registrador:ID_EX|q[108] ; Lost Fanouts              ; registrador:IF_ID|q[34]                                                        ;
+; registrador:ID_EX|q[121] ; Lost Fanouts              ; registrador:IF_ID|q[47]                                                        ;
+; registrador:ID_EX|q[123] ; Lost Fanouts              ; registrador:IF_ID|q[49]                                                        ;
+; registrador:ID_EX|q[124] ; Lost Fanouts              ; registrador:IF_ID|q[50]                                                        ;
+; registrador:ID_EX|q[125] ; Lost Fanouts              ; registrador:IF_ID|q[51]                                                        ;
+; registrador:ID_EX|q[126] ; Lost Fanouts              ; registrador:IF_ID|q[52]                                                        ;
+; registrador:ID_EX|q[127] ; Lost Fanouts              ; registrador:IF_ID|q[53]                                                        ;
+; registrador:ID_EX|q[128] ; Lost Fanouts              ; registrador:IF_ID|q[54]                                                        ;
+; registrador:ID_EX|q[129] ; Lost Fanouts              ; registrador:IF_ID|q[55]                                                        ;
+; registrador:IF_ID|q[15]  ; Stuck at GND              ; registrador:ID_EX|q[25]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
+; registrador:IF_ID|q[13]  ; Stuck at GND              ; registrador:ID_EX|q[23]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
+; registrador:IF_ID|q[9]   ; Stuck at GND              ; registrador:ID_EX|q[19]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
+; registrador:IF_ID|q[8]   ; Stuck at GND              ; registrador:ID_EX|q[18]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
+; registrador:IF_ID|q[7]   ; Stuck at GND              ; registrador:ID_EX|q[17]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
+; registrador:IF_ID|q[6]   ; Stuck at GND              ; registrador:ID_EX|q[16]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
+; registrador:IF_ID|q[4]   ; Stuck at GND              ; registrador:ID_EX|q[14]                                                        ;
+;                          ; due to stuck port data_in ;                                                                                ;
++--------------------------+---------------------------+--------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -557,7 +543,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 440   ;
+; Total registers                              ; 454   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -591,20 +577,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[44] ; 1       ;
 ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[46] ; 1       ;
 ; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[48] ; 1       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[50] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[52] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[54] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[56] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[58] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[60] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[62] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[64] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[66] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[68] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[70] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[72] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[74] ; 2       ;
-; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[76] ; 2       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[50] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[52] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[54] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[56] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[58] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[60] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[62] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[64] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[66] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[68] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[70] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[72] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[74] ; 1       ;
+; memoria_de_dados:memoriaDados|ram_rtl_0_bypass[76] ; 1       ;
 ; Total number of inverted registers = 33            ;         ;
 +----------------------------------------------------+---------+
 
@@ -785,13 +771,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[15]                               ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[2]                                ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |mips_teste|ula_mips:ula|mux4:mux4|Mux30              ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_teste|bancoRegistradores:regs|saidaA[9]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_teste|bancoRegistradores:regs|saidaB[18]        ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |mips_teste|controlador_io:controlador1|dado_lido[11] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |mips_teste|controlador_io:controlador1|dado_lido[2]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[8]                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |mips_teste|PC:PC|q[26]                               ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |mips_teste|ula_mips:ula|mux4:mux4|Mux14              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_teste|bancoRegistradores:regs|saidaA[0]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_teste|bancoRegistradores:regs|saidaB[1]         ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |mips_teste|controlador_io:controlador1|dado_lido[10] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |mips_teste|controlador_io:controlador1|dado_lido[0]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -814,7 +800,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_7ch1:auto_generated ;
+; Source assignments for memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0|altsyncram_31i1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -1154,7 +1140,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                              ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                                  ; Untyped        ;
 ; DEVICE_FAMILY                      ; Cyclone IV E                                       ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_7ch1                                    ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_31i1                                    ; Untyped        ;
 +------------------------------------+----------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1407,21 +1393,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 488                         ;
-; cycloneiii_ff         ; 440                         ;
-;     plain             ; 440                         ;
-; cycloneiii_lcell_comb ; 488                         ;
+; cycloneiii_ff         ; 454                         ;
+;     plain             ; 454                         ;
+; cycloneiii_lcell_comb ; 479                         ;
 ;     arith             ; 29                          ;
 ;         2 data inputs ; 29                          ;
-;     normal            ; 459                         ;
+;     normal            ; 450                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 94                          ;
-;         4 data inputs ; 325                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 342                         ;
 ; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 37.00                       ;
-; Average LUT depth     ; 7.74                        ;
+; Max LUT depth         ; 39.00                       ;
+; Average LUT depth     ; 8.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1430,7 +1416,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1439,113 +1425,113 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Nov 22 22:16:54 2018
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Fri Nov 23 09:48:14 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_mips -c ula_mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula_mips.vhd
-    Info (12022): Found design unit 1: ula_mips-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 14
-    Info (12023): Found entity 1: ula_mips File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
+    Info (12022): Found design unit 1: ula_mips-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 14
+    Info (12023): Found entity 1: ula_mips File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
-    Info (12022): Found design unit 1: mux2-mux2_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 11
-    Info (12023): Found entity 1: mux2 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2.vhd Line: 4
+    Info (12022): Found design unit 1: mux2-mux2_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: /home/parallels/Github/MIPS_2018/ula_mips/mux2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd Line: 25
-    Info (12023): Found entity 1: full_adder File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/full_adder.vhd Line: 8
+    Info (12022): Found design unit 1: full_adder-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd Line: 25
+    Info (12023): Found entity 1: full_adder File: /home/parallels/Github/MIPS_2018/ula_mips/full_adder.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
-    Info (12022): Found design unit 1: mux4-mux4_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 11
-    Info (12023): Found entity 1: mux4 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux4.vhd Line: 4
+    Info (12022): Found design unit 1: mux4-mux4_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 11
+    Info (12023): Found entity 1: mux4 File: /home/parallels/Github/MIPS_2018/ula_mips/mux4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ula_ctrl.vhd
-    Info (12022): Found design unit 1: ula_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 13
-    Info (12023): Found entity 1: ula_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 5
+    Info (12022): Found design unit 1: ula_ctrl-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 13
+    Info (12023): Found entity 1: ula_ctrl File: /home/parallels/Github/MIPS_2018/ula_mips/ula_ctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fd_ctrl.vhd
-    Info (12022): Found design unit 1: fd_ctrl-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 12
-    Info (12023): Found entity 1: fd_ctrl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
+    Info (12022): Found design unit 1: fd_ctrl-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 12
+    Info (12023): Found entity 1: fd_ctrl File: /home/parallels/Github/MIPS_2018/ula_mips/fd_ctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mips_teste.vhd
-    Info (12022): Found design unit 1: mips_teste-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 26
-    Info (12023): Found entity 1: mips_teste File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: mips_teste-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 26
+    Info (12023): Found entity 1: mips_teste File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/parallels/Github/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 29
+    Info (12023): Found entity 1: bancoRegistradores File: /home/parallels/Github/MIPS_2018/ula_mips/bancoRegistradores.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file shifter.vhd
-    Info (12022): Found design unit 1: shifter-shifterarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd Line: 15
-    Info (12023): Found entity 1: shifter File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file estendesinal.vhd
-    Info (12022): Found design unit 1: estendeSinal-estendeSinalarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd Line: 13
-    Info (12023): Found entity 1: estendeSinal File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/estendeSinal.vhd Line: 5
+    Info (12022): Found design unit 1: shifter-shifterarch File: /home/parallels/Github/MIPS_2018/ula_mips/shifter.vhd Line: 15
+    Info (12023): Found entity 1: shifter File: /home/parallels/Github/MIPS_2018/ula_mips/shifter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file estendeSinal.vhd
+    Info (12022): Found design unit 1: estendeSinal-estendeSinalarch File: /home/parallels/Github/MIPS_2018/ula_mips/estendeSinal.vhd Line: 13
+    Info (12023): Found entity 1: estendeSinal File: /home/parallels/Github/MIPS_2018/ula_mips/estendeSinal.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
-    Info (12022): Found design unit 1: somador-Behavioral File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd Line: 14
-    Info (12023): Found entity 1: somador File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/somador.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: PC-PC_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd Line: 13
-    Info (12023): Found entity 1: PC File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/PC.vhd Line: 4
+    Info (12022): Found design unit 1: somador-Behavioral File: /home/parallels/Github/MIPS_2018/ula_mips/somador.vhd Line: 14
+    Info (12023): Found entity 1: somador File: /home/parallels/Github/MIPS_2018/ula_mips/somador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file PC.vhd
+    Info (12022): Found design unit 1: PC-PC_arch File: /home/parallels/Github/MIPS_2018/ula_mips/PC.vhd Line: 13
+    Info (12023): Found entity 1: PC File: /home/parallels/Github/MIPS_2018/ula_mips/PC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_de_dados.vhd
-    Info (12022): Found design unit 1: memoria_de_dados-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 27
-    Info (12023): Found entity 1: memoria_de_dados File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_de_dados-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 27
+    Info (12023): Found entity 1: memoria_de_dados File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_dados.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_de_instrucoes.vhd
-    Info (12022): Found design unit 1: memoria_de_instrucoes-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 24
-    Info (12023): Found entity 1: memoria_de_instrucoes File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_de_instrucoes-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 24
+    Info (12023): Found entity 1: memoria_de_instrucoes File: /home/parallels/Github/MIPS_2018/ula_mips/memoria_de_instrucoes.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file shifter26.vhd
-    Info (12022): Found design unit 1: shifter26-shifterarch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd Line: 15
-    Info (12023): Found entity 1: shifter26 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/shifter26.vhd Line: 5
+    Info (12022): Found design unit 1: shifter26-shifterarch File: /home/parallels/Github/MIPS_2018/ula_mips/shifter26.vhd Line: 15
+    Info (12023): Found entity 1: shifter26 File: /home/parallels/Github/MIPS_2018/ula_mips/shifter26.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2de5.vhd
-    Info (12022): Found design unit 1: mux2de5-mux2_arch File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 11
-    Info (12023): Found entity 1: mux2de5 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mux2de5.vhd Line: 4
+    Info (12022): Found design unit 1: mux2de5-mux2_arch File: /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd Line: 11
+    Info (12023): Found entity 1: mux2de5 File: /home/parallels/Github/MIPS_2018/ula_mips/mux2de5.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/decodificador.vhd Line: 24
-    Info (12023): Found entity 1: decodificador File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/decodificador.vhd Line: 5
+    Info (12022): Found design unit 1: decodificador-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/decodificador.vhd Line: 24
+    Info (12023): Found entity 1: decodificador File: /home/parallels/Github/MIPS_2018/ula_mips/decodificador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file controlador_io.vhd
-    Info (12022): Found design unit 1: controlador_io-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 30
-    Info (12023): Found entity 1: controlador_io File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 5
+    Info (12022): Found design unit 1: controlador_io-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 30
+    Info (12023): Found entity 1: controlador_io File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
-    Info (12022): Found design unit 1: registrador-rtl File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 22
-    Info (12023): Found entity 1: registrador File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/conversorHex7Seg.vhd Line: 18
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/conversorHex7Seg.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/divisorGenerico.vhd Line: 16
-    Info (12023): Found entity 1: divisorGenerico File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/divisorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: registrador-rtl File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 22
+    Info (12023): Found entity 1: registrador File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/parallels/Github/MIPS_2018/ula_mips/conversorHex7Seg.vhd Line: 18
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/parallels/Github/MIPS_2018/ula_mips/conversorHex7Seg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorGenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/parallels/Github/MIPS_2018/ula_mips/divisorGenerico.vhd Line: 16
+    Info (12023): Found entity 1: divisorGenerico File: /home/parallels/Github/MIPS_2018/ula_mips/divisorGenerico.vhd Line: 5
 Info (12127): Elaborating entity "mips_teste" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(7): used implicit default value for signal "clko" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 7
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(9): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(28): used implicit default value for signal "mux2_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 28
-Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(28): used implicit default value for signal "habLeiMEM_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at mips_teste.vhd(48): object "controlador_mem" assigned a value but never read File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 48
-Info (12128): Elaborating entity "fd_ctrl" for hierarchy "fd_ctrl:fd_ctrl" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 61
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 64
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_PC" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 67
-Info (12128): Elaborating entity "memoria_de_instrucoes" for hierarchy "memoria_de_instrucoes:memoriaInst" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 70
-Info (12128): Elaborating entity "somador" for hierarchy "somador:somador1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 73
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:IF_ID" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 26
-Info (12128): Elaborating entity "shifter26" for hierarchy "shifter26:shifter1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 79
-Info (12128): Elaborating entity "mux2de5" for hierarchy "mux2de5:mux_RtRd" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 82
-Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:extensor" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 85
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:regs" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 88
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:ID_EX" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 26
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter2" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 97
-Info (12128): Elaborating entity "ula_ctrl" for hierarchy "ula_ctrl:ula_ctrl" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 103
-Info (12128): Elaborating entity "ula_mips" for hierarchy "ula_mips:ula" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 106
-Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(17): object "c_out_adder" assigned a value but never read File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 17
-Info (12128): Elaborating entity "full_adder" for hierarchy "ula_mips:ula|full_adder:full_adder" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 28
-Info (12128): Elaborating entity "mux4" for hierarchy "ula_mips:ula|mux4:mux4" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/ula_mips.vhd Line: 34
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:EX_MEM" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 26
-Info (12128): Elaborating entity "memoria_de_dados" for hierarchy "memoria_de_dados:memoriaDados" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 120
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:MEM_WB" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 123
-Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 26
-Info (12128): Elaborating entity "controlador_io" for hierarchy "controlador_io:controlador1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 151
-Warning (10036): Verilog HDL or VHDL warning at controlador_io.vhd(78): object "en_seg7" assigned a value but never read File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 78
-Warning (10036): Verilog HDL or VHDL warning at controlador_io.vhd(78): object "en_leds" assigned a value but never read File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 78
-Info (12128): Elaborating entity "decodificador" for hierarchy "controlador_io:controlador1|decodificador:decodificador1" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 82
-Info (12128): Elaborating entity "registrador" for hierarchy "controlador_io:controlador1|registrador:reg_leds" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 26
-Info (12128): Elaborating entity "registrador" for hierarchy "controlador_io:controlador1|registrador:reg_seg7" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/registrador.vhd Line: 26
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "controlador_io:controlador1|conversorHex7Seg:conv_HEX0" File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/controlador_io.vhd Line: 122
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(7): used implicit default value for signal "clko" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 7
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(9): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(28): used implicit default value for signal "mux2_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at mips_teste.vhd(28): used implicit default value for signal "habLeiMEM_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at mips_teste.vhd(48): object "controlador_mem" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 48
+Info (12128): Elaborating entity "fd_ctrl" for hierarchy "fd_ctrl:fd_ctrl" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 61
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 64
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_PC" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 67
+Info (12128): Elaborating entity "memoria_de_instrucoes" for hierarchy "memoria_de_instrucoes:memoriaInst" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 70
+Info (12128): Elaborating entity "somador" for hierarchy "somador:somador1" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 73
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:IF_ID" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 26
+Info (12128): Elaborating entity "shifter26" for hierarchy "shifter26:shifter1" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 79
+Info (12128): Elaborating entity "mux2de5" for hierarchy "mux2de5:mux_RtRd" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 82
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:extensor" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 85
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:regs" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 88
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:ID_EX" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 26
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter2" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 97
+Info (12128): Elaborating entity "ula_ctrl" for hierarchy "ula_ctrl:ula_ctrl" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 103
+Info (12128): Elaborating entity "ula_mips" for hierarchy "ula_mips:ula" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 106
+Warning (10036): Verilog HDL or VHDL warning at ula_mips.vhd(17): object "c_out_adder" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 17
+Info (12128): Elaborating entity "full_adder" for hierarchy "ula_mips:ula|full_adder:full_adder" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 28
+Info (12128): Elaborating entity "mux4" for hierarchy "ula_mips:ula|mux4:mux4" File: /home/parallels/Github/MIPS_2018/ula_mips/ula_mips.vhd Line: 34
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:EX_MEM" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 26
+Info (12128): Elaborating entity "memoria_de_dados" for hierarchy "memoria_de_dados:memoriaDados" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 120
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:MEM_WB" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 26
+Info (12128): Elaborating entity "controlador_io" for hierarchy "controlador_io:controlador1" File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 151
+Warning (10036): Verilog HDL or VHDL warning at controlador_io.vhd(78): object "en_seg7" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 78
+Warning (10036): Verilog HDL or VHDL warning at controlador_io.vhd(78): object "en_leds" assigned a value but never read File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 78
+Info (12128): Elaborating entity "decodificador" for hierarchy "controlador_io:controlador1|decodificador:decodificador1" File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 82
+Info (12128): Elaborating entity "registrador" for hierarchy "controlador_io:controlador1|registrador:reg_leds" File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 26
+Info (12128): Elaborating entity "registrador" for hierarchy "controlador_io:controlador1|registrador:reg_seg7" File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at registrador.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Github/MIPS_2018/ula_mips/registrador.vhd Line: 26
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "controlador_io:controlador1|conversorHex7Seg:conv_HEX0" File: /home/parallels/Github/MIPS_2018/ula_mips/controlador_io.vhd Line: 122
 Warning (276020): Inferred RAM node "bancoRegistradores:regs|registrador_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "bancoRegistradores:regs|registrador_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "memoria_de_dados:memoriaDados|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -1613,7 +1599,23 @@ Info (12133): Instantiated megafunction "bancoRegistradores:regs|altsyncram:regi
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mcc1.tdf
-    Info (12023): Found entity 1: altsyncram_mcc1 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/db/altsyncram_mcc1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_mcc1 File: /home/parallels/Github/MIPS_2018/ula_mips/db/altsyncram_mcc1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "bancoRegistradores:regs|altsyncram:registrador_rtl_1"
+Info (12133): Instantiated megafunction "bancoRegistradores:regs|altsyncram:registrador_rtl_1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12130): Elaborated megafunction instantiation "memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0"
 Info (12133): Instantiated megafunction "memoria_de_dados:memoriaDados|altsyncram:ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1631,61 +1633,57 @@ Info (12133): Instantiated megafunction "memoria_de_dados:memoriaDados|altsyncra
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/ula_mips.ram0_memoria_de_dados_a9f5452f.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7ch1.tdf
-    Info (12023): Found entity 1: altsyncram_7ch1 File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/db/altsyncram_7ch1.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_31i1.tdf
+    Info (12023): Found entity 1: altsyncram_31i1 File: /home/parallels/Github/MIPS_2018/ula_mips/db/altsyncram_31i1.tdf Line: 27
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "clko" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 7
-    Warning (13410): Pin "instrucao[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[6]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[7]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[8]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[9]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[10]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[13]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[15]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[18]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[23]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[28]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[29]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "instrucao[30]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[6]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[7]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[8]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[9]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[10]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[13]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[15]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[16]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[17]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[18]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[19]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[20]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[21]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[22]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[23]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[24]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[25]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[26]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[27]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[28]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[29]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[30]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "saidaExtensor[31]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
-    Warning (13410): Pin "zero" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
-    Warning (13410): Pin "ula_control[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 10
-    Warning (13410): Pin "end1[2]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end2[2]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "end3[2]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
-    Warning (13410): Pin "saida_habLeMem" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
-    Warning (13410): Pin "teste_PC[0]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
-    Warning (13410): Pin "teste_PC[1]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
-    Warning (13410): Pin "saida_mux2" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 14
-    Warning (13410): Pin "op[2]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-    Warning (13410): Pin "op[3]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
-    Warning (13410): Pin "op[4]" is stuck at GND File: C:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
+    Warning (13410): Pin "clko" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 7
+    Warning (13410): Pin "instrucao[4]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[6]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[7]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[8]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[9]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[13]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[15]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[18]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[23]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[25]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "instrucao[30]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[4]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[6]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[7]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[8]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[9]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[13]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[15]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[16]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[17]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[18]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[19]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[20]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[21]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[22]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[23]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[24]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[25]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[26]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[27]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[28]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[29]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[30]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "saidaExtensor[31]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 8
+    Warning (13410): Pin "zero" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 9
+    Warning (13410): Pin "ula_control[3]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 10
+    Warning (13410): Pin "end1[2]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+    Warning (13410): Pin "end1[4]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+    Warning (13410): Pin "end2[2]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+    Warning (13410): Pin "end3[2]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 11
+    Warning (13410): Pin "saida_habLeMem" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 12
+    Warning (13410): Pin "teste_PC[0]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
+    Warning (13410): Pin "teste_PC[1]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 13
+    Warning (13410): Pin "saida_mux2" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 14
+    Warning (13410): Pin "op[4]" is stuck at GND File: /home/parallels/Github/MIPS_2018/ula_mips/mips_teste.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 106 registers lost all their fanouts during netlist optimizations.
+Info (17049): 94 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "toplevel" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity toplevel -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity toplevel -section_id Top was ignored
@@ -1713,15 +1711,15 @@ Warning (20013): Ignored 24 assignments for entity "toplevel" -- entity does not
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity toplevel -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1458 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1478 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 465 output pins
-    Info (21061): Implemented 874 logic cells
+    Info (21061): Implemented 894 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 94 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Thu Nov 22 22:17:22 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
+    Info: Peak virtual memory: 1017 megabytes
+    Info: Processing ended: Fri Nov 23 09:48:29 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:19
 
 
