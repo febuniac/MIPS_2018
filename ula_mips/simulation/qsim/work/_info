@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/vitor/Documents/GitHub/MIPS_2018/ula_mips/simulation/qsim
 Emips_teste
-Z0 w1543001559
+Z0 w1543011448
 Z1 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 K`kJb<]?z4U5EbkG_:lMO3
 Z2 DPx10 cycloneive 21 cycloneive_components 0 22 HFZ8mBI5?[8TM9e2YGWCa2
 Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,18 +23,18 @@ Z10 8ula_mips.vho
 Z11 Fula_mips.vho
 l0
 L37
-Vz`Zg8@I7SgoALDMXzgEXk3
-!s100 z>hW`]Iego]QKz2nMnRc;3
+VnMIDYbK>>;>bajjMifOB;2
+!s100 a[M1E:GzBgN^0n5ML5XAC1
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1543001561
+!s110 1543011451
 !i10b 1
-Z14 !s108 1543001561.000000
-Z15 !s90 -work|work|ula_mips.vho|
-Z16 !s107 ula_mips.vho|
+Z13 !s108 1543011451.000000
+Z14 !s90 -work|work|ula_mips.vho|
+Z15 !s107 ula_mips.vho|
 !i113 1
-Z17 o-work work
-Z18 tExplicit 1 CvgOpt 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
 Astructure
 R1
 R2
@@ -44,57 +44,57 @@ R5
 R6
 R7
 R8
-DEx4 work 10 mips_teste 0 22 z`Zg8@I7SgoALDMXzgEXk3
-l1073
-L59
-VTCd8[TJ?RJlkzjUK>e;7<0
-!s100 hC=VU^:VK9C`0FJh0AdWP2
+DEx4 work 10 mips_teste 0 22 nMIDYbK>>;>bajjMifOB;2
+l1158
+L54
+VPhej;iY5L?gPLi`1HB<bi0
+!s100 d=oV8]13033Pi4]LGJ=741
 R12
 32
-R13
+!s110 1543011452
 !i10b 1
+R13
 R14
 R15
-R16
 !i113 1
+R16
 R17
-R18
 Emips_teste_vhd_vec_tst
-Z19 w1543001556
+Z18 w1543011445
 R6
 R7
 R9
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z19 8Waveform1.vwf.vht
+Z20 FWaveform1.vwf.vht
 l0
 L32
 Vz5g?U3JGLQX:Yz5hfn1bY1
 !s100 one@A6^man_G5kNKk@clc0
 R12
 32
-Z22 !s110 1543001562
+Z21 !s110 1543011453
 !i10b 1
-Z23 !s108 1543001562.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+Z22 !s108 1543011452.000000
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+Z24 !s107 Waveform1.vwf.vht|
 !i113 1
+R16
 R17
-R18
 Amips_teste_arch
 R6
 R7
-Z26 DEx4 work 22 mips_teste_vhd_vec_tst 0 22 z5g?U3JGLQX:Yz5hfn1bY1
-l75
+Z25 DEx4 work 22 mips_teste_vhd_vec_tst 0 22 z5g?U3JGLQX:Yz5hfn1bY1
+l65
 L34
-Z27 V2i>DX59S[B;0mF@0EknXT0
-Z28 !s100 ]2<9ICFiFjmY4J<TJ7[c71
+Z26 V6>bR]6gGRTP057TMJ2fKX1
+Z27 !s100 S@BCGRRNVhkjn^n:YS8e[1
 R12
 32
-R22
+R21
 !i10b 1
+R22
 R23
 R24
-R25
 !i113 1
+R16
 R17
-R18

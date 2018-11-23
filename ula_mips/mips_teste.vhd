@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity mips_teste is
 port( 
 	--	  clko : out std_logic; 
---        Reg3, mux_ulamem,saida1reg, saida2reg, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
+	--		entrada1_ULA, entrada2_ULA, saida : out std_logic_vector(31 downto 0);
 --		  zero : out std_logic;
 --		  ula_control : out std_logic_vector (3 downto 0);
 --		  end1, end2, end3 : out std_logic_vector (4 downto 0);
@@ -13,6 +13,8 @@ port(
 --		  teste_PC:out std_logic_vector(31 downto 0);
 --		  saida_habEscReg, habesc,saida_mux2: out std_logic;
 --		  op, mem_addr : out std_logic_vector(5 downto 0);
+		--	imm : out std_logic_vector(2 downto 0);
+			--ula_control : out std_logic_vector(3 downto 0);
 
 --		saida, entrada1_ULA, entrada2_ULA , dadoescritonoreg, instrucao: out std_logic_Vector(31 downto 0);
 --		saida2 : out std_logic_vector(3 downto 0);
@@ -34,7 +36,7 @@ architecture Behavioral of mips_teste is
 
 signal zero_aux, mux1_aux, mux2_aux, mux3_aux, mux4_aux, habEscReg_aux, beq_aux, habLeiMEM_aux, habEscMEM_aux, and_beq : std_logic;
 
-signal saida_fluxo : std_logic_vector(9 downto 0);
+signal saida_fluxo : std_logic_vector(12 downto 0);
 
 signal ula_ctrl_aux : std_logic_vector(3 downto 0);
 
@@ -44,7 +46,7 @@ signal saida_shifter1 : std_logic_vector (25 downto 0);
 
 signal saida_IF : std_logic_vector(63 downto 0);
 
-signal saida_EX : std_logic_vector(146 downto 0);
+signal saida_EX : std_logic_vector(149 downto 0);
 
 signal saida_EX_MEM : std_logic_vector(106 downto 0);
 
@@ -96,7 +98,7 @@ regs: entity work.bancoRegistradores
 		Port map(clk => clk, enderecoA => saida_IF(25 downto 21), enderecoB => saida_IF(20 downto 16), enderecoC => saida_MEM_WB(4 downto 0), dadoEscritaC => saida_mux_ULA, escreveC => saida_MEM_WB(70), saidaA => saidaA_regs, saidaB => saidaB_regs);
 
 ID_EX: entity work.registrador
-Generic map(DATA_WIDTH => 147) Port map(data(4 downto 0) => saida_IF(15 downto 11),  data(9 downto 5) => saida_IF(20 downto 16), data(41 downto 10) => saida_extensor, data(73 downto 42) => saidaB_regs, data(105 downto 74) => saidaA_regs, data(137 downto 106) => saida_IF(63 downto 32), data(141 downto 138) => saida_fluxo(3 downto 0), data(144 downto 142) => saida_fluxo(6 downto 4), data(146 downto 145) => saida_fluxo(8 downto 7), clk => clk, we=>'1', reset => '0', q => saida_EX);
+Generic map(DATA_WIDTH => 150) Port map(data(4 downto 0) => saida_IF(15 downto 11),  data(9 downto 5) => saida_IF(20 downto 16), data(41 downto 10) => saida_extensor, data(73 downto 42) => saidaB_regs, data(105 downto 74) => saidaA_regs, data(137 downto 106) => saida_IF(63 downto 32), data(141 downto 138) => saida_fluxo(3 downto 0), data(144 downto 142) => saida_fluxo(6 downto 4), data(146 downto 145) => saida_fluxo(8 downto 7), data(149 downto 147) => saida_fluxo(12 downto 10), clk => clk, we=>'1', reset => '0', q => saida_EX);
 		
 mux_Rt_im: entity work.mux2
 		Port map(A => saida_EX(73 downto 42), B => saida_EX(41 downto 10), SEL => saida_EX(138), Y => mux_Rt_im_aux);
@@ -108,7 +110,7 @@ somador2: entity work.somador
 		Port map(A => saida_EX(137 downto 106), B => saida_shifter2, Y => saida_somador2);	
 
 ula_ctrl: entity work.ula_ctrl
-		Port map(ULAop => saida_EX(140 downto 139), funct => saida_EX(15 downto 10), ula_ctrl => ula_ctrl_aux);
+		Port map(ULAop => saida_EX(140 downto 139), imm => saida_EX(149 downto 147), funct => saida_EX(15 downto 10), ula_ctrl => ula_ctrl_aux);
 
 ula: entity work.ula_mips
 		Port map(A => saida_EX(105 downto 74), B => mux_Rt_im_aux, ula_ctrl => ula_ctrl_aux, Q => saida_aux, zero => zero_aux);
@@ -161,6 +163,9 @@ Generic map(DATA_WIDTH => 71) Port map(data(4 downto 0) => saida_EX_MEM(4 downto
 
 --decoder : entity work.decodificador
 	--port map( endereco, mem, seg7, leds, sw, key);
+	
+--imm <= saida_EX(149 downto 147);
+--ula_control <= ula_ctrl_aux;
 	
 display0 : entity work.conversorHex7seg
     Port map (saida7seg => HEX0, dadoHex =>saida_aux(3 downto 0));
