@@ -5,16 +5,16 @@ use IEEE.NUMERIC_STD.ALL;
 entity mips_teste is
 port( 
 		  clko : out std_logic; 
-        Reg3, mux_ulamem,saida1reg, saida2reg, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
-		  zero : out std_logic;
-		  ula_control : out std_logic_vector (3 downto 0);
-		  end1, end2, end3 : out std_logic_vector (4 downto 0);
-		  saida_habLeMem: out std_logic;
-		  teste_PC:out std_logic_vector(31 downto 0);
-		  saida_habEscReg, habesc,saida_mux2: out std_logic;
-		  op : out std_logic_vector(5 downto 0);
+--        Reg3, mux_ulamem,saida1reg, saida2reg, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
+--		  zero : out std_logic;
+--		  ula_control : out std_logic_vector (3 downto 0);
+--		  end1, end2, end3 : out std_logic_vector (4 downto 0);
+--		  saida_habLeMem: out std_logic;
+--		  teste_PC:out std_logic_vector(31 downto 0);
+--		  saida_habEscReg, habesc,saida_mux2: out std_logic;
+--		  op : out std_logic_vector(5 downto 0);
 		  
-		  SW: in std_logic_vector(17 downto 0);
+		SW: in std_logic_vector(17 downto 0);
 		LEDR: out std_logic_vector(17 downto 0);
 		LEDG: out std_logic_vector(7 downto 0);
 		KEY: in std_logic_vector(3 downto 0);
@@ -56,7 +56,7 @@ divisor: entity work.divisorGenerico
       Port map(clk => CLOCK_50, saida_clk => clk);
 		 
 		 clko <= clk;
-		 clk <= CLOCK_50;
+		 --clk <= CLOCK_50;
 		 
 fd_ctrl: entity work.fd_ctrl
 		Port map(op_code => saida_IF(31 downto 26), saida_fluxo => saida_fluxo);
@@ -140,12 +140,12 @@ Generic map(DATA_WIDTH => 71) Port map(data(4 downto 0) => saida_EX_MEM(4 downto
 --habesc <= saida_fluxo(8);
 
 
-op <= saida_IF(31 downto 26);
-
-instrucao <= dado_aux;
-ula_control <= ula_ctrl_aux;
-dadolido <= dado_lido_aux;
-saida_habLeMem <= habLeiMEM_aux;
+--op <= saida_IF(31 downto 26);
+--
+--instrucao <= dado_aux;
+--ula_control <= ula_ctrl_aux;
+--dadolido <= dado_lido_aux;
+--saida_habLeMem <= habLeiMEM_aux;
 
 
 controlador1: entity work.controlador_io
