@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity fd_ctrl is
 port( 
         op_code : in std_logic_vector(5 downto 0);  
-		  saida_fluxo : out std_logic_vector(8 downto 0)
+		  saida_fluxo : out std_logic_vector(9 downto 0)
         );
 end fd_ctrl;
 
@@ -39,6 +39,6 @@ begin
 				"10" when op_code_aux = '1' else
 				"00";
 				
-	saida_fluxo <= habEscReg & mux4 & beq & habLeiMEM & habEscMEM & mux2 & ULAop & mux3;
+	saida_fluxo <= mux1 & habEscReg & mux4 & beq & habLeiMEM & habEscMEM & mux2 & ULAop & mux3;
 				
 end Behavioral;

@@ -20,7 +20,7 @@ entity bancoRegistradores is
 --
         dadoEscritaC    : in std_logic_vector((larguraDados-1) downto 0);
 --
-        escreveC        : in std_logic := '0';
+        escreveC        : in std_logic;
         saidaA          : out std_logic_vector((larguraDados -1) downto 0);
         saidaB          : out std_logic_vector((larguraDados -1) downto 0)
     );
@@ -33,25 +33,25 @@ architecture comportamento of bancoRegistradores is
 
 -- So para teste:  ====================================================================
 
-  function inicializa_regs
-      return memoria_t is
-      variable tmp : memoria_t := (others => (others => '0'));
-  begin
-      tmp(0) := (others => '0');    -- $zero
-      return tmp;
-  end inicializa_regs;
+--  function inicializa_regs
+--      return memoria_t is
+--      variable tmp : memoria_t := (others => (others => '0'));
+--  begin
+--      tmp(0) := (others => '0');    -- $zero
+--      return tmp;
+--  end inicializa_regs;
     -- ===================================================================================
 
     -- Declaracao dos registradores:
 --    shared variable registrador : memoria_t;
-  shared variable registrador : memoria_t := inicializa_regs;
+  signal registrador : memoria_t; --:= inicializa_regs;
 
 begin
     process(clk) is
     begin
         if (rising_edge(clk)) then
             if (escreveC = '1') then
-                registrador(to_integer(unsigned(enderecoC))) := dadoEscritaC;
+                registrador(to_integer(unsigned(enderecoC))) <= dadoEscritaC;
             end if;
         end if;
     end process;

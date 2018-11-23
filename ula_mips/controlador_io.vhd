@@ -58,8 +58,7 @@ component registrador is
 		data	: in std_logic_vector(DATA_WIDTH-1 downto 0);
 		q     : out std_logic_vector(DATA_WIDTH-1 downto 0);
 		clk   : in std_logic;
-		reset : in std_logic := '0';
-		we    : in std_logic
+		reset : in std_logic := '0'
 	);
 end component;
 
@@ -104,7 +103,6 @@ begin
 	   data => dado_escrito(25 downto 0),
 		clk => clk,
 		reset => '0',
-		we => en_leds,
 		q(7 downto 0) => LEDG(7 downto 0),
 		q(25 downto 8) => LEDR(17 downto 0)
 	);
@@ -118,7 +116,6 @@ begin
 	   data => dado_escrito(31 downto 0),
 		clk => clk,
 		reset => '0',
-		we => en_seg7,
 		q => hex_dados
 	);
 	

@@ -1,10 +1,17 @@
 onerror {exit -code 1}
 vlib work
-vlog -work work ula_mips.vo
-vlog -work work Waveform11.vwf.vt
-vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mips_teste_vlg_vec_tst -voptargs="+acc"
+vcom -work work ula_mips.vho
+vcom -work work Waveform.vwf.vht
+vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mips_teste_vhd_vec_tst
 vcd file -direction ula_mips.msim.vcd
-vcd add -internal mips_teste_vlg_vec_tst/*
-vcd add -internal mips_teste_vlg_vec_tst/i1/*
+vcd add -internal mips_teste_vhd_vec_tst/*
+vcd add -internal mips_teste_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
 run -all
 quit -f
