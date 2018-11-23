@@ -5,16 +5,16 @@ use IEEE.NUMERIC_STD.ALL;
 entity mips_teste is
 port( 
 		  clko : out std_logic; 
---        Reg3, mux_ulamem,saida1reg, saida2reg, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
---		  zero : out std_logic;
---		  ula_control : out std_logic_vector (3 downto 0);
---		  end1, end2, end3 : out std_logic_vector (4 downto 0);
---		  saida_habLeMem: out std_logic;
---		  teste_PC:out std_logic_vector(31 downto 0);
---		  saida_habEscReg, habesc,saida_mux2: out std_logic;
---		  op : out std_logic_vector(5 downto 0);
+        Reg3, mux_ulamem,saida1reg, saida2reg, instrucao, entrada1_ULA, entrada2_ULA, saida, saidaExtensor, dadolido : out std_logic_vector(31 downto 0);
+		  zero : out std_logic;
+		  ula_control : out std_logic_vector (3 downto 0);
+		  end1, end2, end3 : out std_logic_vector (4 downto 0);
+		  saida_habLeMem: out std_logic;
+		  teste_PC:out std_logic_vector(31 downto 0);
+		  saida_habEscReg, habesc,saida_mux2: out std_logic;
+		  op : out std_logic_vector(5 downto 0);
 		  
-		SW: in std_logic_vector(17 downto 0);
+		  SW: in std_logic_vector(17 downto 0);
 		LEDR: out std_logic_vector(17 downto 0);
 		LEDG: out std_logic_vector(7 downto 0);
 		KEY: in std_logic_vector(3 downto 0);
@@ -52,11 +52,11 @@ signal clk: std_logic;
 begin
 
 
-divisor: entity work.divisorGenerico
-      Port map(clk => CLOCK_50, saida_clk => clk);
+--divisor: entity work.divisorGenerico
+--       Port map(clk => CLOCK_50, saida_clk => clk);
 		 
-		 clko <= clk;
-		 --clk <= CLOCK_50;
+		 --clko <= clk;
+		 clk <= CLOCK_50;
 		 
 fd_ctrl: entity work.fd_ctrl
 		Port map(op_code => saida_IF(31 downto 26), saida_fluxo => saida_fluxo);
@@ -118,34 +118,34 @@ mux_beq: entity work.mux2
 		Port map(A => saida_somador1, B =>  saida_EX_MEM(101 downto 70), SEL => and_beq, Y => saida_mux_beq);
 		
 memoriaDados: entity work.memoria_de_dados
-		Port map (clk => clk, addr => to_integer(unsigned(saida_EX_MEM(45 downto 39))), data => saida_EX_MEM(36 downto 5), we => saida_EX_MEM(102), q => dado_lido_mem);
+		Port map (clk => clk, addr => to_integer(unsigned(saida_EX_MEM(44 downto 39))), data => saida_EX_MEM(36 downto 5), we => saida_EX_MEM(102), q => dado_lido_mem);
 
 MEM_WB: entity work.registrador
 Generic map(DATA_WIDTH => 71) Port map(data(4 downto 0) => saida_EX_MEM(4 downto 0), data(36 downto 5) => saida_EX_MEM(68 downto 37), data(68 downto 37) => dado_lido_mem, data(70 downto 69) => saida_EX_MEM(106 downto 105), clk => clk, reset => '0', q => saida_MEM_WB);
 		
---saida <= saida_aux;
---teste_PC <= saida_PC;
---saida1reg <= saidaA_regs;
---saida2reg <= saidaB_regs;
---entrada1_ULA <= saida_EX(105 downto 74);
---entrada2_ULA <= mux_Rt_im_aux;
---saidaExtensor <= saida_extensor;
---mux_ulamem <= saida_mux_ULA;
---end1 <= saida_IF(25 downto 21);
---end2 <= saida_IF(20 downto 16);
---end3 <= saida_MEM_WB(4 downto 0);
---Reg3 <= saida_mux_ULA;
---saida_mux2 <= mux2_aux;
---saida_habEscReg <= saida_MEM_WB(70);
---habesc <= saida_fluxo(8);
+saida <= saida_aux;
+teste_PC <= saida_PC;
+saida1reg <= saidaA_regs;
+saida2reg <= saidaB_regs;
+entrada1_ULA <= saida_EX(105 downto 74);
+entrada2_ULA <= mux_Rt_im_aux;
+saidaExtensor <= saida_extensor;
+mux_ulamem <= saida_mux_ULA;
+end1 <= saida_IF(25 downto 21);
+end2 <= saida_IF(20 downto 16);
+end3 <= saida_MEM_WB(4 downto 0);
+Reg3 <= saida_mux_ULA;
+saida_mux2 <= mux2_aux;
+saida_habEscReg <= saida_MEM_WB(70);
+habesc <= saida_fluxo(8);
 
 
---op <= saida_IF(31 downto 26);
---
---instrucao <= dado_aux;
---ula_control <= ula_ctrl_aux;
---dadolido <= dado_lido_aux;
---saida_habLeMem <= habLeiMEM_aux;
+op <= saida_IF(31 downto 26);
+
+instrucao <= dado_aux;
+ula_control <= ula_ctrl_aux;
+dadolido <= dado_lido_aux;
+saida_habLeMem <= habLeiMEM_aux;
 
 
 controlador1: entity work.controlador_io

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ula_mips
-Fri Nov 23 01:42:08 2018
+Fri Nov 23 10:55:34 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Nov 23 01:42:08 2018 ;
+; EDA Netlist Writer Status ; Successful - Fri Nov 23 10:55:34 2018 ;
 ; Revision Name             ; ula_mips                              ;
 ; Top-level Entity Name     ; mips_teste                            ;
 ; Family                    ; Cyclone IV E                          ;
@@ -93,7 +93,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Nov 23 01:42:08 2018
+    Info: Processing started: Fri Nov 23 10:55:34 2018
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/parallels/Github/MIPS_2018/ula_mips/simulation/qsim/ ula_mips -c ula_mips
 Warning (20013): Ignored 24 assignments for entity "toplevel" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity toplevel -section_id Top was ignored
@@ -125,7 +125,7 @@ Warning (18236): Number of processors has not been specified which may cause ove
 Info (204019): Generated file ula_mips.vho in folder "/home/parallels/Github/MIPS_2018/ula_mips/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 26 warnings
     Info: Peak virtual memory: 1061 megabytes
-    Info: Processing ended: Fri Nov 23 01:42:08 2018
+    Info: Processing ended: Fri Nov 23 10:55:34 2018
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
